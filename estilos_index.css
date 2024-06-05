@@ -1,0 +1,86 @@
+html {
+    background-color: rgba(238,238,238,1);
+}
+
+body {
+    display: grid;
+    grid-template-columns: 75fr minmax(200px ,20fr);
+    grid-template-rows: 100px 35px 50px;
+    grid-auto-rows: 1fr;
+    background: rgb(238,238,238);
+    background: linear-gradient(0deg, rgba(238,238,238,1) 0%, rgba(255,255,255,1) 40%);
+}
+
+:root {
+    --Vinotinto: rgb(188,28,72);
+    --VinotintoClarito: rgb(215,54,99);
+    --VinotintoOscuro: rgb(162,19,37);
+    --Rosita: rgb(247,229,233);
+    --Gris: rgb(150,150,150);
+    --GrisClarito: rgb(201,201,201);
+}
+
+.CajaDeModulos {
+    padding: 50px 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Contenido {
+    grid-column: 1/3;
+}
+
+.BotonesInicio {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 20px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    height: 129px;
+}
+
+.BotonesInicio img{
+    height: 100px;
+    width: 100px;
+    
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+.DisplayDeError{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 187px);
+    
+}
+
+.VentanitaDeInfo {
+    border-radius: 20px;
+    background-color: lightgrey;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.VentanitaDeInfo img {
+    height: 250px;
+    width: 350px;
+    object-fit: cover;
+}
+
+.VentanitaDeInfo h2{
+    color: rgb(92, 92, 92);
+    font-family: PuntaRedonda;
+}
+
+.VentanitaDeInfo p {
+    color: gray;
+}

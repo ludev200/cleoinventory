@@ -1,0 +1,331 @@
+html {
+    background-color: rgba(238,238,238,1);
+}
+body {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    grid-template-rows: 100px 35px 50px;
+    grid-auto-rows: 1fr;
+    background: rgb(238,238,238);
+    background: linear-gradient(0deg, rgba(238,238,238,1) 0%, rgba(255,255,255,1) 40%);
+    
+}
+
+:root {
+    --Gris: rgb(150,150,150);
+    --GrisClarito: rgb(201,201,201);
+}
+
+#CajaContenido {
+    padding: 20px;
+}
+
+form {
+    position: relative;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputBuscador {
+    background-color: var(--Rosita);
+    border: 3px solid var(--VinotintoClarito);
+    padding: 5px 15px;
+    font-size: 16px;
+    outline: none;
+    border-radius: 20px;
+    width: calc(70% + 30px);
+}
+.BotonBuscador {
+    background-color: var(--VinotintoClarito);
+    position: absolute;
+    left: 70%;
+    padding: 5px 30px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    height: 35px;
+    transition: all 300ms;
+    cursor: pointer;
+    width: 80px;
+    transform: translateX(0);
+}
+.BotonBuscador:hover {
+    font-size: 20px;
+    width: 100px;
+    transform: translate(-10px);
+}
+.SelectBuscador {
+    background-color: var(--VinotintoClarito);
+    border-radius: 5px;
+    color: white;
+    height: 35px;
+    border: none;
+    outline: none;
+    width: 100px;
+}
+
+#CajaDeFiltros {
+    grid-row: 2/3;
+    grid-column: 2/4;
+    padding: 10px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.NombreFiltro {
+    display: inline;
+    color: var(--VinotintoOscuro);
+    
+    
+}
+
+#CajaDeFiltros div select {
+    background-color: var(--Rosita);
+    outline: none;
+    height: 25px;
+    width: 100px;
+    color: var(--VinotintoOscuro);
+    border: none;
+    border-radius: 5px;
+    background-color: var(--VinotintoClarito);
+    color: white;
+}
+
+#CajaDeFiltros div select option {
+    background-color: var(--Vinotinto);
+    color: white;
+    background-color: var(--Rosita);
+    color: var(--VinotintoOscuro)
+}
+
+
+
+
+.TextoAlCentro {
+    text-align: center;
+}
+
+.Rojo {
+    color: red;
+    align-self: center;
+}
+
+.Verde {
+    color: forestgreen;
+    align-self: center;
+}
+
+.TablaDeResultados {
+    text-align: center;
+    width: 95%;
+}
+
+
+
+.TablaVacia {
+    justify-content: center;
+    color: var(--Gris);
+    font-size: 18px;
+    align-items: center;
+}
+
+
+
+
+
+
+#BarraLateral {
+    
+    padding: 10px;
+    
+}
+
+#contenidoDeLaBarraLateral {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    
+    border-radius: 10px;
+    background-color: var(--Rosita);
+    position:sticky;
+    top: 95px;
+}
+
+#EspacioDeLaImagen {
+    height: 160px;
+    width: 180px;
+    border: 5px solid var(--Vinotinto);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    
+}
+
+#EspacioDeLaImagen img {
+    height: 135px;
+    margin: 0 auto;   
+}
+
+#EspacioDeLaImagen b{
+    display: block;
+    padding-top: 5px;
+    height: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+
+#contenidoDeLaBarraLateral a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(168, 246, 164);
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 190px;
+    text-align: center;
+    background-color: var(--VinotintoClarito);
+}
+
+#contenidoDeLaBarraLateral a:hover {
+    box-shadow: 0 0 5px rgba(50, 50, 50, 0.6);
+    background-color: var(--Vinotinto)
+    
+}
+
+.fi-rr-add::before {
+    position: relative;
+    top: 2px;
+}
+
+
+
+article {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.TituloDeSectionDelArticle {
+    font-size: 25px;
+    border-bottom: 3px solid var(--VinotintoClarito);
+    display: block;
+    font-family: 'PuntaRedonda' ,Arial, sans-serif;
+    font-stretch: wider;
+}
+.TituloDeSectionDelArticle:before {
+    color: var(--VinotintoOscuro)
+}
+
+
+form select:hover, form button:hover {
+    box-shadow: 0 0 5px #333;
+}
+form select option {
+    background-color: var(--Rosita);
+    color: var(--VinotintoClarito);
+}
+
+
+
+.TablaDeResultados {
+    background-color: lightcoral;
+    width: 95%;
+    box-shadow: 2px 2px 3px lightgrey;
+    border: 1px solid gray;
+}
+.CabeceraDeLaTabla {
+    background: var(--Vinotinto);
+    background: linear-gradient(0deg, var(--Vinotinto) 20%, var(--VinotintoClarito) 50%, var(--Vinotinto) 80%);
+    display: flex;
+    gap: 2px;
+}
+.CabeceraDeLaTabla celda {
+    background-color: var(--Vinotinto);
+    color: white;
+    font-weight: normal;
+    justify-content: center;
+}
+.CuerpoDeLaTabla {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--VinotintoClarito);
+    background: linear-gradient(90deg, white 5%, var(--Rosita) 26%, var(--VinotintoClarito) 50%, var(--Rosita) 74%, white 95%);
+}
+.RowVacio {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    align-items: center;
+    color: #bbb;
+    
+}
+.RowVacio span {
+    font-family: 'PuntaRedonda';
+    font-size: 18px;
+}
+row {
+    background-color: white;
+    height: 60px;
+    text-align: center;
+    display: flex;
+    gap: 2px;
+}
+row:hover {
+    color: var(--VinotintoClarito);
+}
+celda {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+.ColumnaID img {
+    width: 50px;
+    background-color: white;
+    border: 1px solid var(--VinotintoClarito);
+    height: 50px;
+    border-radius: 5px;
+}
+.ColumnaID {
+    width: 80px;
+    justify-content: center;
+    
+}
+.ColumnaRIF {
+    width: 120px;
+}
+.ColumnaNombre {
+    width: calc(100% - 330px);
+    text-align: initial;
+}
+.ColumnaDetalles {
+    width: 100px;
+    justify-content: center;
+}
+.ColumnaDetalles a {
+    text-decoration: none;
+    background-color: var(--VinotintoClarito);
+    text-align: center;
+    width: 90px;
+    padding: 3px;
+    border-radius: 5px;
+    color: white;
+}
+
+
+
+
+.hovershadow:hover {
+    box-shadow: 0 0 3px 3px rgba(150, 150, 150, 0.5);
+}

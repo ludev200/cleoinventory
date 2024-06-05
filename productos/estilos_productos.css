@@ -1,0 +1,307 @@
+html {
+    background-color: rgba(238,238,238,1);
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    grid-template-rows: 100px 35px 50px;
+    grid-auto-rows: 1fr;
+    background: linear-gradient(0deg, rgba(238,238,238,1) 0%, rgba(255,255,255,1) 40%);
+}
+
+:root {
+    --Gris: rgb(150,150,150);
+    --GrisClarito: rgb(201,201,201);
+}
+ 
+
+
+#CajaDeFiltros {
+    height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+#CajaDeFiltros select {
+    background-color: var(--VinotintoClarito);
+    border: none;
+    outline: none;
+    height: 30px;
+    border-radius: 5px;
+    color: white;
+}
+#CajaDeFiltros select option {
+    background-color: var(--Rosita);
+    color: var(--VinotintoOscuro);
+}
+
+.NombreFiltro {
+    display: inline;
+    color: var(--VinotintoOscuro);
+
+    
+    
+}
+
+#CajaDeFiltros div select {
+    background-color: var(--Rosita);
+    outline: none;
+    height: 25px;
+    color: var(--VinotintoOscuro);
+    border: none;
+    border-radius: 5px;
+    background-color: var(--VinotintoClarito);
+    color: white;
+}
+
+#CajaDeFiltros div select option {
+    background-color: var(--Vinotinto);
+    color: white;
+    background-color: var(--Rosita);
+    color: var(--VinotintoOscuro)
+}
+
+
+
+
+#CajaResultados {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.TarjetaProducto {
+    border: 3px solid  var(--VinotintoOscuro);
+    border-radius: 5px;
+    height: 260px; width: 190px;
+    text-decoration: none;
+    color: black;
+    transition: scale 0.3s;
+    position: relative;
+    overflow-y: hidden;
+    
+}
+
+.TablaVacia {
+    justify-content: center;
+    color: var(--Gris);
+    font-size: 20px;
+    font-family: 'PuntaRedonda', monospace;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 280px;
+    border: 3px solid var(--GrisClarito);
+    border-radius: 20px;
+}
+
+.TapaDeTextoSobrante {
+    background: var(--Rosita);
+    background: linear-gradient(0deg, var(--Rosita) 10%, rgba(247,229,233,0) 100%);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+}
+
+.precioFlotador {
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    color: #222;
+    padding: 0 3px;
+
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.precioFlotador:hover {
+    background-color: var(--Rosita);
+    color: black;
+}
+
+.TarjetaProducto:hover {
+    
+    box-shadow: 0 0 5px rgba(40, 40, 40, 0.8);
+    scale: 1.05;
+}
+
+.CajaDeImagen {
+    height: 140px;
+    width: 190px;
+    border-radius: 10px;
+    display: flex;
+}
+
+.CajaDeImagen img{
+    background-color: white;
+    object-fit: cover;
+    height: 140px;
+    width: 190px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    margin: 0 auto;
+    opacity: 1;
+}
+
+.CajaDeCaractaresiticas {
+    background-color: var(--Rosita);
+    height: 100px;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.CajaDeCaractaresiticas .descripcion {
+    font-size: 15px;
+}
+
+.CajaDeCaractaresiticas div {
+    background-color: var(--Vinotinto);
+    height: 3px;
+}
+
+.tipo {
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+#BarraLateral {
+    
+    padding: 10px;
+    
+}
+
+#contenidoDeLaBarraLateral {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    
+    border-radius: 10px;
+    background-color: var(--Rosita);
+    position:sticky;
+    top: 95px;
+}
+
+#EspacioDeLaImagen {
+    height: 160px;
+    width: 180px;
+    border: 5px solid var(--Vinotinto);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    
+}
+
+#EspacioDeLaImagen img {
+    height: 135px;
+    margin: 0 auto;   
+}
+
+#EspacioDeLaImagen b{
+    display: block;
+    height: 25px;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+
+#contenidoDeLaBarraLateral a {
+    text-decoration: none;
+    color:white;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 190px;
+    text-align: center;
+    background-color: var(--VinotintoClarito);
+}
+
+#contenidoDeLaBarraLateral a:hover {
+    box-shadow: 0 0 5px rgba(50, 50, 50, 0.6);
+    background-color: var(--Vinotinto)
+    
+}
+
+.fi-rr-add::before {
+    position: relative;
+    top: 2px;
+}
+
+
+article {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.TituloDeSectionDelArticle {
+    font-size: 25px;
+    border-bottom: 3px solid var(--VinotintoClarito);
+    display: block;
+    font-family: 'PuntaRedonda' ,Arial, sans-serif;
+    font-stretch: wider;
+}
+.TituloDeSectionDelArticle:before {
+    color: var(--VinotintoOscuro)
+}
+
+
+form {
+    position: relative;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputBuscador {
+    background-color: var(--Rosita);
+    border: 3px solid var(--VinotintoClarito);
+    padding: 5px 15px;
+    font-size: 16px;
+    outline: none;
+    border-radius: 20px;
+    width: calc(100% - 250px);
+}
+.BotonBuscador {
+    background-color: var(--VinotintoClarito);
+    position: absolute;
+    left: calc(100% - 250px);
+    padding: 5px 30px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    height: 35px;
+    transition: all 300ms;
+    cursor: pointer;
+    width: 80px;
+    transform: translateX(0);
+}
+.BotonBuscador:hover {
+    font-size: 20px;
+    width: 100px;
+    transform: translate(-10px);
+}
+.SelectBuscador {
+    background-color: var(--VinotintoClarito);
+    border-radius: 5px;
+    color: white;
+    height: 35px;
+    border: none;
+    outline: none;
+    width: 100px;
+}
+form select:hover, form button:hover {
+    box-shadow: 0 0 5px #333;
+}
+form select option {
+    background-color: var(--Rosita);
+    color: var(--VinotintoClarito);
+}

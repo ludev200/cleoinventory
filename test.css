@@ -1,0 +1,114 @@
+@font-face {
+    font-family: FuenteNormalPeroBonita;
+    src: url(Fuentes/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: TituloPrincipal;
+    src: url(Fuentes/PassionOne-Bold.ttf);
+}
+
+@font-face {
+    font-family: PuntaRedonda;
+    src: url(Fuentes/Comfortaa-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: PuntaRedonda500;
+    src: url(Fuentes/Comfortaa-SemiBold.ttf);
+}
+
+
+:root {
+    --VinotintoOscuro: rgb(32,56,100);
+    --Vinotinto: rgb(31,78,121);
+    --VinotintoClarito: rgb(46,117,182);
+    --RositaOscuro: rgb(150,190,250);
+    --Rosita: rgb(189,215,238);
+}
+
+body {
+    font-family: 'PuntaRedonda';
+}
+
+.productList {
+    border: 1px solid gray;
+    width: 400px;
+    border-radius: 5px;
+    
+}
+.productList > * > * {
+    display: flex;
+}
+.productList .head {
+    background-color: var(--Vinotinto);
+    padding: 5px;
+    color: white;
+}
+.productList .value {
+    width: 150px;
+}
+.productList .name {
+    width: calc(100% - 220px);
+}
+.productList .head .row span {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    
+}
+.productList .head .row {
+    height: 40px;
+}
+.productList .body .row {
+    height: 30px;
+    font-size: 14px;
+}
+.productList .body .row span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.productList .body .row .name {
+    justify-content: left;
+}
+
+
+
+
+.productList .body .row .value input {
+    width: 120px;
+    background-color: var(--Rosita);
+    border: none;
+    outline: none;
+    height: calc(100% - 6px);
+    text-align: center;
+}
+
+.productList .body .row .value button {
+
+}
+
+
+
+.nro {
+    width: 40px;
+}
+
+
+.submit {
+    width: 30px;
+}
+
+
+.submitButton {
+    background-color: var(--VinotintoClarito);
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 5px;
+    height: 20px;
+    width: 25px;
+}

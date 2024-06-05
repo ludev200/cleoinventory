@@ -1,0 +1,316 @@
+html {
+    background-color: rgba(238,238,238,1);
+}
+body {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    grid-template-rows: 100px 35px 50px;
+    grid-auto-rows: 1fr;
+    background: rgb(238,238,238);
+    background: linear-gradient(0deg, rgba(238,238,238,1) 0%, rgba(255,255,255,1) 60%);
+}
+:root {
+    --Gris: rgb(150,150,150);
+    --GrisClarito: rgb(201,201,201);
+}
+
+
+/* -------------ARTICLE------------- */
+
+form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 60px;
+}
+
+.TituloDeSectionDelArticle {
+    padding-top: 15px;
+    margin-left: -30px;
+    font-size: 20px;
+    display: flex;
+    gap: 10px;
+}
+.TituloDeSectionDelArticle:before {
+    color: var(--VinotintoOscuro)
+}
+
+
+/* -------------BARRA LATERAL------------- */
+aside {
+    padding: 10px;
+}
+
+.contenidoDeLaBarraLateral {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    border-radius: 10px;
+    background-color: var(--Rosita);
+    position:sticky;
+    top: 95px;
+}
+
+.EspacioDeLaImagen {
+    height: 160px;
+    width: 180px;
+    border: 5px solid var(--Vinotinto);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.EspacioDeLaImagen img {
+    height: 135px;
+    margin: 0 auto;   
+}
+
+.EspacioDeLaImagen b{
+    display: block;
+    padding-top: 5px;
+    height: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.contenidoDeLaBarraLateral a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(168, 246, 164);
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 190px;
+    text-align: center;
+    background-color: var(--VinotintoClarito);
+}
+
+.contenidoDeLaBarraLateral a:hover {
+    box-shadow: 0 0 5px rgba(50, 50, 50, 0.6);
+    background-color: var(--Vinotinto)
+}
+
+
+ul.personales li {
+    width: 250px;
+}
+ul.cuenta li {
+    width: 250px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+li {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.CajaPalInput {
+    display: flex;
+    
+    gap: 5px;
+}
+.CajaPalInput input, .CajaPalInput select {
+    background-color: var(--Rosita);
+    border: none;
+    outline: none;
+    border-bottom: 3px solid var(--VinotintoOscuro);
+    font-size: 16px;
+    padding: 0 5px;
+    height: 30px;
+}
+.CajaPalInput input {
+    width: 100%;
+    height: 27px;
+}
+
+ul.cuenta li .CajaPalInput {
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+}
+.customquestion {
+    display: flex;
+}
+.customquestion span {
+    background-color: var(--Rosita);
+    border-bottom: 3px solid var(--VinotintoOscuro);
+    display: flex;
+    align-items: center;
+}
+.customquestion span:nth-child(1) {
+    padding-left: 5px;
+}
+.customquestion span:nth-child(3) {
+    padding-right: 5px;
+}
+
+ul.cuenta li .CajaPalInput input {
+    width: calc(100% - 10px);
+}
+
+ul.seguridad li .CajaPalInput {
+    align-items: center;
+}
+
+.botonesfinales {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    height: 50px;
+}
+.botonesfinales a, .botonesfinales button {
+    border: none;
+    outline: none;
+    text-decoration: none;
+    font-size: 20px;
+    
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+}
+.botonesfinales a {
+    background-color: white;
+    width: 150px;
+    border: 3px solid var(--VinotintoClarito);
+    color: var(--VinotintoClarito);
+}
+.botonesfinales button {
+    background-color: var(--VinotintoClarito);
+    width: calc(100% - 200px);
+    color: white;
+    border: 3px solid var(--Vinotinto);
+}
+
+
+.noarrows::-webkit-outer-spin-button,
+.noarrows::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+
+.dplaynn {
+    display: none;
+}
+
+.modulocard {
+    display: flex;
+    width: 200px;
+    padding: 5px;
+    gap: 5px;
+    align-items: center;
+    border-radius: 10px;
+    background-color: lightgray;
+    border: 1px solid gray;
+}
+.modulocard:hover {
+    box-shadow: 0 0 2px 2px rgba(50, 50, 50, 0.3);
+}
+.modulocard img {
+    height: 40px;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.permisos label input:checked + .modulocard {
+    
+    border: 1px solid var(--VinotintoClarito);
+    background-color: var(--Rosita);
+}
+.permisos label input:checked + .modulocard img {
+    
+    border: 1px solid var(--VinotintoClarito);
+}
+.permisos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+modal {
+    position: fixed;
+    background-color: rgba(150,150,150,0.4);
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ContenidoDelModal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #666;
+    box-shadow: 4px 8px rgb(50 50 50 / 50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    max-width: 600px;
+}
+.ContenidoDelModal img {
+    width: 100px;
+    align-self: center;
+    margin: 10px 0;
+}
+.TextoCentro {
+    align-self: center;
+}
+.ContenidoDelModal p {
+    margin: 10px 0;
+}
+.CajaDeErrores {
+    background-color: #ddd;
+    width: 98%;
+    padding: 5px 5px 0 5px;
+    border: 1px solid rgb(182, 135, 114);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.coolFinalButtons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 945px;
+    margin-bottom: 20px;
+}
+.coolFinalButtons > * {
+    text-decoration: none;
+    box-sizing: border-box;
+    color: white;
+    background-color: #999;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+#validateFormButton {
+    background-color: rgb(70, 200, 70);
+}
+
+.hovershadow:hover {
+    box-shadow: 0 0 3px 3px rgba(150, 150, 150, 0.5);
+}

@@ -1,0 +1,1661 @@
+html {
+    background-color: rgba(238,238,238,1);
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    grid-template-rows: 100px 35px 50px;
+    grid-auto-rows: 1fr;
+    background: rgb(238,238,238);
+    background: linear-gradient(0deg, rgba(238,238,238,1) 0%, rgba(255,255,255,1) 60%);
+}
+
+:root {
+    --Gris: rgb(150,150,150);
+    --GrisClarito: rgb(201,201,201);
+}
+
+article {
+    height: calc(100vh - 120px);
+    grid-column: 1/3;
+    display: flex;
+    padding: 20px;
+}
+.MostrarPaso2 {
+    transform: translateX(calc(-50% - 20px));
+}
+
+
+.OcultadorDePaginas {
+    width: 100%;
+    overflow-x:hidden
+}
+.ContenedorDePaginas {
+    transition: 500ms all;
+    display: flex;
+    width: calc(200% + 50px);
+    gap: 40px;
+}
+.Pagina {
+    width: 100%;
+    height: calc(100vh - 120px);
+    display: flex;
+}
+
+.LetreroPaso {
+    font-size: 50px;
+    width: 80px;
+    color: gray;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-right: 1px solid gray;
+    padding-right: 10px;
+    position: relative;
+}
+.LetreroPaso b {
+    font-family: PuntaRedonda;
+}
+.BVacio {
+    height: 20px;
+}
+.BotonPaVolver {
+    font-size: 16px;
+    position: absolute;
+    bottom: 0px;
+    text-decoration: none;
+    color: gray;
+    padding: 5px;
+    border-radius: 5px;
+    max-width: 60px;
+}
+.BotonPaVolver:hover {
+    background-color: var(--Gris);
+    color: white;
+}
+
+section {
+    position: relative;
+    padding: 0 10px;
+    width: calc(100% - 10px);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.TituloDeSection {
+    font-size: 30px;
+    color: #222;
+    border-bottom: 2px solid var(--VinotintoClarito);
+}
+
+.BotonTextoImportar {
+    text-decoration: none;
+    color: var(--Vinotinto);
+    cursor: pointer;
+}
+
+
+
+/*---------CLIENTE Y TITULO--------*/
+.TituloYCliente {
+    width: 80%;
+    display: flex;
+    gap: 10px;
+
+    position: relative;
+    z-index: 10;
+}
+.CampoDeInputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 35px 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    height: 100px;
+    width: calc(100% - 330px);
+}
+.CampoDeInputs input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: var(--Rosita);
+    border-bottom: 2px solid var(--VinotintoClarito);
+    width: calc(100% - 10px);
+    padding: 0 5px;
+    font-size: 16px;
+}
+.TituloDeCoti {
+    grid-column: 1/4;
+    text-transform: uppercase;
+}
+.datito {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.datito span {
+    height: 20px;
+}
+.datito input {
+    height: calc(100% - 20px);
+    text-align: right;
+    padding-right: 25px;
+    width: calc(100% - 30px);
+}
+.datito input[type=number] {
+    margin: 0;
+}
+.datito input[type=number]::-webkit-outer-spin-button,
+.datito input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.porcento {
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+}
+.ClienteVacio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: gray;
+    width: 100%;
+}
+.CardCliente {
+    background-color: var(--Rosita);
+    border-radius: 10px;
+    border: 2px solid var(--VinotintoClarito);
+    width: 320px;
+    padding: 5px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    position: relative;
+    z-index: initial;
+}
+.CardCliente img {
+    height: 80px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid var(--VinotintoClarito);
+}
+.DatosDelCliente {
+    width: calc(100% - 80px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.NombreYIDDeCliente {
+    display: flex;
+    flex-direction: column;
+}
+.IDDelCliente {
+    font-size: 14px;
+    color: gray;
+}
+
+.BotonesExtraDeClientes {
+    position: absolute;
+    z-index: -1;
+    left: 270px;
+    top: 0;
+    padding: 0 10px;
+    
+    height: 60px;
+    display: flex;
+    
+    flex-direction: column;
+    transition: all 500ms;
+    transition-delay: 500ms;
+
+    color: var(--VinotintoClarito);
+}
+.BotonesExtraDeClientes i:hover {
+    font-size: 20px;
+    cursor: pointer;
+}
+.CardCliente:hover > .BotonesExtraDeClientes {
+    left: 330px;
+}
+
+
+/*-----------TABLA---------------*/
+.TablaDeResultados {
+    background-color: white;
+    width: 80%;
+    min-width: 660px;
+    box-shadow: 2px 2px 3px lightgrey;
+    border: 1px solid gray;
+}
+.CabeceraDeLaTabla {
+    background: var(--Vinotinto);
+    background: linear-gradient(0deg, var(--Vinotinto) 20%, var(--VinotintoClarito) 50%, var(--Vinotinto) 80%);
+    display: flex;
+    gap: 2px;
+}
+.CabeceraDeLaTabla celda {
+    background-color: var(--Vinotinto);
+    color: white;
+    font-weight: normal;
+    justify-content: center;
+}
+.CuerpoDeLaTabla {
+    height: calc(100vh - 450px);
+    overflow-y: auto;
+}
+.ContenedorDeRows {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--VinotintoClarito);
+    background: linear-gradient(90deg, white 5%, var(--Rosita) 26%, var(--VinotintoClarito) 50%, var(--Rosita) 74%, white 95%);
+}
+.RowVacio {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 450px);
+    align-items: center;
+    color: #bbb;
+    font-family: PuntaRedonda;
+}
+row {
+    background-color: white;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    gap: 2px;
+    position: relative;
+    overflow-x: hidden;
+}
+row:hover {
+    color: var(--VinotintoClarito);
+}
+celda {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+.ColumnaImagen {
+    width: 80px;
+    justify-content: center;
+}
+.ColumnaID {
+    width: 80px;
+    justify-content: center;
+}
+.ColumnaNombre {
+    width: calc(100% - 500px);
+}
+.ColumnaCantidad {
+    width: 100px;
+    justify-content: center;
+}
+.ColumnaPrecio {
+    width: 80px;
+    justify-content: end;
+}
+.ColumnaTotal {
+    width: 140px;
+    justify-content: end;
+}
+
+.ColumnaImagen img {
+    height: 40px;
+    width: 40px;
+    border: 1px solid var(--VinotintoClarito);
+    border-radius: 5px;
+    object-fit: cover;
+}
+.CeldaOculta {
+    transform: translateX(50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    right: 0;
+    background: rgb(247,229,233);
+    background: linear-gradient(89deg, rgba(247,229,233,0) 0%, var(--Rosita) 86%);
+    width: 50px;
+    transition: all 500ms;
+    height: 100%;
+    align-items: center;
+}
+.CeldaOculta i {
+    cursor: pointer;
+    transition: all 500ms;
+    color: var(--Vinotinto);
+}
+row:hover > .CeldaOculta {
+    transform: translateX(0);
+    transition-delay: 1s;
+}
+.CeldaOculta i:hover {
+    font-size: 23px;
+}
+
+.CajaTotal {
+    display: flex;
+    justify-content: end;
+    font-size: 22px;
+    font-family: PuntaRedonda;
+    width: 80%;
+}
+.CajaTotal b {
+    margin-right: 10px;
+}
+
+/*-------BOTONES ABSOLUTOS--------*/
+.BotonAbsoluto_ImportarCoti {
+    position: relative;
+}
+.BotonAbsoluto_CambiarCliente {
+    position: relative;
+}
+.BotonAbsoluto_AgregarProduto {
+    position: relative;
+}
+.BtnAbsolutos {
+    right: 10px;
+    bottom: 10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    transform: translateY(0);
+    transition: all 500ms;
+}
+.BotonAbsoluto_AgregarProduto button, .BotonAbsoluto_ImportarCoti button, .BotonAbsoluto_CambiarCliente button {
+    background-color: var(--Rosita);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid var(--VinotintoClarito);
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px gray;
+    padding: 5px;
+    z-index: 10;
+    position: relative;
+}
+.BotonAbsoluto_AgregarProduto button img, .BotonAbsoluto_ImportarCoti button img, .BotonAbsoluto_CambiarCliente button img {
+    height: 40px;
+    width: 40px;
+}
+.letrerito {
+    transition: 1s left, 500ms opacity;
+    position: absolute;
+    background-color: var(--VinotintoClarito);
+    left: 0;
+    top: 15px;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0;
+    z-index: 5;
+}
+.BotonAbsoluto_AgregarProduto:hover button, .BotonAbsoluto_ImportarCoti:hover button, .BotonAbsoluto_CambiarCliente:hover button {
+    background-color: var(--VinotintoClarito);
+}
+.BotonAbsoluto_AgregarProduto:hover > .letrerito, .BotonAbsoluto_ImportarCoti:hover > .letrerito, .BotonAbsoluto_CambiarCliente:hover >.letrerito {
+    transition: 1s opacity, 500ms left;
+    left: -140px;
+    opacity: 1;
+}
+
+.soloCoti {
+    transform: translateY(130px);
+}
+
+/*-------BOTON CONTINUAR--------*/
+.EspacioDeBotones {
+    display: flex;
+    justify-content: center;
+}
+.BotonContinuarDisponible {
+    background-color: var(--VinotintoClarito);
+    color: white;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.BotonContinuarDisponible:hover {
+    box-shadow: 0 0 7px gray;
+}
+.BotonContinuarNoDisponible {
+    background-color: gray;
+    color: white;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+
+
+
+
+/*---------------------------MODAL IMPORTAR COTI-----------------------------*/
+modal {
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(200,200,200,0.5);
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+}
+.VentanaFlotante{
+    height: 80%;
+    width: 80%;
+    transform: translateY(0);
+    transition: all 0.5s;
+    opacity: 1;
+}
+.OcultarModal {
+    transform: translateY(-100px);
+    opacity: 0;
+}
+.ContenidoDeVentana {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100%);
+    box-shadow: 5px 5px 2px rgb(50 50 50 / 60%);
+    border: 1px solid gray;
+    background-color: white;
+}
+.TituloDeModal {
+    background-color: var(--VinotintoClarito);
+    padding: 10px;
+    width: calc(100% - 20px);
+    color: white;
+    text-align: center;
+    font-family: PuntaRedonda500;
+    font-size: 30px;
+    height: 30px;
+}
+.BotonCerrar {
+    border: none;
+    background-color: white;
+    color: var(--Vinotinto);
+    border: 3px solid var(--Vinotinto);
+    border-radius: 10px;
+    font-size: 15px;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    outline: none;
+}
+.BotonCerrar:hover {
+    background-color: var(--Vinotinto);
+    color: white;
+}
+
+.DivisorDelBuscadorDeProductos {
+    background-color: red;
+    display: flex;
+    width: 100%;
+    height: calc(100% - 50px);
+}
+.EspacioDeTablaBuscadorProductos {
+    background-color: lightblue;
+    background-color: white;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: calc(100% - 290px);
+}
+.EspacioDePrevisualizacionDeProducto {
+    background-color: var(--Rosita);
+    padding: 10px;
+    width: 250px;
+    border-left: 1px solid var(--VinotintoClarito);
+}
+
+.TablaDeProdcutos {
+    height: calc(100% - 66px);
+    overflow-y: auto;
+}
+
+/*----------IMPORTAR COMPRA-----------*/
+.EspacioDeTablaBuscadorDeCompras {
+    background-color: lightblue;
+    background-color: white;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: calc(100% - 380px);
+}
+.EspacioDePrevisualizacionDeCompra {
+    background-color: var(--Rosita);
+    padding: 10px;
+    width: 380px;
+    border-left: 1px solid var(--VinotintoClarito);
+}
+.ColumnaDescripcion {
+    width: calc(100% - 220px);
+    text-align: left;
+}
+
+.ProductoNoSeleccionado, .CompraNoSeleccionada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 6px);
+    border-radius: 20px;
+    border: 3px solid #855;
+    color: #333;
+    mix-blend-mode: color-burn;
+    user-select: none;
+}
+.ProductoNoSeleccionado img, .CompraNoSeleccionada img {
+    height: 200px;
+}
+.CompraNoSeleccionada span {
+    text-align: center;
+    font-size: 20px;
+    font-family: PuntaRedonda500;
+    padding: 0 10px 40px 10px;   
+}
+
+/*---------BUSCADOR DEL MODAL---------*/
+.EspacioDeBuscadorDeProductos {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.EspacioDeBuscadorDeProductos input {
+    background-color: var(--Rosita);
+    outline: none;
+    height: 30px;
+    border: 3px solid var(--VinotintoClarito);
+    border-radius: 15px;
+    width: 55%;
+    padding: 0 10px;
+    font-size: 16px;
+}
+.EspacioDeBuscadorDeProductos button {
+    background-color: var(--VinotintoClarito);
+    position: absolute;
+    left: 55%;
+    border: none;
+    height: 36px;
+    padding: 0 10px;
+    border-radius: 20px;
+    width: 100px;
+    color: white;
+    font-size: 13px;
+    transition: all 300ms;
+    cursor: pointer;
+    outline: none;
+}
+.EspacioDeBuscadorDeProductos select {
+    background-color: var(--VinotintoClarito);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+.EspacioDeBuscadorDeProductos button:hover, .EspacioDeBuscadorDeProductos select:hover {
+    box-shadow: 0 0 5px #333;
+    cursor: pointer;
+}
+
+
+.TablaDeProdcutos {
+    height: calc(100% - 66px);
+    overflow-y: auto;
+}
+/*--------TABLA DEL BUSCADOR-------*/
+.ColumnasDeTabla {
+    display: flex;
+    gap: 2px;
+    background-color: var(--Gris);
+}
+.ColumnasDeTabla celda {
+    background-color: var(--Gris);
+    color: white;
+    justify-content: center;
+}
+.ColumnaNombre2 {
+    width: calc(100% - 255px);
+}
+.ColumnaExistencia {
+    width: 90px;
+}
+.EspacioDeRows {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--VinotintoClarito);
+    background: linear-gradient(90deg, white 5%, var(--Rosita) 26%, var(--VinotintoClarito) 50%, var(--Rosita) 74%, white 95%);
+}
+.EspacioDeRows row {
+    cursor: pointer;
+}
+.ProductoSeleccionado {
+    background-color: var(--Rosita);
+}
+
+
+
+
+/*--------COMPRA SELECCIONADA--------*/
+.CompraSiSeleccionada .Titulo {
+    border-bottom: 3px solid var(--VinotintoClarito);
+    font-family: PuntaRedonda;
+    text-align: center;
+    font-size: 20px;
+    width: 100%;
+    padding: 5px 0;
+    margin-bottom: 5px;
+}
+
+.CajaDeDatosDeLaCompra {
+    display: flex;
+    gap: 4px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.DatosDeLaCompra {
+    display: flex;
+    flex-direction: column;
+}
+.DatosDeLaCompra b, .DatosDeLaCompra p {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+
+
+.CompraSiSeleccionada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    justify-content: space-between;
+}
+.CompraSiSeleccionada img {
+    height: 65px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: white;
+    border: 2px solid var(--VinotintoClarito);
+}
+.SubTitulo_ProductosDeCompra {
+    width: 100%;
+    text-align: left;
+}
+.SubTitulo_ProductosDeCompra i {
+    color: var(--Vinotinto);
+}
+
+
+.TablaDeCambios {
+    height: calc(80vh - 310px);
+    width: 100%;
+}
+.mostly-customized-scrollbar {
+    display: block;
+    overflow: auto;
+    height: 100%;
+}
+.mostly-customized-scrollbar::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    background-color: #aaa;
+}
+.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--VinotintoClarito);
+}
+
+.EspacioDeRowDeCambio {
+    flex-direction: column;
+    gap: 1px;
+}
+.RowDeCambio {
+    background-color: var(--RositaOscuro);
+    height: 50px;
+    display: flex;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    width: 95%;
+}
+.CeldaRowDeCambio_Imagen {
+    width: 50px;
+    align-items: center;
+}
+.CeldaRowDeCambio_Imagen img {
+    padding: 0;
+    height: 35px;
+    width: 35px;
+    border: 2px solid var(--VinotintoClarito);
+    border-radius: 5px;
+    background-color: white;
+    object-fit: cover;
+}
+.Celda_ProductoDeCompra {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.CeldaRowDeCambio_Imagen {
+    width: 50px;
+}
+.CeldaRowDeCambio_ID {
+    width: 90px;
+    align-items: center;
+}
+.CeldaRowDeCambio_PrecioU {
+    width: 80px;
+    align-items: end;
+}
+.CeldaRowDeCambio_CantidadXD {
+    width: 90px;
+    align-items: center;
+}
+.CeldaRowDeCambio_Nombre {
+    width: calc(100% - 180px);
+}
+.CeldaRowDeCambio_Cantidad {
+    width: 80px;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.BotonImportarOrden {
+    background-color: var(--VinotintoClarito);
+    border: 5px solid var(--Vinotinto);
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    margin-top: 5px;
+    cursor: pointer;
+    display: flex;
+}
+.BotonQuitarOrden {
+    border: 5px solid var(--VinotintoClarito);
+    padding: 5px;
+    border-radius: 10px;
+    color: var(--Vinotinto);
+    width: 130px;
+    font-size: 16px;
+    margin-top: 5px;
+    cursor: pointer;
+    display: flex;
+}
+.BotonImportarOrden:hover, .BotonQuitarOrden:hover {
+    box-shadow: 0 0 5px #333;
+}
+
+.IconoConInfo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #f8921e;
+}
+.TextoDeIconoConInfo {
+    position: absolute;
+    background-color: #ffc74f;
+    color: brown;
+    border: 1px solid #f8921e;
+    width: 140px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    top: -115px;
+    left: -80px;
+    text-align: justify;
+    display: none;
+    font-style: normal;
+}
+.IconoConInfo:hover > .TextoDeIconoConInfo,.IconoConInfo:hover > .TextoDeIconoConInfo2 {
+    display: block;
+}
+.TextoDeIconoConInfo2 {
+    position: absolute;
+    background-color: #ffc74f;
+    color: brown;
+    border: 1px solid #f8921e;
+    width: 170px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    top: -100px;
+    left: -80px;
+    text-align: justify;
+    display: none;
+    font-style: normal;
+}
+#AvisitoDeQueTePasas {
+    display: none;
+}
+.totaldeprev {
+    
+    align-self: end;
+    font-family: 'PuntaRedonda';
+}
+
+
+
+/*---------------------CLIENTE-------------------*/
+.EspacioDelBuscador {
+    padding: 0 20px;
+    width: calc(100% - 40px);
+}
+.Buscador {
+    background-color: var(--Rosita);
+    height: 30px;
+    width: 60%;
+    border: 3px solid var(--VinotintoClarito);
+    border-radius: 15px;
+    outline: none;
+    padding: 0 10px;
+    font-size: 16px;
+    margin: 10px 0;
+}
+.BotonBuscar {
+    height: 36px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--VinotintoClarito);
+    padding: 0 10px;
+    width: 100px;
+    margin-left: -30px;
+    color: white;
+    font-size: 13px;
+    transition: all 300ms;
+    cursor: pointer;
+}
+.TablaDeClientes {
+    width: calc(100% - 20px);
+    height: calc(80vh - 145px);
+    overflow-y: auto;
+}
+.ColumnasTablaCliente {
+    width: calc(100% - 20px);
+    display: flex;
+    gap: 2px;
+    background-color: var(--Gris);
+    color: white;
+    
+}
+.ColumnasTablaCliente celda {
+    justify-content: center;
+}
+.ColumnaRIF {
+    width: 120px;
+    justify-content: center;
+}
+.ColumnaNombre3 {
+    width: calc(100% - 300px);
+    align-items: flex-start;
+}
+.ColumnaSeleccionar {
+    width: 100px;
+    justify-content: center;
+}
+.RowDeClientes {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+.EspacioRowClientes {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--VinotintoClarito);
+    background: linear-gradient(90deg, white 5%, var(--Rosita) 26%, var(--VinotintoClarito) 50%, var(--Rosita) 74%, white 95%);
+}
+.RowDeClientes {
+    background-color: white;
+    
+}
+.RowDeClientes celda img {
+    height: 60px;
+    width: 60px;
+    border: 2px solid var(--VinotintoClarito);
+}
+.BontonSeleccionar {
+    background-color: var(--VinotintoClarito);
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    color: white;
+}
+.BontonSeleccionar:hover {
+    box-shadow: 0 0 5px black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------MODAL AGREGAR PRODUCTOS--------------------*/
+.ProductoNoSeleccionado span {
+    margin-top: -30px;
+    text-align: center;
+    font-size: 20px;
+    font-family: PuntaRedonda500;
+    padding: 0 10px 40px 10px;
+}
+
+/*------ PRODUCTO SELECCIONADO ------*/
+.ProductoSiSeleccionado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    gap: 5px;
+}
+.ProductoSiSeleccionado img {
+    height: 150px;
+    border: 3px solid var(--VinotintoClarito);
+    border-radius: 20px;
+    background-color: white;
+    position: relative;
+}
+.clasexd {
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    border-radius: 10px;
+    color: var(--VinotintoClarito);
+    height: 20px;
+}
+.NombreDelProductoSiSeleccionado {
+    border-bottom: 4px solid var(--Vinotinto);
+    display: block;
+    width: 100%;
+    font-size: 18px;
+}
+.PrecioDelProductoSiSeleccionado {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.ElementosPaElegirCantidad {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.CantidadYUnidad {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+}
+.CantidadYUnidad span {
+    align-items: center;
+    display: flex;
+    margin: 0 10px;
+}
+.CantidadYUnidad input {
+    background-color: white;
+    width: 50px;
+    border: none;
+    border-bottom: 3px solid var(--VinotintoClarito);
+    outline: none;
+    padding: 0 5px;
+    text-align: center;
+    font-size: 15px;
+}
+.TextToNumbre input:hover {
+    width: 70px;
+}
+.PrecioMultiplicado {
+    align-self: center;
+}
+.BotonParaAgregarElProductoSeleccionado {
+    background-color: var(--VinotintoClarito);
+    border: 5px solid var(--Vinotinto);
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    width: 100px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}
+#BotonRemoverProductoSeleccionado {
+    border: 5px solid var(--VinotintoClarito);
+    padding: 5px;
+    border-radius: 10px;
+    color: var(--VinotintoClarito);
+    font-size: 16px;
+    cursor: pointer;
+}
+#CajaDeBotonBorrarYAgregar button:hover, #CajaDeBotonBorrarYAgregar span:hover, #BotonRemoverProductoSeleccionado:hover {
+    box-shadow: 0 0 5px #333;
+}
+
+/*----SLIDER BONITO---*/
+.DesactivarCierreAutomatico {
+    font-size: 12px;
+    cursor: pointer;
+}
+.switch {
+    display: inline-block;
+    height: 17px;
+    position: relative;
+    width: 120px;
+}
+.switch input {
+    display:none;
+}
+.slider, .sliderrr {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 100px;
+    position: absolute;
+    right: -8px;
+    top: 0;
+    transition: .4s;
+}  
+.slider:before {
+    background-color: #fff;
+    bottom: 2px;
+    content: "";
+    height: 11px;
+    left: 2px;
+    position: absolute;
+    transition: .4s;
+    width: 11px;
+}
+.sliderrr:before {
+    background-color: #fff;
+    bottom: 3px;
+    content: "";
+    height: 11px;
+    left: 2px;
+    position: absolute;
+    transition: .4s;
+    width: 11px;
+}
+input:checked + .slider, input:checked + .sliderrr {
+    background-color: var(--VinotintoClarito);
+}
+input:checked + .slider:before, input:checked + .sliderrr:before {
+    transform: translateX(13px);
+}
+.slider.round, .sliderrr.round {
+    border-radius: 8px;
+}  
+.slider.round:before,.sliderrr.round:before  {
+    border-radius: 50%;
+}
+
+
+
+/*---------------PASO 2--------------*/
+.EspacioDeListaYTabla {
+    gap: 30px;
+    height: calc(100vh - 300px);
+    display: flex;
+}
+.EspacioDeProductosComprados {
+    border: 2px solid dimgray;
+    background-color: white;
+    padding: 10px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0px 1px rgb(50 50 50 / 50%);;
+}
+.Titulillo {
+    font-size: 20px;
+    border-bottom: 2px solid var(--VinotintoClarito);
+}
+.Titulillo::before {
+    color: var(--Vinotinto);
+}
+
+.EspacioDeTablaDeAlmacenaje {
+    background-color: lightgreen;
+    width: calc(100% - 354px);
+
+    background-color: white;
+    
+    
+    box-shadow: 2px 2px 3px lightgrey;
+    border: 1px solid gray;
+}
+.EspacioDeTablaDeAlmacenaje .CabeceraDeLaTabla, .Rositapls {
+    background: rgb(247,229,233);
+    background: linear-gradient(0deg, var(--Rosita) 10%, var(--VinotintoClarito) 50%, var(--Rosita) 90%);
+}
+
+.EspacioDeTablaDeAlmacenaje .CabeceraDeLaTabla celda, .Rositapls celda {
+    background-color: var(--Rosita);
+    color: black;
+}
+
+.ColumnaImagenAP {
+    width: 70px;
+    justify-content: center;
+}
+.ColumnaNombreAP {
+    width: calc(50% - 135px);
+}
+.ColumnaCantidadAP {
+    width: 100px;
+    justify-content: center;
+}
+.ColumnaResultadoAP {
+    width: 100px;
+    justify-content: center;
+}
+.CuerpoDeLaTabla2 {
+    height: calc(100% - 29px);
+    overflow-y: auto;
+}
+
+.ColumnaImagenAP img {
+    height: 40px;
+    width: 40px;
+    border: 1px solid var(--VinotintoClarito);
+    border-radius: 5px;
+    object-fit: cover;
+}
+.TablaDeCambios2 {
+    height: calc(80vh - 235px);
+    width: 100%;
+}
+.CeldaBotonAlmacenar {
+    width: 50px;
+    align-items: center;
+}
+
+.BotonAlmacenarProductoDisponible {
+    background-color: var(--VinotintoClarito);
+    border: none;
+    outline: none;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.BotonAlmacenarProductoNoDisponible {
+    background-color: var(--Rosita);
+    border: none;
+    outline: none;
+    color: var(--VinotintoClarito);
+    padding: 4px;
+    border-radius: 5px;
+    border: 1px solid var(--VinotintoClarito);
+}
+
+.RowVacioAlmacenaje {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 335px);
+    align-items: center;
+    color: #bbb;
+}
+
+
+
+/*-----------MODAL ALMACENAR PRODUCTO---------*/
+.EspacioDeTablaBuscadorDeAlmacenes {
+    background-color: lightblue;
+    background-color: white;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: calc(100% - 250px);
+}
+.EspacioDePrevisualizacionDeAlmacen {
+    background-color: var(--Rosita);
+    padding: 10px;
+    width: 250px;
+    border-left: 1px solid var(--VinotintoClarito);
+}
+
+.EspacioDePrevisualizacionDeAlmacen div img {
+    padding: 20px 0;
+}
+
+.AlmacenSiSeleccionado {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.TituloDeAlmacen {
+    font-size: 20px;
+    border-bottom: 2px solid var(--VinotintoClarito);
+}
+.DireccionDeAlmacen {
+    color: gray;
+}
+.DivDeAlmacenaje {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+.DivDeAlmacenaje img {
+    object-fit: cover;
+    width: 60px;
+    height: 60px;
+    padding: 0 !important;
+}
+.ImagenDelProductoAAlmacenar {
+    background-color: white;
+    border: 2px solid var(--VinotintoClarito);
+    border-radius: 5px;
+}
+.DivDeAlmacenaje span {
+    font-size: 60px;
+    color: var(--VinotintoClarito);
+}
+.InputDeCantidadAAlmacenar {
+    height: 30px;
+    border: none;
+    outline: none;
+    width: 180px;
+    align-self: center;
+    border-bottom: 3px solid var(--VinotintoClarito);
+    padding: 0 5px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.BotonAlmacenarProductoSeleccionado {
+    background-color: var(--VinotintoClarito);
+    border: 5px solid var(--Vinotinto);
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    width: 100px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+.BotonAlmacenarProductoSeleccionado:hover, #BotonEliminarProductoAlmacenadoSeleccionado:hover {
+    box-shadow: 0 0 5px #333;
+}
+
+
+.Weas {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.asdf {
+    display: flex;
+    gap: 3px;
+    flex-direction: column;
+}
+.asdf div:nth-child(1) {
+    align-self: center;
+}
+.asdf div:nth-child(2) {
+    flex-direction: column;
+    font-size: 13px;
+    display: block;
+    height: 0;
+    overflow-y: hidden;
+    opacity: 0;
+}
+.asdf:hover > div:nth-child(2) {
+    height: auto;
+    opacity: 1;
+}
+
+.asdf div {
+    display: flex;
+    transition: all 1s;
+    gap: 3px;
+}
+
+.AlmacenSiSeleccionado div:nth-child(4) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.TituloDeProductoAAlmacenar {
+    background: var(--RositaOscuro);
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
+}
+.TituloDeProductoAAlmacenar::before {
+    color: var(--VinotintoClarito);
+}
+.titulillo::before {
+    color: var(--VinotintoClarito);
+}
+.titulillo {
+    border-bottom: 2px solid var(--Rosita);
+}
+
+.BotonPrincipalDeModalDesactivado {
+    background-color: var(--Gris);
+    padding: 10px 7px;
+    border-radius: 10px;
+    color: white;
+    width: 100px;
+    font-size: 16px;
+
+    display: flex;
+    align-self: center;
+    border: none;
+    justify-content: center;
+}
+
+.RowVacioAlmacenaje {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 335px);
+    align-items: center;
+    color: #bbb;
+}
+
+.FH {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+}
+
+#BotonEliminarProductoAlmacenadoSeleccionado {
+    border: 5px solid var(--Vinotinto);
+    border-radius: 10px;
+    color: var(--VinotintoClarito);
+    width: 38px;
+    font-size: 17px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* almacen predetermonado*/
+.ContenidoDeModalDiferente {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100% - 50px);
+    background-color: white;
+}
+.PseudoTarjetaDeAlmPre {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+.PseudoTarjetaDeAlmPre img {
+    height: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid var(--VinotintoClarito);
+}
+.NombrePaEsteDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: calc(100% - 136px);
+    position: relative;
+}
+.TituloAlmPre {
+    font-size: 24px;
+    border-bottom: 2px solid var(--VinotintoClarito);
+    font-family: PuntaRedonda;
+}
+.Datillos {
+    display: flex;
+    gap: 3px;
+}
+.Datillos .Orden {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.VerMasDeAlmPre {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-decoration: none;
+    color: var(--VinotintoClarito);
+}
+.CajaDeInventarioDeAlmPre {
+    height: calc(80vh - 340px);
+    padding: 0 10px;
+}
+.TituloInvAlmPre {
+    padding: 10px;
+    font-size: 20px;
+}
+.TituloInvAlmPre::before {
+    color: var(--Vinotinto);
+}
+.TextoParaIdiotas {
+    padding: 10px;
+    color: gray;
+    font-size: 14px;
+    padding-bottom: 0;
+}
+.EspacioPalBotonDeEsto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+}
+.MarcoDeTablaAlmPre {
+    box-shadow: 2px 2px 3px lightgrey;
+    border: 1px solid gray;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.ColumnaImagenPred img {
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 2px solid var(--VinotintoClarito);
+}
+.ColumnaImagenPred {
+    width: 70px;
+    justify-content: center;
+}
+.ColumnaIDPred {
+    width: 100px;
+    justify-content: center;
+}
+.ColumnaNombrePred {
+    width: calc(100% - 300px);
+}
+.ColumnaExistenciaPred {
+    width: 130px;
+    justify-content: center;
+}
+
+.EspacioDeProductosAlmPre {
+    height: 135px;
+    overflow-y: auto;
+}
+.FlexDeProductosEnAlmPre {
+    display: flex;
+    flex-direction: column;
+}
+.RowVacio_AlmPre {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    height: calc(80vh - 370px);
+    align-items: center;
+    color: #bbb;
+}
+
+.AlmPredNoEncontrado {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 20px;
+}
+.AlmPredNoEncontrado img {
+    height: 250px;
+    scale: 1.4;
+}
+
+.SpanProblema {
+    font-family: PuntaRedonda;
+    font-size: 20px;
+    color: #444;
+    text-align: center;
+}
+.PSolucion {
+    color: var(--VinotintoClarito);
+    text-decoration: none;
+}
+
+.estebetavacio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(80vh);
+    height: calc(80vh - 145px);
+    background: white;
+}
+.estebetavacio span {
+    font-family: PuntaRedonda;
+    color: gray;
+    border: 2px solid gray;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.did_loading {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    min-height: 300px;
+    color: gray;
+}
+.did_loading div {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.did_loading div span {
+    font-size: 30px;
+    height: 30px;
+}
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  .rotating {
+    -webkit-animation: rotating 2s linear infinite;
+    -moz-animation: rotating 2s linear infinite;
+    -ms-animation: rotating 2s linear infinite;
+    -o-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite;
+  }

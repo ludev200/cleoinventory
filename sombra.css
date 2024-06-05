@@ -1,0 +1,89 @@
+body {
+    background-color: darkcyan;
+}
+
+
+.OtroDiv {
+
+    width: 50%;
+    
+    height: 100vh;
+    flex-direction: column;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.EspacioDeLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.EspacioDeLogo img {
+    height: 400px;
+}
+
+
+.Sombra {
+    height: 50px;
+    width: 200px;
+    background-color: black;
+    opacity: 0.7;
+    box-shadow: 0 0 5px 5px black;
+    border-radius: 50%;
+}
+
+
+
+
+.logo-animate img{
+    
+    object-fit: cover;
+    animation-iteration-count: infinite;
+    animation-delay: 300ms;
+    animation-name: girar;
+    animation-duration: 15s;
+    
+    }
+    
+    
+    .logo-animate {
+        width: 100%;
+        animation-iteration-count: infinite;
+        animation-delay: 200ms;
+        animation-name: arriba;
+        animation-duration: 10s;
+        
+    }
+
+    .Sombra-animada {
+        
+    animation-iteration-count: infinite;
+    animation-delay: 300ms;
+        animation-name: sombra;
+        animation-duration: 15s;
+    }
+    
+    @keyframes sombra {
+        0%{transform: scaleX(1);}
+        25%{transform: scaleX(0.5);}
+        50%{transform: scaleX(1);}
+        75%{transform: scaleX(0.5);}
+        100%{transform: scaleX(1);}   
+    }
+    
+    @keyframes arriba {
+        0%{transform: translateY(0);}
+        25%{transform: translateY(20px);}
+        75%{transform: translateY(-20px);}
+        100%{transform: translateY(0);}    
+    }
+    @keyframes girar {
+        0%{transform: rotateY(0deg);}
+        25%{transform: rotateY(90deg);}
+        50%{transform: rotateY(180deg);}
+        75%{transform: rotateY(270deg);}
+        100%{transform: rotateY(360deg);}    
+    }

@@ -1,0 +1,250 @@
+html {
+    background-color: rgba(238,238,238,1);
+}
+body {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    grid-template-rows: 100px 35px 50px;
+    grid-auto-rows: 1fr;
+    background: rgb(238,238,238);
+    background: linear-gradient(0deg, rgba(238,238,238,1) 0%, rgba(255,255,255,1) 60%);
+}
+:root {
+    --Gris: rgb(150,150,150);
+    --GrisClarito: rgb(201,201,201);
+}
+
+
+/* -------------ARTICLE------------- */
+
+article {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.TituloDeSectionDelArticle {
+    font-size: 25px;
+    border-bottom: 3px solid var(--VinotintoClarito);
+    display: block;
+    font-family: 'PuntaRedonda' ,Arial, sans-serif;
+    font-stretch: wider;
+}
+.TituloDeSectionDelArticle:before {
+    color: var(--VinotintoOscuro)
+}
+
+.formularioDeBuqueda {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.spaceSearchBar {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.spaceSearchBar input {
+    width: calc(100% - 70px);
+    border: none;
+    outline: none;
+    background-color: var(--Rosita);
+    border: 3px solid var(--VinotintoClarito);
+    border-radius: 20px;
+    height: 30px;
+    padding: 0 15px;
+    font-size: 16px;
+}
+.spaceSearchBar button {
+    width: 80px;
+    position: absolute;
+    right: 0;
+    transition: all 500ms;
+    border: none;
+    outline: none;
+    background-color: var(--Vinotinto);
+    border-radius: 20px;
+    height: 36px;
+    color: white;
+    cursor: pointer;
+}
+.spaceSearchBar button:hover, .spaceSearchBar button:focus {
+    width: 100px;
+    font-size: 20px;
+    box-shadow: 0 0 5px rgb(50 50 50 / 60%);
+}
+.spaceSelectInputs select {
+    height: 30px;
+    background-color: var(--VinotintoClarito);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: white;
+    width: 120px;
+    font-size: 14px;
+    padding: 0 5px;
+}
+.spaceSelectInputs select:focus {
+    background-color: var(--Vinotinto);
+}
+.spaceSelectInputs select option {
+    background-color: var(--Rosita);
+    color: var(--Vinotinto);
+}
+
+/* -------------BARRA LATERAL------------- */
+aside {
+    padding: 10px;
+}
+
+.contenidoDeLaBarraLateral {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    border-radius: 10px;
+    background-color: var(--Rosita);
+    position:sticky;
+    top: 95px;
+}
+
+.EspacioDeLaImagen {
+    height: 160px;
+    width: 180px;
+    border: 5px solid var(--Vinotinto);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.EspacioDeLaImagen img {
+    height: 135px;
+    margin: 0 auto;   
+}
+
+.EspacioDeLaImagen b{
+    display: block;
+    padding-top: 5px;
+    height: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.contenidoDeLaBarraLateral a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(168, 246, 164);
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 190px;
+    text-align: center;
+    background-color: var(--VinotintoClarito);
+}
+
+.contenidoDeLaBarraLateral a:hover {
+    box-shadow: 0 0 5px rgba(50, 50, 50, 0.6);
+    background-color: var(--Vinotinto)
+}
+
+
+/* tabla de resultados */
+.TablaDeResultados {
+    background-color: lightcoral;
+    width: 95%;
+    box-shadow: 2px 2px 3px lightgrey;
+    border: 1px solid gray;
+}
+.CabeceraDeLaTabla {
+    background: var(--Vinotinto);
+    background: linear-gradient(0deg, var(--Vinotinto) 20%, var(--VinotintoClarito) 50%, var(--Vinotinto) 80%);
+    display: flex;
+    gap: 2px;
+}
+.CabeceraDeLaTabla celda {
+    background-color: var(--Vinotinto);
+    color: white;
+    font-weight: normal;
+    justify-content: center;
+}
+.CuerpoDeLaTabla {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--VinotintoClarito);
+    background: linear-gradient(90deg, white 5%, var(--Rosita) 26%, var(--VinotintoClarito) 50%, var(--Rosita) 74%, white 95%);
+}
+.RowVacio {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    align-items: center;
+    color: #bbb;
+}
+row {
+    background-color: white;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    gap: 2px;
+}
+row:hover {
+    color: var(--VinotintoClarito);
+}
+celda {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+
+.ColumnaCedula {
+    width: 100px;
+    justify-content: center;
+}
+.ColumnaNombre {
+    width: calc(100% - 480px);
+}
+.ColumnaUsuario {
+    width: 120px;
+}
+.ColumnaPerfil {
+    width: 110px;
+    justify-content: center;
+}
+.ColumnaDetalles {
+    width: 100px;
+}
+.ColumnaDetalles a {
+    text-decoration: none;
+    background-color: var(--VinotintoClarito);
+    text-align: center;
+    width: 90px;
+    padding: 3px;
+    border-radius: 5px;
+    color: white;
+}
+.ColumnaDetalles a:hover {
+    box-shadow: 0 0 3px 3px rgba(50, 50, 50, 0.3);
+}
+
+
+
+
+.puntito {
+    height: 15px;
+    width: 15px;
+    border: 1px solid gray;
+    border-radius: 50%;
+}
+.puntito.Inhabilitado {
+    background-color: lightgray;
+}
+.puntito.Activo {
+    background-color: rgb(61, 184, 61);
+}

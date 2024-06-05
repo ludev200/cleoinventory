@@ -1,0 +1,225 @@
+html {
+    background-color: rgba(238,238,238,1);
+}
+body {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    grid-template-rows: 100px 35px 50px;
+    grid-auto-rows: 1fr;
+    background: rgb(238,238,238);
+    background: linear-gradient(0deg, rgba(238,238,238,1) 0%, rgba(255,255,255,1) 40%);
+    
+}
+
+:root {
+    --Gris: rgb(150,150,150);
+    --GrisClarito: rgb(201,201,201);
+}
+
+.hovershadow:hover {
+    box-shadow: 0 0 3px 3px rgba(150, 150, 150, 0.5);
+}
+
+
+/* -------------ASIDE------------- */
+aside {
+    padding: 10px;
+}
+
+.contenidoDeLaBarraLateral {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    border-radius: 10px;
+    background-color: var(--Rosita);
+    position:sticky;
+    top: 95px;
+}
+
+.EspacioDeLaImagen {
+    height: 160px;
+    width: 180px;
+    border: 5px solid var(--Vinotinto);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.EspacioDeLaImagen img {
+    height: 135px;
+    margin: 0 auto;   
+}
+
+.EspacioDeLaImagen b{
+    display: block;
+    padding-top: 5px;
+    height: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.contenidoDeLaBarraLateral a, .contenidoDeLaBarraLateral button {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(168, 246, 164);
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 190px;
+    text-align: center;
+    background-color: var(--VinotintoClarito);
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contenidoDeLaBarraLateral a:hover, .contenidoDeLaBarraLateral button:hover {
+    box-shadow: 0 0 5px rgba(50, 50, 50, 0.6);
+    background-color: var(--Vinotinto)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+form {
+    padding: 20px;
+    padding-left: 40px;
+
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+h2.SubtituloCentral {
+    padding-top: 15px;
+    
+    font-size: 20px;
+    display: flex;
+    gap: 10px;
+    font-weight: 100;
+}
+h2.SubtituloCentral i {
+    color: var(--VinotintoOscuro);
+}
+
+.inputsContainer {
+    display: flex;
+    flex-direction: column;
+}
+.inputsContainer b {
+    margin-bottom: 10px;
+}
+.inputsContainer input, .inputsContainer select {
+    font-size: 17px;
+    height: 30px;
+    background-color: var(--Rosita);
+    border: none;
+    border-bottom: 4px solid var(--Vinotinto);
+    margin-bottom: 10px;
+    padding: 0 5px;
+}
+.inputsContainer select {
+    height: 34px;
+}
+
+.gap10 {
+    display: flex;
+    gap: 15px;
+}
+
+.inputsContainer :focus:focus, .inputsContainer input:focus {
+    border-radius: 5px;
+    border: 2px solid var(--Vinotinto);
+    border-bottom: 4px solid var(--Vinotinto);
+    outline: none;
+}
+
+
+
+.buttonsContainer {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+.buttonsContainer > * {
+    height: 50px;
+    border-radius: 5px;
+    width: 200px;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttonsContainer > *:nth-child(1) {
+    background-color: white;
+    border: 5px solid gray;
+    height: 40px;
+    color: gray;
+}
+.buttonsContainer > *:nth-child(2) {
+    background-color: rgb(62, 194, 62);
+    color: white;
+}
+
+.nota {
+    background: white;
+    padding: 10px;
+    border: 1px solid gray;
+    text-align: center;
+    color: gray;
+    max-width: 925px;
+}
+.nota a {
+    text-decoration: none;
+    color: var(--VinotintoClarito);
+    font-weight: 600;
+    
+}
+
+
+
+.coolFinalButtons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 945px;
+    margin-bottom: 20px;
+}
+.coolFinalButtons > * {
+    text-decoration: none;
+    box-sizing: border-box;
+    color: white;
+    background-color: #999;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+#validateFormButton {
+    background-color: rgb(70, 200, 70);
+}
+
+.hovershadow:hover {
+    box-shadow: 0 0 3px 3px rgba(150, 150, 150, 0.5);
+}

@@ -1,0 +1,352 @@
+html {
+    background-color: rgba(238,238,238,1);
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    grid-template-rows: 100px 35px 50px calc(100vh -185px);
+    background: rgb(238,238,238);
+    background: linear-gradient(0deg, rgba(238,238,238,1) 0%, rgba(255,255,255,1) 40%);
+}
+
+:root {
+    --Gris: rgb(150,150,150);
+    --GrisClarito: rgb(201,201,201);
+}
+
+#CajaContenido {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#CajaDeProducto {
+    display: flex;
+    gap: 25px;
+    
+    
+}
+
+#BordeDelProducto {
+    height: 250px;
+    border: 4px solid var(--VinotintoClarito);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#BordeDelProducto img {
+    height: 250px;
+    margin: 0 auto;   
+    border-radius: 15px;
+    min-width: 250px;
+    object-fit: contain;
+}
+
+#CajaDeDatos {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 10px;
+}
+
+.div-space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+#NombreDeProducto {
+    font-size: 20px;
+    
+}
+
+#CajaDeDatos p {
+    margin: 5px 0;
+    line-height : 25px;
+    
+}
+
+#rayita {
+    background-color: var(--Vinotinto);
+    height: 6px;
+}
+
+#precio {
+    font-size: 20px;
+}
+
+#CajaDeDisposicion {
+    margin: 20px 0 ;
+    background-color: var(--VinotintoClarito);
+    font-size: 25px;
+    padding: 3px;
+    text-align: center;
+    color: white;
+}
+
+.TituloCentral {
+    background-color: var(--VinotintoClarito);
+    font-size: 25px;
+    color: white;
+    display: block;
+    padding: 5px;
+    text-align: center;
+}
+
+.FondoDegradadoDeTabla {
+    background: var(--VinotintoClarito);
+    background: linear-gradient(90deg, white 5%, var(--Rosita) 26%, var(--VinotintoClarito) 50%, var(--Rosita) 74%, white 95%);
+    display: flex;
+    gap: 1px;
+    flex-direction: column;
+}
+
+.ColumnasDeCajaProveedores {
+    background-color: var(--Gris);
+    padding: 5px;
+    color: white;
+}
+
+.ColumnasDeCajaProveedores span {
+    text-align: center;
+}
+
+.FlexH {
+    display: flex;
+
+}
+
+.ColumnaImagen, .ColumnaRIF, .ColumnaNombre, .ColumnaDireccion, .ColumnaDetalles {
+    
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.ColumnaImagen {
+    width: 80px;
+    align-items: center;
+}
+
+.ColumnaRIF {
+    width: 120px;
+}
+
+.ColumnaNombre {
+    width: calc(50% - 100px);
+}
+
+.ColumnaDireccion {
+    width: calc(50% - 100px);
+}
+
+.ColumnaDetalles {
+    width: 100px;
+    align-items: center;
+}
+
+.ColumnaDetalles a:hover {
+    box-shadow: 0 0 5px var(--VinotintoClarito);
+    background-color: var(--Vinotinto);
+}
+
+.ColumnaDetalles a {
+    text-decoration: none;
+    background-color: var(--VinotintoClarito);
+    text-align: center;
+    width: 65px;
+    padding: 3px;
+    border-radius: 5px;
+    color: white;
+}
+
+.RowProveedorDisponible {
+    text-align: left;
+    height: 80px;
+    background-color: white;
+    
+}
+
+.RowProveedorDisponible:hover {
+    color: var(--VinotintoClarito);
+}
+
+
+.ColumnaImagen img {
+    height: 60px;
+    width: 60px;
+    object-fit: contain;
+    border: 2px solid var(--VinotintoClarito);
+    border-radius: 5px;
+    
+}
+
+#BarraLateral {
+    padding: 10px;
+}
+
+
+#contenidoDeLaBarraLateral {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    
+    border-radius: 10px;
+    background-color: var(--Rosita);
+    position:sticky;
+    top: 95px;
+}
+
+#contenidoDeLaBarraLateral a {
+    text-decoration: none;
+    color: white;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 190px;
+    text-align: center;
+    background-color: var(--VinotintoClarito);
+}
+
+#EspacioDeLaImagen {
+    height: 160px;
+    width: 180px;
+    border: 5px solid var(--Vinotinto);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+#EspacioDeLaImagen img {
+    height: 135px;
+    margin: 0 auto;   
+}
+
+#EspacioDeLaImagen b{
+    display: block;
+    height: 25px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#contenidoDeLaBarraLateral a:hover {
+    box-shadow: 0 0 5px rgb(50 50 50 / 60%);
+    background-color: var(--Vinotinto);
+}
+
+
+
+.TituloDeSectionDelArticle {
+    font-size: 25px;
+    border-bottom: 3px solid var(--VinotintoClarito);
+    display: block;
+    font-family: 'PuntaRedonda' ,Arial, sans-serif;
+    font-stretch: wider;
+}
+.TituloDeSectionDelArticle:before {
+    color: var(--VinotintoOscuro)
+}
+
+.TablaDeResultados {
+    background-color: lightcoral;
+    width: 100%;
+    box-shadow: 2px 2px 3px lightgrey;
+    border: 1px solid gray;
+}
+.CabeceraDeLaTabla {
+    background: var(--Vinotinto);
+    background: linear-gradient(0deg, var(--Vinotinto) 20%, var(--VinotintoClarito) 50%, var(--Vinotinto) 80%);
+    display: flex;
+    gap: 2px;
+}
+.CabeceraDeLaTabla celda {
+    background-color: var(--Vinotinto);
+    color: white;
+    font-weight: normal;
+    justify-content: center;
+}
+.CuerpoDeLaTabla {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--VinotintoClarito);
+    background: linear-gradient(90deg, white 5%, var(--Rosita) 26%, var(--VinotintoClarito) 50%, var(--Rosita) 74%, white 95%);
+}
+.RowVacio {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    align-items: center;
+    color: #bbb;
+}
+row {
+    background-color: white;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    gap: 2px;
+}
+row:hover {
+    color: var(--VinotintoClarito);
+}
+celda {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+.ColumnaID {
+    width: 50px;
+    justify-content: center;
+    
+}
+.ColumnaNombre {
+    width: calc(50% - 150px);
+    text-align: initial;
+}
+row .ColumnaNombre {
+    align-items: baseline;
+}
+.ColumnaDetalles {
+    width: 100px;
+    justify-content: center;
+}
+.ColumnaDetalles a {
+    text-decoration: none;
+    background-color: var(--VinotintoClarito);
+    text-align: center;
+    width: 90px;
+    padding: 3px;
+    border-radius: 5px;
+    color: white;
+}
+
+
+
+
+
+.ColumnaImg {
+    width: 70px;
+    justify-content: center;
+}
+.ColumnaRif {
+    width: 140px;
+    justify-content: center;
+}
+.ColumnaRS {
+    width: calc(100% - 330px);
+}
+.ColumnaImg img {
+    height: 40px;
+    border: 1px solid var(--VinotintoClarito);
+    border-radius: 5px;
+    background-color: white;
+}

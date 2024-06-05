@@ -1,0 +1,168 @@
+.TasaAvisito {
+    color: gray;
+    font-size: 14px;
+    text-align: right;
+}
+.SelloXDDD {
+    position: absolute;
+    left: 0px;
+    height: 80px;
+    top: 50px;
+}
+.intentodemejoracion {
+    height: 100px;
+    position: absolute;
+    left: 10px;
+}
+
+
+
+.NombreDeTituloDeTabla, .CeldaDeTabla {
+    font-size: 13px;
+}
+.ColumnaPrecio.CeldaDeTabla, .ColumnaTotal.CeldaDeTabla {
+    font-size: 12px !important;
+    padding-top: 2px;
+}
+
+.ColumnaID {
+    width: 46px;
+}
+.ColumnaNombre {
+    left: 52px;
+    width: 190px !important;
+}
+.ColumnaCantidad {
+    right: 385px;
+    width: 55px;
+}
+.ColumnaUnidad {
+    right: 334px;
+    width: 45px;
+}
+.ColumnaPrecio {
+    right: 258px;
+    width: 70px;
+}
+.ColumnaTotal {
+    width: 90px;
+    right: 162px;
+}
+.ColumnaPrecioUSD {
+    right: 96px;
+    width: 60px;
+}
+.ColumnaTotalUSD {
+    width: 90px;
+    right: 0;
+}
+
+
+.EspacioDeLosTotales_Mixto {
+    position: relative;
+    height: 155px;
+}
+.EspacioDeLosTotales_Mixto div .Palito {
+    height: 2px;
+    display: block;
+}
+
+.EspacioDeLosTotales_Mixto, .EspacioDeLosTotales2 {
+    font-size: 14px;
+}
+
+.SubTotales {
+    position: absolute;
+    right: 340px;
+    width: 170px;
+    height: 100px;
+}
+.PuntosSeparadoresDelSubTotal {
+    position: absolute;
+    right: 330px;
+    width: 10px;
+    height: 100px;
+}
+.PreciosDeSubTotal_BS {
+    position: absolute;
+    right: 162px;
+    width: 168px;
+    height: 100px;
+}
+.PreciosDeSubTotal_USD {
+    position: absolute;
+    right: 0;
+    width: 162px;
+    height: 100px;
+}
+
+
+
+.EspacioDelTotal {
+    position: absolute;
+    right: 0;
+    bottom: 20;
+    width: 388px;
+    font-size: 18px;
+}
+
+.EspacioDelTotal b {
+    display: block;
+    position: absolute;
+}
+
+.EspacioDelTotal p {
+    position: absolute;
+    right: 0;
+}
+.TotalBS.Coloreado {
+    right: 162px;
+}
+.TotalUSD.Coloreado {
+    right: 0;
+}
+
+.ColumnaID_cotiMixto {
+    left: 0;
+    width: 60px;
+}
+.ColumnaNombre_cotiMixto {
+    width: 210px;
+    left: 66px;
+    overflow: hidden;
+}
+.ColumnaCantidad_cotiMixto {
+    width: 52px;
+    right: 354px;
+}
+.rowlarguito, .rowlarguito .CeldaDeTabla {
+    height: 35px;
+}
+
+.EspacioDeLosTotales2 .SubTotales {
+    width: 100px;
+    height: 40px;
+    right: 360px;
+}
+.EspacioDeLosTotales2 .PuntosSeparadoresDelSubTotal {
+    height: 40px;
+    right: 350px;
+}
+.EspacioDeLosTotales2 .PreciosDeSubTotal_BS {
+    height: 40px;
+    width: 188px;
+}
+.EspacioDeLosTotales2 .PreciosDeSubTotal_USD {
+    height: 40px;
+}
+.EspacioDeLosTotales2 .EspacioDelTotal {
+    width: 401px;
+}
+.TablaDeServicio .ColumnaPrecio {
+    right: 268px;
+    width: 80px;
+}
+.TablaDeServicio .ColumnaTotal {
+    width: 100px;
+    right: 162px;
+}

@@ -1,0 +1,1 @@
+C:/xampp/mysql/bin/mysql.exe -uroot cleodatabase < "C:\Users\Luis\Desktop\CLEO_DB_28-01-2024.sql"

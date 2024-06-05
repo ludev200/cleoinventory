@@ -1,0 +1,441 @@
+/*------- Universal --------*/
+html {
+    background-color: rgba(238,238,238,1);
+}
+body {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    grid-template-rows: 100px 35px 50px;
+    grid-auto-rows: 1fr;
+    background: rgb(238,238,238);
+    background: linear-gradient(0deg, rgba(238,238,238,1) 0%, rgba(255,255,255,1) 60%);
+}
+:root {
+    --Vinotinto: rgb(188,28,72);
+    --VinotintoClarito: rgb(215,54,99);
+    --VinotintoOscuro: rgb(162,19,37);
+    --Rosita: rgb(247,229,233);
+    --Gris: rgb(150,150,150);
+    --GrisClarito: rgb(201,201,201);
+}
+
+/* ------------ ARTICLE --------------- */
+article {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.TituloNombreDelAlmacen {
+    font-size: 25px;
+    text-align: center;
+    font-family: PuntaRedonda500;
+    border-bottom: 3px solid var(--VinotintoClarito);
+}
+.RespuestaDelCliente {
+    text-align: center;
+}
+
+.DatosDelCliente {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0 5px;
+}
+.FilaDato {
+    height: 40px;
+    display: flex;
+    align-items: end;
+}
+.FilaDato b {
+    width: 75px;
+}
+.DatosDelCliente a {
+    text-decoration: none;
+    color: black;
+}
+.RespuestaDeFila {
+    display: flex;
+    gap: 10px;
+    align-items: end;
+    margin-left: 10px;
+}
+
+/*-----TABLA-----*/
+.TablaDeProductos {
+    box-shadow: 2px 2px 3px lightgrey;
+}
+.TituloDeTabla {
+    background-color: var(--Vinotinto);
+    font-size: 25px;
+    color: white;
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+}
+.CabeceraDeLaTabla {
+    background: rgb(150,150,150);
+    background: linear-gradient(0deg, rgba(150,150,150,1) 0%, rgba(85,85,85,1) 50%, rgba(150,150,150,1) 100%);
+    display: flex;
+    gap: 2px;
+}
+.CabeceraDeLaTabla celda {
+    background-color: rgb(150,150,150);
+    color: white;
+    font-weight: normal;
+    justify-content: center;
+}
+
+.ColumnaImagen {
+    width: 85px;
+    justify-content: center;
+}
+.ColumnaImagen img {
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    border: 2px solid var(--VinotintoClarito);
+    border-radius: 5px;
+    object-fit: cover;
+}
+.ColumnaID {
+    width: 80px;
+    justify-content: center;
+}
+.ColumnaNombre {
+    width: calc(100% - 475px);
+}
+.ColumnaExistencia {
+    width: 100px;
+    justify-content: center;
+}
+.ColumnaCategoria {
+    width: 110px;
+    justify-content: center;
+}
+.ColumnaVerMas {
+    width: 100px;
+    justify-content: center;
+}
+.ColumnaVerMas a {
+    text-decoration: none;
+    background-color: var(--VinotintoClarito);
+    text-align: center;
+    width: 65px;
+    padding: 3px;
+    border-radius: 5px;
+    color: white;
+}
+celda {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+row:hover {
+    color: var(--VinotintoClarito);
+}
+.RowVacio {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    align-items: center;
+    color: #bbb;
+}
+row {
+    background-color: white;
+    height: 70px;
+    text-align: center;
+    display: flex;
+    gap: 2px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.CuerpoDeLaTabla {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: rgb(215,54,99);
+    background: linear-gradient(90deg, white 5%, var(--Rosita) 26%,
+    var(--VinotintoClarito) 50%, var(--Rosita) 74%, white 95%);
+}
+
+
+/*-----CAJA DE FILTROS-----*/
+.CajaDeFiltros {
+    
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+    align-items: center;
+}
+.CajaDeFiltros select {
+    background-color: var(--Rosita);
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: var(--VinotintoOscuro);
+    cursor: pointer;
+}
+.CajaDeFiltros b {
+    color: var(--VinotintoOscuro);
+}
+.CajaDeFiltros select:focus {
+    outline: 2px solid var(--VinotintoClarito);
+}
+
+
+
+.TituloDeSectionDelArticle {
+    font-size: 25px;
+    border-bottom: 3px solid var(--VinotintoClarito);
+    display: block;
+    font-family: 'PuntaRedonda' ,Arial, sans-serif;
+}
+.TituloDeSectionDelArticle:before {
+    color: var(--VinotintoOscuro)
+}
+
+/*---MOVIMIENTOS---*/
+.BotonesTipoDeMovimientoAMostrar {
+    
+    display: flex;
+    gap: 20px;
+}
+.BotonesTipoDeMovimientoAMostrar a {
+    height: 30px;
+    border-radius: 15px;
+    padding: 0 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: var(--Rosita);
+    color: var(--Vinotinto);
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.TipoDeMovimientoSeleccionado {
+    background-color: var(--VinotintoClarito) !important;
+    color: white !important;
+}
+
+.CartaMovimiento {
+    height: 470px;
+    background-color:white;
+    width: 400px;
+    border: 1px solid #bbb;
+    position: relative;
+}
+.TituloDeMovimiento {
+    background-color: var(--VinotintoClarito);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+}
+.DescripcionDelMovimiento {
+    height: calc(100% - 30px);
+    overflow-y: auto;
+}
+.RowsDeMovimientos {
+    background: rgb(215,54,99);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 5%, rgba(228,127,155,1) 26%, rgba(215,54,99,1) 50%, rgba(228,127,155,1) 74%, rgba(255,255,255,1) 95%);
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+.RowMovimiento {
+    height: 50px;
+    background-color: white;
+    display: flex;
+}
+.RowMovimiento span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.EspacioImagenMovimiento {
+    
+    width: 60px;
+    
+}
+.EspacioImagenMovimiento img {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid var(--Vinotinto);
+}
+.NombreDelPM {
+    
+    width: calc(100% - 160px);
+    justify-content: flex-start !important;
+    padding: 0 10px;
+}
+.CantidadDelPM {
+    
+    width: 70px;
+}
+.fi-rr-caret-down {
+    color: rgb(236, 49, 49);
+}
+.fi-rr-caret-up {
+    color: rgb(64, 173, 64);
+}
+.FlechitaDelPM {
+    
+    font-size: 25px;
+    
+    width: 30px;
+}
+.EspacioDelBotonParaMasInfoDelMovimiento {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 50px;
+    font-size: 15px;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 30%, rgba(255,255,255,0) 100%);
+    position: absolute;
+    bottom: 0;
+    width: 400px;
+    padding-bottom: 5px;
+}
+.EspacioDelBotonParaMasInfoDelMovimiento a:hover {
+    color: var(--VinotintoClarito);
+}
+.rellenoxd {
+    height: 30px;
+    background-color: white;
+    margin-top: -1px;
+}
+.CartaMovimiento a {
+    color: rgb(77, 77, 77);
+    text-decoration: none;
+}
+
+.DetallesDelMovimientoEnSi {
+    padding: 10px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.TitulloDetalles {
+    font-size: 25px;
+    border-bottom: 3px solid var(--VinotintoClarito);
+}
+.DetallesDelMovimientoEnSi p {
+    
+    height: calc(100% - 110px);
+}
+.CositasDelMovmiento {
+    
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+.BotonesNavDeMov {
+    display: flex;
+    justify-content: space-between;
+}
+.BotonesNavDeMov a {
+    border: none;
+    text-decoration: none;
+    color: gray;
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    cursor: default;
+    font-size: 15px;
+}
+.BotonesNavDeMov a span::before {
+    font-size: 19px;
+}
+.BotonesNavDeMovDisponible {
+    color: var(--VinotintoClarito) !important;
+    cursor: pointer !important;
+}
+
+.Flex {
+    display: flex;
+    gap: 10px;
+    
+
+}
+
+.MovimientoVacio {
+    background-color: white;
+    color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+
+/* -------------BARRA LATERAL------------- */
+aside {
+    padding: 10px;
+}
+.contenidoDeLaBarraLateral {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    border-radius: 10px;
+    background-color: var(--Rosita);
+    position:sticky;
+    top: 95px;
+}
+.EspacioDeLaImagen {
+    height: 160px;
+    width: 180px;
+    border: 5px solid var(--Vinotinto);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+.EspacioDeLaImagen img {
+    height: 135px;
+    margin: 0 auto;   
+}
+.EspacioDeLaImagen b{
+    display: block;
+    padding-top: 5px;
+    height: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+.contenidoDeLaBarraLateral a, .contenidoDeLaBarraLateral button {
+    text-decoration: none;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 190px;
+    text-align: center;
+    color: white;
+    background-color: var(--VinotintoClarito);
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+.contenidoDeLaBarraLateral a:hover,.contenidoDeLaBarraLateral button:hover {
+    box-shadow: 0 0 5px rgba(50, 50, 50, 0.6);
+    background-color: var(--Vinotinto)
+}
+

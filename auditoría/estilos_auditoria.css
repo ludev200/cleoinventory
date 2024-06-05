@@ -1,0 +1,379 @@
+html {
+    background-color: rgba(238,238,238,1);
+}
+body {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    grid-template-rows: 100px 35px 50px;
+    grid-auto-rows: 1fr;
+    background: rgb(238,238,238);
+    background: linear-gradient(0deg, rgba(238,238,238,1) 0%, rgba(255,255,255,1) 60%);
+}
+:root {
+    --Gris: rgb(150,150,150);
+    --GrisClarito: rgb(201,201,201);
+}
+
+
+/* -------------ARTICLE------------- */
+
+article {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.TituloDeSectionDelArticle {
+    font-size: 25px;
+    border-bottom: 3px solid var(--VinotintoClarito);
+    display: block;
+    font-family: 'PuntaRedonda' ,Arial, sans-serif;
+    font-stretch: wider;
+}
+.TituloDeSectionDelArticle:before {
+    color: var(--VinotintoOscuro)
+}
+
+.formularioDeBuqueda {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.spaceSearchBar {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.spaceSearchBar input {
+    width: calc(100% - 70px);
+    border: none;
+    outline: none;
+    background-color: var(--Rosita);
+    border: 3px solid var(--VinotintoClarito);
+    border-radius: 20px;
+    height: 30px;
+    padding: 0 15px;
+    font-size: 16px;
+}
+.spaceSearchBar button {
+    width: 80px;
+    position: absolute;
+    right: 0;
+    transition: all 500ms;
+    border: none;
+    outline: none;
+    background-color: var(--Vinotinto);
+    border-radius: 20px;
+    height: 36px;
+    color: white;
+    cursor: pointer;
+}
+.spaceSearchBar button:hover, .spaceSearchBar button:focus {
+    width: 100px;
+    font-size: 20px;
+    box-shadow: 0 0 5px rgb(50 50 50 / 60%);
+}
+.spaceSelectInputs select {
+    height: 30px;
+    background-color: var(--VinotintoClarito);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: white;
+    width: 120px;
+    font-size: 14px;
+    padding: 0 5px;
+}
+.spaceSelectInputs select:focus {
+    background-color: var(--Vinotinto);
+}
+.spaceSelectInputs select option {
+    background-color: var(--Rosita);
+    color: var(--Vinotinto);
+}
+
+
+
+
+/* tabla de resultados */
+.TablaDeResultados {
+    background-color: lightcoral;
+    width: 95%;
+    box-shadow: 2px 2px 3px lightgrey;
+    border: 1px solid gray;
+}
+.CabeceraDeLaTabla {
+    background: var(--Vinotinto);
+    background: linear-gradient(0deg, var(--Vinotinto) 20%, var(--VinotintoClarito) 50%, var(--Vinotinto) 80%);
+    display: flex;
+    gap: 2px;
+}
+.CabeceraDeLaTabla celda {
+    background-color: var(--Vinotinto);
+    color: white;
+    font-weight: normal;
+    justify-content: center;
+}
+.CuerpoDeLaTabla {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--VinotintoClarito);
+    background: linear-gradient(90deg, white 5%, var(--Rosita) 26%, var(--VinotintoClarito) 50%, var(--Rosita) 74%, white 95%);
+}
+.RowVacio {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    align-items: center;
+    color: #bbb;
+}
+row {
+    background-color: white;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    gap: 2px;
+}
+row:hover {
+    color: var(--VinotintoClarito);
+}
+celda {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+.ColumnaID {
+    width: 80px;
+    justify-content: center;
+}
+.ColumnaTipo {
+    width: 90px;
+    justify-content: center;
+}
+.ColumnaDescripcion {
+    width: calc(100% - 440px);
+    text-align: left;
+}
+.ColumnaFecha {
+    width: 130px;
+}
+.ColumnaUsuario {
+    width: 100px;
+}
+
+
+
+
+
+/*Botones de busqueda*/
+.BotonesDeConsulta {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.SeparadorDeBotones {
+    width: 100px;
+    height: 30px;
+    
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.SeparadorDeBotones .NroPag {
+    width: 30px;
+    height: 30px;
+    outline: none;
+    border: none;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--VinotintoClarito);
+    background-color: white;
+    border-radius: 50%;
+}
+
+.SeparadorDeBotones button {
+    color: white;
+    height: 30px;
+    width: 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+.SeparadorDeBotones button[type=button] {
+    background-color:#aaa;
+}
+
+.SeparadorDeBotones button[type=submit] {
+    background-color: var(--VinotintoOscuro);
+    cursor: pointer;
+}
+
+
+.SeparadorDeBotones button[type=submit]:hover {
+    background-color: var(--Vinotinto);
+    box-shadow: 0 0 5px #222;
+}
+
+
+
+
+
+
+/* -------------BARRA LATERAL------------- */
+aside {
+    padding: 10px;
+}
+
+.contenidoDeLaBarraLateral {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    border-radius: 10px;
+    background-color: var(--Rosita);
+    position:sticky;
+    top: 95px;
+}
+
+.EspacioDeLaImagen {
+    height: 160px;
+    width: 180px;
+    border: 5px solid var(--Vinotinto);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.EspacioDeLaImagen img {
+    height: 135px;
+    margin: 0 auto;   
+}
+
+.EspacioDeLaImagen b{
+    display: block;
+    padding-top: 5px;
+    height: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.contenidoDeLaBarraLateral a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(168, 246, 164);
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 190px;
+    text-align: center;
+    background-color: var(--VinotintoClarito);
+}
+
+.contenidoDeLaBarraLateral a:hover {
+    box-shadow: 0 0 5px rgba(50, 50, 50, 0.6);
+    background-color: var(--Vinotinto)
+}
+
+/* Registro Seleccionado*/
+.RegistroSeleccionado {
+    background-color: lightblue;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    position: sticky;
+    top: 375px;
+    display: flex;
+    gap: 10px;
+}
+.RegistroSeleccionado img {
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    border: 2px solid steelblue;
+    border-radius: 10px;
+    object-fit: contain;
+}
+.DatosRegistroSeleccionado {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.SpanTipo {
+    color: gray;
+    position: relative;
+}
+.circulito {
+    width: 12px;
+    height: 12px;
+    background-color: steelblue;
+    position: absolute;
+    border-radius: 50%;
+    left: -20px;
+    top: 2px;
+    border: 1px solid white;
+}
+.verde {
+    background-color: rgb(58, 175, 58);
+}
+.amarillo {
+    background-color: rgb(240, 206, 57);
+}
+.gris {
+    background-color: #aaa;
+}
+.DatosRegistroSeleccionado a {
+    background-color: steelblue;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 3px;
+    color: white;
+    cursor: pointer;
+    width: 140px;
+    text-align: center;
+    text-decoration: none;
+}
+.DatosRegistroSeleccionado a:hover {
+    box-shadow: 0 0 5px rgb(50 50 50 / 80%);
+}
+.ProductoSeleccionado {
+    background-color: var(--Rosita);
+}
+.Vacio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: steelblue;
+    font-family: 'PUNTAREDONDA';
+    text-align: center;
+    border: 2px solid steelblue;
+    padding: 15px 0;
+    border-radius: 5px;
+}
+
+
+
+.TablaVacia {
+    font-family: 'PuntaRedonda';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}

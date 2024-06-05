@@ -1,0 +1,253 @@
+html {
+    background-color: rgba(238,238,238,1);
+}
+body {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    grid-template-rows: 100px 35px 50px;
+    grid-auto-rows: 1fr;
+    background: rgb(238,238,238);
+    background: linear-gradient(0deg, rgba(238,238,238,1) 0%, rgba(255,255,255,1) 60%);
+}
+:root {
+    --Gris: rgb(150,150,150);
+    --GrisClarito: rgb(201,201,201);
+}
+
+
+/* -------------ARTICLE------------- */
+
+article {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.TituloDeSectionDelArticle {
+    margin-top: 20px;
+    font-size: 25px;
+    border-bottom: 3px solid var(--VinotintoClarito);
+    display: block;
+    font-family: 'PuntaRedonda' ,Arial, sans-serif;
+    font-stretch: wider;
+}
+.TituloDeSectionDelArticle:before {
+    color: var(--VinotintoOscuro)
+}
+
+
+/* -------------BARRA LATERAL------------- */
+aside {
+    padding: 10px;
+}
+
+.contenidoDeLaBarraLateral {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    border-radius: 10px;
+    background-color: var(--Rosita);
+    position:sticky;
+    top: 95px;
+}
+
+.EspacioDeLaImagen {
+    height: 160px;
+    width: 180px;
+    border: 5px solid var(--Vinotinto);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.EspacioDeLaImagen img {
+    height: 135px;
+    margin: 0 auto;   
+}
+
+.EspacioDeLaImagen b{
+    display: block;
+    padding-top: 5px;
+    height: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.contenidoDeLaBarraLateral a, .contenidoDeLaBarraLateral button {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(168, 246, 164);
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 190px;
+    text-align: center;
+    background-color: var(--VinotintoClarito);
+    outline: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contenidoDeLaBarraLateral button  {
+    width: calc(100% - 50px);
+}
+
+.contenidoDeLaBarraLateral a:hover, .contenidoDeLaBarraLateral button:hover {
+    box-shadow: 0 0 5px rgba(50, 50, 50, 0.6);
+    background-color: var(--Vinotinto)
+}
+
+
+
+
+.imgXdiv {
+    display: flex;
+    gap: 10px;
+}
+.imgXdiv div:nth-child(1) {
+    background-color: white;
+    border: 3px solid var(--VinotintoClarito);
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgXdiv div img {
+    height: 120px;
+    background-color: white;
+}
+
+.datospersonales h2 {
+    border-bottom: 3px solid var(--VinotintoClarito);
+    font-family: PuntaRedonda;
+    font-weight: bold;
+}
+.datospersonales {
+    width: calc(100% - 166px);
+}
+.datospersonales ul {
+    flex-direction: column;
+    gap: 10px;
+    display: flex;
+    list-style-type: none;
+}
+.datospersonales ul li b {
+    width: 150px;
+}
+
+.modulos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.modulocard {
+    display: flex;
+    width: 150px;
+    padding: 5px;
+    gap: 5px;
+    align-items: center;
+    border-radius: 10px;
+    background-color: lightgray;
+    border: 1px solid gray;
+}
+.modulocard img {
+    height: 40px;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.seleccionado {
+    background-color: var(--Rosita);
+    border: 1px solid var(--VinotintoClarito);
+}
+.seleccionado img {
+    border: 1px solid var(--VinotintoClarito);   
+}
+
+
+
+
+
+
+
+/* tabla de resultados */
+.TablaDeResultados {
+    background-color: lightcoral;
+    width: 95%;
+    box-shadow: 2px 2px 3px lightgrey;
+    border: 1px solid gray;
+}
+.CabeceraDeLaTabla {
+    background: var(--Vinotinto);
+    background: linear-gradient(0deg, var(--Vinotinto) 20%, var(--VinotintoClarito) 50%, var(--Vinotinto) 80%);
+    display: flex;
+    gap: 2px;
+}
+.CabeceraDeLaTabla celda {
+    background-color: var(--Vinotinto);
+    color: white;
+    font-weight: normal;
+    justify-content: center;
+}
+.CuerpoDeLaTabla {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--VinotintoClarito);
+    background: linear-gradient(90deg, white 5%, var(--Rosita) 26%, var(--VinotintoClarito) 50%, var(--Rosita) 74%, white 95%);
+}
+.RowVacio {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    align-items: center;
+    color: #bbb;
+}
+row {
+    background-color: white;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    gap: 2px;
+}
+row:hover {
+    color: var(--VinotintoClarito);
+}
+celda {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+.ColumnaID {
+    width: 80px;
+    justify-content: center;
+}
+.ColumnaTipo {
+    width: 90px;
+    justify-content: center;
+}
+.ColumnaDescripcion {
+    width: calc(100% - 340px);
+    text-align: left;
+}
+.ColumnaFecha {
+    width: 130px;
+}
+
+.TablaVacia {
+    font-family: 'PuntaRedonda';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}

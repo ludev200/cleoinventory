@@ -1,0 +1,1322 @@
+html {
+    background-color: rgba(238,238,238,1);
+}
+body {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    grid-template-rows: 100px 35px 50px;
+    grid-auto-rows: 1fr;
+    background: rgb(238,238,238);
+    background: linear-gradient(0deg, rgba(238,238,238,1) 0%, rgba(255,255,255,1) 40%);
+    
+}
+
+:root {
+    --Gris: rgb(150,150,150);
+    --GrisClarito: rgb(201,201,201);
+}
+
+.hovershadow:hover {
+    box-shadow: 0 0 3px 3px rgba(150, 150, 150, 0.5);
+}
+
+
+/* -------------ASIDE------------- */
+aside {
+    padding: 10px;
+}
+
+.contenidoDeLaBarraLateral {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    border-radius: 10px;
+    background-color: var(--Rosita);
+    position:sticky;
+    top: 95px;
+}
+
+.EspacioDeLaImagen {
+    height: 160px;
+    width: 180px;
+    border: 5px solid var(--Vinotinto);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.EspacioDeLaImagen img {
+    height: 135px;
+    margin: 0 auto;   
+}
+
+.EspacioDeLaImagen b{
+    display: block;
+    padding-top: 5px;
+    height: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.contenidoDeLaBarraLateral a, .contenidoDeLaBarraLateral button {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(168, 246, 164);
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 190px;
+    text-align: center;
+    background-color: var(--VinotintoClarito);
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contenidoDeLaBarraLateral a:hover, .contenidoDeLaBarraLateral button:hover {
+    box-shadow: 0 0 5px rgba(50, 50, 50, 0.6);
+    background-color: var(--Vinotinto)
+}
+
+
+
+
+
+form {
+    padding: 20px;
+    padding-left: 40px;
+
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.SubtituloCentral {
+    font-family: PuntaRedonda500;
+    font-size: 20px;
+    height: 30px;
+    gap: 10px;
+    width: 100%;
+    border-bottom: 3px solid var(--Vinotinto);
+}
+.Arreglito {
+    color: var(--VinotintoOscuro);
+}
+
+
+#EspacioDeTarjetaDeCliente {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    overflow: hidden;
+    height: 200px;
+}
+.NoCliente, .SiCliente {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+.NoCliente, .SiCliente {
+    transition: all 500ms;
+}
+.BotonesParaSeleccionarCliente {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    width: calc(75% + 20px);
+    padding: 0 10px;
+}
+.BotonesParaSeleccionarCliente button, .BotonesParaQuitarCliente button{
+    border: none;
+    padding: 5px;
+    color: white;
+    display: block;
+    height: 40px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.BotonesParaSeleccionarCliente button:hover {
+    box-shadow: 0 0 5px #333;
+}
+.BotonesParaSeleccionarCliente a {
+    background-color:white;
+    color: var(--VinotintoClarito);
+    border: 4px solid var(--Vinotinto);
+    width: 200px;
+    padding: 5px;
+    display: block;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.BotonesParaSeleccionarCliente a:hover, .BotonesParaQuitarCliente button:hover {
+    box-shadow: 0 0 5px #333;
+}
+
+.BotonesParaSeleccionarCliente button:nth-child(odd){
+    background-color: var(--VinotintoClarito);
+    border: 4px solid var(--Vinotinto);
+}
+.CajaDeClienteVacio {
+    border: 2px solid var(--GrisClarito);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    gap: 10px;
+    width: 75%;
+    background-color: #eee;
+    height: 100px;
+    color: var(--Gris);
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.Subir {
+    transform: translate(0, -190px);
+}
+
+.SeccionDelCliente {
+    border: 2px solid var(--Vinotinto);
+    padding: 10px;
+    display: flex;
+    border-radius: 10px;
+    gap: 10px;
+    width: 80%;
+    background-color: var(--Rosita);
+}
+
+.SeccionDelCliente img {
+    height: 180px;
+    background-color: white;
+    border: 3px solid var(--VinotintoClarito);
+    border-radius: 10px;
+    margin-right: 20px;
+    object-fit: cover;
+    width: 180px;
+}
+.SeccionDelCliente input[type=text] {
+    font-size: 17px;
+    height: 30px;
+    background-color: var(--Rosita);
+    border: none;
+    border-bottom: 2px solid var(--VinotintoClarito);
+    outline: none;   
+}
+
+
+.BotonesParaQuitarCliente {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 20px;
+    width: 75%;
+    padding: 0 10px;
+}
+
+.BotonesParaSeleccionarCliente button, .BotonesParaQuitarCliente button{
+    border: none;
+    padding: 5px;
+    color: white;
+    display: block;
+    height: 40px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.BotonesParaSeleccionarCliente button:hover {
+    box-shadow: 0 0 5px #333;
+}
+
+.BotonesParaQuitarCliente button {
+    background-color:white;
+    color: var(--VinotintoClarito);
+    border: 4px solid var(--Vinotinto);
+    width: 150px;
+}
+
+.BotonesParaSeleccionarCliente a {
+    background-color:white;
+    color: var(--VinotintoClarito);
+    border: 4px solid var(--Vinotinto);
+    width: 200px;
+    padding: 5px;
+    display: block;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.BotonesParaSeleccionarCliente a:hover, .BotonesParaQuitarCliente button:hover {
+    box-shadow: 0 0 5px #333;
+}
+
+.BotonesParaSeleccionarCliente button:nth-child(odd){
+    background-color: var(--VinotintoClarito);
+    border: 4px solid var(--Vinotinto);
+}   
+
+.EspacioDeLetras b {
+    height: 32px;
+    display: flex;
+    align-items: center;
+}
+
+.EspacioDeLetras {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.CamposDelCliente{
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    width: calc(100% - 100px);
+}
+.FlexH {
+    display: flex;
+    flex-direction: row;
+}
+
+.SeccionDelCliente input[type=text] {
+    font-size: 17px;
+    height: 30px;
+    background-color: var(--Rosita);
+    border: none;
+    border-bottom: 2px solid var(--VinotintoClarito);
+    outline: none;
+}
+
+.EspacioDeTipoDeID{
+    width: 30px;
+    text-align: center;    
+}
+
+.GuionSeparador {
+    height: 30px;
+    background-color: var(--Rosita);
+    border: none;
+    border-bottom: 2px solid var(--VinotintoClarito);
+    width: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.EspacioDeID {
+    width: 100px;
+    padding: 0 5px;
+    outline: none;
+}
+
+.EspacioDeNombre, .EspacioDeTelefono, .EspacioDeDireccion, .EspacioDeCorreo {
+    width: calc(100% - 10px);
+    padding: 0 5px;
+    outline: none;
+}
+
+.expiracion {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border: 1px solid #bbb;
+    padding: 10px;
+    flex-wrap: wrap;
+    width: 600px;
+}
+
+.expiracion div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.expiracion div:nth-child(1) {
+    width: 195px;
+    align-items: baseline;
+}
+.expiracion div b {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.expiracion div b {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.ColumnaDeDosPuntos {
+    width: 25px;
+}
+.CajaDeInputsDeDetalles{
+    width: calc(100% - 220px);
+}
+
+.CajaDeInputsDeDetalles select {
+    height: 30px;
+    background-color: var(--Rosita);
+    border: none;
+    outline: none;
+
+
+    background-color: var(--Rosita);
+    border-bottom: 3px solid var(--Vinotinto);
+    width: 80px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.Targeteable {
+    height: 30px;
+    outline: none;
+    border: none; 
+    font-size: 16px;
+    background-color: var(--Rosita);
+    padding: 0 10px;
+}
+
+.RayitaVino {
+    border-bottom: 3px solid var(--Vinotinto);
+    height: 27px;
+}
+
+.FlexH-NoGap {
+    display: flex;
+    flex-direction: row;
+}
+.targeteable{
+    background-color: var(--Rosita);
+    border: none;
+    border-bottom: 3px solid var(--Vinotinto);
+    text-align: center;
+    width: 40px;
+    height: 27px;
+    outline: none;
+    font-size: 16px;
+}
+
+xd label {
+    background-color: var(--Rosita);
+    border-bottom: 3px solid var(--Vinotinto);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 5px;
+    width: 35px;   
+}
+
+.FlexH-NoGap input[type=date] {
+    margin-left: 10px;
+    color: var(--Vinotinto);
+    border: none;
+    width: 20px;
+    font-size: 20px;
+    scale: 1.2;
+    outline: none;
+    background-color: white;
+}
+
+.CajaDeInputsDeDetalles p {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.CuerpoDeLaCotizacion {
+    background-color: var(--Rosita);
+    box-shadow: 2px 2px 3px lightgrey;   
+}
+.TituloDeCuerpo {
+    background-color: var(--Vinotinto);
+    font-size: 25px;
+    color: white;
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+}
+
+.ColumnasDeTabla {
+    background-color: white;
+}
+
+.Flex-gap2 {
+    display: flex;
+}
+
+row {
+    height: 70px;
+    position: relative;
+    overflow: hidden;
+}
+
+row:hover {
+    color: var(--Vinotinto);
+}
+
+.NombreDeColumna {
+    background-color: var(--Gris);
+    padding: 5px;
+    text-align: center;
+    color: white;
+    align-items: center !important; 
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Celda {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    height: 65px;
+}
+
+.CeldaSinH {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+
+.ColumnaImagen {
+    width: 85px;
+}
+
+.ColumnaImagen img {
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+    border: 2px solid var(--VinotintoClarito);
+    border-radius: 5px;
+    object-fit: cover;
+
+}
+
+.TablaVacia {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    color: #bbb;
+}
+
+.HoverVino:hover {
+    color: var(--Vinotinto);
+}
+
+.ColumnaID {
+    width: 80px;
+}
+
+.ColumnaNombre {
+    width: calc(100% - 475px);
+    align-items: flex-start;
+}
+
+.ColumnaNombre2 {
+    width: calc(100% - 405px)
+}
+
+.ColumnaNombre69 {
+    width: calc(100% - 475px);
+    align-items: flex-start;
+}
+
+.ColumnaUnidad {
+    width: 70px;
+}
+
+.ColumnaPrecio {
+    width: 70px;
+    align-items:flex-end;
+}
+
+.ColumnaCantidad {
+    width: 80px;
+    text-align: center;
+}
+
+.ColumnaTotal {
+    width: 100px;
+    align-items:flex-end;
+}
+
+.EspacioDeRows {
+    overflow: auto;
+    display: flex;
+    flex-direction:column;
+    gap: 1px;
+    background: var(--VinotintoClarito);
+    background: linear-gradient(90deg, white 5%, var(--Rosita) 26%, var(--VinotintoClarito) 50%, var(--Rosita) 74%, white 95%);
+}
+
+.BotonDinamicoAgregar span {
+    font-size: 50px;
+    color: var(--VinotintoClarito);
+    transition: all 300ms;
+    border: 3px solid var(--VinotintoClarito);
+    border-radius: 10px;
+    width: calc(100% - 20px);
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-family: 'PuntaRedonda500';
+    height: 50px;
+    align-items: center;
+}
+.BotonDinamicoAgregar span::before {
+    font-size: 40px;
+}
+.BotonDinamicoAgregar span:hover {
+    background-color: var(--VinotintoClarito);
+    color: white;
+    border: none;
+}
+
+.EspacioDeRows:hover + .BotonDinamicoAgregar {
+    transform: scaleY(1);
+    height: 70px;
+    transition-delay: 500ms;
+}
+
+.BotonDinamicoAgregar:hover {
+    transform: scaleY(1);
+    height: 70px;
+}
+
+.BotonDinamicoAgregar {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: var(--Rosita);
+    transition: all 500ms;
+    transform: scaleY(0);
+    height: 0;
+    cursor: pointer;
+    padding: 0;
+}
+
+.FinalDeCotizacion {
+    background-color: white;
+    padding: 10px;
+    border-top: 10px double var(--VinotintoOscuro);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: rgb(255,255,255);
+    background: linear-gradient(162deg, rgba(255,255,255,1) 50%, rgba(247,229,233,1) 100%);
+
+  }
+
+  .PuntosSeparadores {
+    width: 20px;
+    text-align: center;
+  }
+
+.SubTotal {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    
+    border-bottom: 3px solid var(--VinotintoClarito);
+    align-self: end;
+    padding-bottom: 10px;
+}
+
+.ColumnaDelFinalDeCot {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: space-between;
+}
+
+.ColumnaDelFinalDeCot b ,.ColumnaDelFinalDeCot p{
+    font-family: PuntaRedonda500;
+}
+
+.Total {
+    font-size: 50px;
+    text-align: right;
+    
+    display: flex;
+    justify-content: end;
+}
+
+.Total p {
+    font-family: PuntaRedonda500;
+}
+
+.TitulosDelTotal {
+    width: 230px;
+}
+
+.PreciosDelTotal {
+    text-align: right;
+}
+
+#PrecioTotal {
+    padding-left: 30px;
+}
+
+.PalitoDeSuma {
+    height: 3px;
+    background-color: var(--VinotintoClarito);
+}
+
+.NumeroConColor {
+    color: var(--Vinotinto);
+}
+
+
+
+
+
+
+.buttonsContainer {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+.buttonsContainer > * {
+    height: 50px;
+    border-radius: 5px;
+    width: 200px;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttonsContainer > *:nth-child(1) {
+    background-color: white;
+    border: 5px solid gray;
+    height: 40px;
+    color: gray;
+}
+.buttonsContainer > *:nth-child(2) {
+    background-color: rgb(62, 194, 62);
+    color: white;
+}
+
+
+
+
+row:hover > .test9 {
+    transform: translateX(0);
+    transition-delay: 1s;
+}
+
+
+.test9 i {
+    cursor: pointer;
+    transition: all 500ms;
+    color: var(--Vinotinto);
+}
+
+.test9 i:hover {
+    font-size: 25px;
+}
+
+.test9 {
+    transform: translateX(50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    right: 0;
+    background: rgb(247,229,233);
+    background: linear-gradient(89deg, rgba(247,229,233,0) 0%, var(--Rosita) 86%);
+    width: 50px;
+    transition: all 500ms;
+    height: 100%;
+    
+    align-items: center;
+}
+
+
+
+
+
+modal {
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(200,200,200,0.5);
+    width: 100%;
+    height: 100vh;
+    z-index: 101;
+}
+.VentanaFlotante {
+    width: 70%;
+    height: 80%;
+    background-color: white;
+    border: 1px solid gray;
+    box-shadow: 5px 5px 2px rgb(50 50 50 / 60%);
+    
+    transition: all 0.5s;
+    opacity: 1;
+}
+.ContenidoDeVentana {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100%);
+    box-shadow: 5px 5px 2px rgb(50 50 50 / 60%);
+    border: 1px solid gray;
+    transform: translateY(0);
+    transition: all 0.5s;
+    opacity: 1;
+}
+
+.BotonCerrar {
+    background-color: white;
+    color: var(--Vinotinto);
+    border: 3px solid var(--Vinotinto);
+    border-radius: 10px;
+    font-size: 15px;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    outline: none;
+}
+.TituloDeModal {
+    background-color: var(--VinotintoClarito);
+    padding: 10px;
+    width: calc(100% - 20px);
+    color: white;
+    text-align: center;
+    font-family: PuntaRedonda500;
+    font-size: 30px;
+    height: 30px;
+}
+
+
+.EspacioDelBuscador {
+    padding: 0 20px;
+    width: calc(100% - 20px);
+}
+.Buscador {
+    background-color: var(--Rosita);
+    height: 30px;
+    width: 60%;
+    border: 3px solid var(--VinotintoClarito);
+    border-radius: 15px;
+    outline: none;
+    padding: 0 10px;
+    font-size: 16px;
+    margin: 10px 0;
+}
+.BotonBuscar {
+    height: 36px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--VinotintoClarito);
+    padding: 0 10px;
+    width: 100px;
+    margin-left: -30px;
+    color: white;
+    font-size: 13px;
+    transition: all 300ms;
+    cursor: pointer;
+}
+
+.EspacioDeTablaDeClientes {
+    width: calc(100% - 20px);
+    overflow-y:auto;
+}
+.Flex-gap2 {
+    display: flex;
+}
+.ColumnasDeTabla {
+    background-color: white;
+}
+.ColumnaImagen {
+    width: 85px;
+}
+.ColumnaRIF {
+    width: 120px;
+}
+.ColumnaNombre3 {
+    width: calc(100% - 300px);
+}
+.ColumnaSeleccionar {
+    width: 100px;
+}
+
+
+.Flex-gap2 {
+    display: flex;
+}
+.Celda {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    height: 65px;
+}
+
+.BontonSeleccionar {
+    background-color: var(--VinotintoClarito);
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    color: white;
+}
+
+
+.OcultarContenidoModal {
+    transform: translateY(-50vh);
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+
+.TablaDeClientesVacia, .TablaDeproductosVacia {
+    background-color: white;
+    height: calc(80vh - 160px);
+    padding: 10px;
+}
+
+.Flex-gap2 {
+    display: flex;
+}
+.TablaDeClientesVacia span, .TablaDeproductosVacia span {
+    border-radius: 20px;
+    border: 3px solid #bbb;
+    color: #777;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'PuntaRedonda500';
+    font-size: 20px;
+}
+
+.BotonCerrar:hover {
+    background-color: var(--Vinotinto);
+    color: white;
+}
+.BontonSeleccionar:hover {
+    background-color: var(--Vinotinto);
+    box-shadow: 0 0 5px #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.VentanaFlotanteProductos {
+    width: 80%;
+    height: 80%;
+}
+.DivisorDelBuscadorDeProductos {
+    background-color: red;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.EspacioDeTablaBuscadorProductos {
+    background-color: lightblue;
+    background-color: white;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: calc(100% - 290px);
+}
+.EspacioDePrevisualizacionDeProducto {
+    background-color: var(--Rosita);
+    padding: 10px;
+    width: 250px;
+    border-left: 1px solid var(--VinotintoClarito);
+}
+.EspacioDeBuscadorDeProductos {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.EspacioDeBuscadorDeProductos input {
+    background-color: var(--Rosita);
+    outline: none;
+    height: 30px;
+    border: 3px solid var(--VinotintoClarito);
+    border-radius: 15px;
+    width: 55%;
+    padding: 0 10px;
+    font-size: 16px;
+}
+.EspacioDeBuscadorDeProductos button {
+    background-color: var(--VinotintoClarito);
+    position: absolute;
+    left: 55%;
+    border: none;
+    height: 36px;
+    padding: 0 10px;
+    border-radius: 20px;
+    width: 100px;
+    color: white;
+    font-size: 13px;
+    transition: all 300ms;
+    cursor: pointer;
+    outline: none;
+}
+.EspacioDeBuscadorDeProductos select {
+    background-color: var(--VinotintoClarito);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+
+.EspacioDeBuscadorDeProductos button:hover, .EspacioDeBuscadorDeProductos select:hover{
+    box-shadow: 0 0 5px #333;
+}
+
+.EspacioDeBuscadorDeProductos select option {
+    background-color: var(--Rosita);
+    color: var(--VinotintoClarito);
+}
+
+
+
+.Flex-gap2 {
+    display: flex;
+}
+
+.ColumnasDeTabla {
+    background-color: white;
+}
+.ColumnaImagen {
+    width: 85px;
+}
+.NombreDeColumna {
+    background-color: var(--Gris);
+    padding: 5px;
+    text-align: center;
+    color: white;
+    align-items: center !important;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.ColumnaID {
+    width: 80px;
+}
+.ColumnaNombre4 {
+    width: calc(100% - 275px);
+}
+.ColumnaCantidad {
+    width: 80px;
+    text-align: center;
+}
+
+.TablaDeProdcutos {
+    overflow-y: auto;
+    height: calc(80vh - 115px);
+}
+
+.HoverVino:hover {
+    color: var(--Vinotinto);
+}
+.TablaDeproductosVacia {
+    height: calc(80vh - 170px);
+}
+
+
+
+
+.ProductoNoSeleccionado {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    height: calc(100% - 6px);
+    border-radius: 20px;
+    border: 3px solid #855;
+    color: #333;
+    mix-blend-mode: color-burn;
+    user-select:none;
+}
+
+.ProductoNoSeleccionado span {
+    margin-top: -30px;
+    text-align: center;
+    font-size: 20px;
+    font-family: PuntaRedonda500;
+    padding: 0 0 40px 0;
+}
+
+.ProductoNoSeleccionado img {
+    height: 200px;
+    
+}
+
+
+.ProductoSiSeleccionado {
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    position: relative;
+    height: 100%;
+}
+
+.clasexd {
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    border-radius: 10px;
+    color: var(--VinotintoClarito);
+    height: 20px;
+    
+}
+
+.clasexd:hover {
+    color: var(--Vinotinto);
+    box-shadow: 0 0 5px black
+}
+
+.ProductoSiSeleccionado img {
+    height: 150px;
+    border: 3px solid var(--VinotintoClarito);
+    border-radius: 20px;
+    background-color: white;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+
+.NombreDelProductoSiSeleccionado {
+    border-bottom: 4px solid var(--Vinotinto);
+    display: block;
+    width: 100%;
+    font-size: 18px;
+
+}
+
+.PrecioDelProductoSiSeleccionado {
+    display: block; 
+    width: 100%;
+    margin-bottom: 10px;
+
+}
+
+.BotonParaAgregarElProductoSeleccionado {
+    background-color: var(--VinotintoClarito);
+    border: 5px solid var(--Vinotinto);
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    width: 100px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.BotonParaAgregarElProductoSeleccionado:hover {
+    box-shadow: 0 0 5px #333;
+}
+
+.DesactivarCierreAutomatico {
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.switch {
+    display: inline-block;
+    height: 17px;
+    position: relative;
+    width: 120px;
+}
+
+  .switch input {
+    display:none;
+  }
+  
+  .slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 100px;
+    position: absolute;
+    right: -8px;
+    top: 0;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    background-color: #fff;
+    bottom: 2px;
+    content: "";
+    height: 11px;
+    left: 2px;
+    position: absolute;
+    transition: .4s;
+    width: 11px;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--VinotintoClarito);
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(13px);
+  }
+  
+  .slider.round {
+    border-radius: 8px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .ElementosPaElegirCantidad {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .PrecioMultiplicado {
+    align-self: center;
+  }
+
+  .CantidadYUnidad {
+    
+    height: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .CantidadYUnidad input{
+    background-color: white;
+    width: 50px;
+    border: none;
+    border-bottom: 3px solid var(--VinotintoClarito);
+    outline: none;
+    padding: 0 5px;
+    text-align: center;
+    font-size: 15px;
+  }
+
+.TextToNumbre input:hover {
+    width: 70px;
+}
+
+
+  .CantidadYUnidad span {
+    align-items: center;
+    display: flex;
+    margin: 0 10px;
+  }
+
+  #BotonRemoverProductoSeleccionado {
+    
+    border: 5px solid var(--VinotintoClarito);
+    padding: 5px;
+    border-radius: 10px;
+    color: var(--VinotintoClarito);
+    width: 100px;
+    font-size: 16px;
+    
+    cursor: pointer;
+  }
+
+
+
+.ProductoSeleccionado span, .ProductoSeleccionado div {
+    background-color: var(--Rosita);
+}
+
+.coolFinalButtons {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+.coolFinalButtons > * {
+    text-decoration: none;
+    box-sizing: border-box;
+    color: white;
+    background-color: #999;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+#validateFormButton {
+    background-color: rgb(70, 200, 70);
+}
+
+.hovershadow:hover {
+    box-shadow: 0 0 3px 3px rgba(150, 150, 150, 0.5);
+}

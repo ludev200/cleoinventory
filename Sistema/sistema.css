@@ -1,0 +1,559 @@
+html {
+    background-color: rgba(238,238,238,1);
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    grid-template-rows: 100px 35px 50px;
+    grid-auto-rows: 1fr;
+    background: rgb(238,238,238);
+    background: linear-gradient(0deg, rgba(238,238,238,1) 0%, rgba(255,255,255,1) 60%);
+}
+
+:root {
+    --Gris: rgb(150,150,150);
+    --GrisClarito: rgb(201,201,201);
+}
+
+article {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+aside {
+    padding: 10px;
+}
+
+.contenidoDeLaBarraLateral {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    border-radius: 10px;
+    background-color: var(--Rosita);
+    position:sticky;
+    top: 95px;
+}
+
+.EspacioDeLaImagen {
+    height: 160px;
+    width: 180px;
+    border: 5px solid var(--Vinotinto);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.EspacioDeLaImagen img {
+    height: 135px;
+    margin: 0 auto;   
+}
+
+.EspacioDeLaImagen b{
+    display: block;
+    padding-top: 5px;
+    height: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.contenidoDeLaBarraLateral a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(168, 246, 164);
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 190px;
+    text-align: center;
+    background-color: var(--VinotintoClarito);
+}
+
+.contenidoDeLaBarraLateral a:hover {
+    box-shadow: 0 0 5px rgba(50, 50, 50, 0.6);
+    background-color: var(--Vinotinto)
+}
+
+
+
+
+
+.test1 {
+    font-size: 25px;
+    border-bottom: 3px solid var(--VinotintoClarito);
+    display: block;
+    font-family: 'PuntaRedonda' ,Arial, sans-serif;
+}
+.test1:before {
+    color: var(--VinotintoOscuro)
+}
+
+#colorsSelector {
+    display: flex;
+    gap: 20px;
+
+}
+#colorsSelector button {
+    flex: 1;
+
+    border-radius: 10px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid black;
+    background-color: white;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+#colorsSelector button:hover {
+    box-shadow: 0 0 3px 3px rgba(150, 150, 150, 0.5);
+}
+
+.muestra {
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+#colorsSelector button span {
+    border: 1px solid black;
+    font-size: 20px;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--Rosita);
+}
+
+button:nth-child(1) .muestra {
+    background: rgb(46,117,182);
+    background: linear-gradient(45deg, rgba(32,56,100,1) 10%, rgba(46,117,182,1) 60%, rgba(189,215,238,1) 100%);
+}
+button:nth-child(2) .muestra {
+    background: rgb(215,54,99,1);
+    background: linear-gradient(45deg, rgba(162,19,37,1) 10%, rgba(215,54,99,1) 60%, rgba(247,229,233,1) 100%);
+}
+button:nth-child(3) .muestra {
+    background: rgb(254,168,47);
+    background: linear-gradient(45deg, rgba(198,68,16,1) 10%, rgba(254,168,47,1) 60%, rgba(251,216,137,1) 100%);
+}
+button:nth-child(4) .muestra {
+    background: rgb(133,189,95);
+    background: linear-gradient(45deg, rgba(54,110,66,1) 10%, rgba(133,189,95,1) 60%, rgba(197,224,180,1) 100%);
+}
+
+#colorsSelector button:hover span {
+    
+    outline: 2px solid var(--VinotintoClarito);
+    border: 1px solid white;
+}
+
+
+
+
+
+#listaEditable {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+#listaEditable .row {
+    display: flex;
+    gap: 5px;
+
+    border-left: 10px solid var(--VinotintoClarito);
+    padding: 5px 0 5px 10px;
+}
+#listaEditable .row:hover, .listaImagenEditable .row:hover {
+    border-left: 10px solid var(--VinotintoOscuro);
+}
+#listaEditable .row .hideInActive, #listaEditable .row .showInActive {
+    position: relative;
+    padding-right: 40px;
+    width: 100%;
+}
+.editData_button, .editPhoto_button {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    right: 5px;
+
+    display: none;
+
+    border-radius: 5px;
+    background-color: var(--Rosita);
+    border: 1px solid var(--Vinotinto);
+    color: var(--Vinotinto);
+    font-size: 17px;
+}
+#listaEditable .row:hover .editData_button, .row:hover .editPhoto_button {
+    display: block;
+}
+
+#listaEditable .row b, #listaEditable .row small {
+    display: block;
+}
+
+.adornito {
+    width: 20px;
+    height: 100%;
+    background-color: var(--Vinotinto);
+}
+
+.hovershadow:hover {
+    box-shadow: 0 0 2px 2px rgba(150, 150, 150, 0.5);
+}
+
+#listaEditable input {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid var(--Vinotinto);
+    background-color: white;
+    border-radius: 3px;
+    height: 20px;
+    padding: 5px;
+    width: 400px;
+    font-size: 15px;
+}
+#listaEditable input:focus {
+    border: 1px solid var(--Vinotinto);
+    border-bottom: 2px solid var(--Vinotinto);
+}
+
+.buttonsContainer {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    width: 400px;
+    justify-content: center;
+}
+
+
+.buttonsContainer button {
+    height: 30px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-right: 5px;
+}
+.buttonsContainer button.back {
+    background-color: white;
+    color: rgb(214, 73, 73);
+    border: 2px solid rgb(214, 73, 73);
+    font-size: 18px;
+    padding: 0 4px;
+}
+.buttonsContainer button.save {
+    background-color: rgb(79, 180, 79);
+    color: white;
+    border: none;
+    padding: 0 10px;
+}
+
+
+
+#listaEditable .hideInActive {
+    display: block;
+}
+#listaEditable .showInActive {
+    display: none;
+}
+
+#listaEditable .row.active .hideInActive {
+    display: none;
+}
+#listaEditable .row.active .showInActive {
+    display: block;
+}
+
+.listaImagenEditable {
+    margin-top: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.listaImagenEditable .row {
+    display: flex;
+    gap: 5px;
+
+    border-left: 10px solid var(--VinotintoClarito);
+    padding: 5px 0 5px 10px;
+}
+.listaImagenEditable .hideInActive {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    position: relative;
+    padding-right: 40px;
+    width: 100%;
+    
+}
+.listaImagenEditable img {
+    height: 100px;
+    width: fit-content;
+    border: 2px solid var(--Vinotinto);
+    border-radius: 5px;
+    background-color: white;
+}
+
+.listaImagenEditable .showInActive {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.imgAndData {
+    display: flex;
+    gap: 10px;
+}
+
+
+.listaImagenEditable label {
+    background-color: var(--VinotintoClarito);
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 400px;
+    display: inline-block;
+    color: white;
+}
+.listaImagenEditable label:hover {
+    background-color: var(--Vinotinto);
+}
+
+.listaImagenEditable .active .hideInActive  {
+    display: none;
+}
+.listaImagenEditable .active .showInActive  {
+    display: flex;
+}
+
+
+
+#selectsEditables {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#selectsEditables .row {
+    border-left: 10px solid var(--VinotintoClarito);
+    padding: 5px 0 5px 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+#selectsEditables .row select {
+    font-size: 17px;
+    height: 30px;
+    background-color: var(--Rosita);
+    border: none;
+    border-bottom: 4px solid var(--Vinotinto);
+    
+    padding: 0 5px;
+    width: fit-content;
+}
+#selectsEditables .row select:focus {
+    border: 2px solid var(--Vinotinto);
+    border-radius: 5px;
+    outline: none;
+}
+
+.selectButtoned {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.selectButtoned > button {
+    
+    width: 30px;
+    height: 30px;
+
+    
+    border-radius: 5px;
+    background-color: var(--Rosita);
+    border: 1px solid var(--Vinotinto);
+    color: var(--Vinotinto);
+    font-size: 17px;
+}
+
+.addNewDiv {
+    width: 100%;
+}
+
+
+#selectsEditables .hideInActive {
+    display: flex;
+}
+#selectsEditables .showInActive {
+    display: none;
+}
+
+#selectsEditables .active .hideInActive  {
+    display: none;
+}
+#selectsEditables .active .showInActive  {
+    display: flex;
+}
+
+.showAddNewOptionButton {
+    color: gray;
+    cursor: pointer;
+}
+
+.addNewForm {
+    border: 1px solid black;
+    background-color: white;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    max-width: 400px;
+    text-align: center;
+    gap: 10px;
+}
+
+.addNewForm b {
+    font-family: 'PuntaRedonda500' ,Arial, sans-serif;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+input.coolInput {
+    font-size: 17px;
+    height: 30px;
+    background-color: var(--Rosita);
+    border: none;
+    border-bottom: 4px solid var(--Vinotinto);
+    padding: 0 5px;
+}
+input.coolInput:focus {
+    outline: none;
+    border: 2px solid var(--Vinotinto);
+    border-bottom: 4px solid var(--Vinotinto);
+    border-radius: 5px;
+}
+input.coolInput:focus + span {
+    background-color: red;
+}
+
+
+#newQuestionInput {
+    max-width: 300px;
+}
+
+.questionMarks {
+    display: flex;
+    justify-content: center;
+}
+.questionMarks > *, .span_input input {
+    background-color: var(--Rosita);
+    border: none;
+    border-bottom: 4px solid var(--VinotintoClarito);
+    height: 30px;
+    font-size: 15px;
+}
+.questionMarks span, .span_input span {
+    padding: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+.questionMarks input, .span_input input {
+    outline: none !important;
+}
+
+.span_input {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.span_input input {
+    padding: 0 10px;
+}
+
+
+
+
+.selectButtoned > button {
+    display: none;
+}
+
+#selectsEditables .row:hover .selectButtoned > button {
+    display: block;
+}
+
+
+.editMode .hideOnEdit {
+    display: none !important;
+}
+.editMode .showOnEdit {
+    display: flex !important;
+}
+
+.showOnEdit {
+    max-width: 400px;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    display: none;
+}
+
+.showOnEdit input {
+    background-color: var(--Rosita);
+    border: none;
+    border-bottom: 4px solid var(--VinotintoClarito);
+    height: 30px;
+    font-size: 15px;
+    padding: 0 10px;
+}
+.showOnEdit input:focus {
+    outline: none !important;
+    border-radius: 5px;
+    border: 2px solid var(--VinotintoClarito);
+    border-bottom: 4px solid var(--VinotintoClarito);
+}
+
+
+#openCAButton {
+    background-color: var(--Rosita);
+    outline: none;
+    border-radius: 10px;
+    border: 2px solid var(--VinotintoClarito);
+
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    gap: 10px;
+}
+#openCAButton img {
+    width: 70px;
+    height: 70px;
+}
+#openCAButton div {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-family: TituloPrincipal;
+    font-size: 40px;
+    color: var(--VinotintoOscuro);
+    padding-right: 5px;
+}

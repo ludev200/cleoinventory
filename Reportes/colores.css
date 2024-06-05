@@ -1,0 +1,529 @@
+@font-face {
+    font-family: FuenteNormalPeroBonita;
+    src: url(../Fuentes/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: TituloPrincipal;
+    src: url(../Fuentes/PassionOne-Bold.ttf);
+}
+
+@font-face {
+    font-family: PuntaRedonda;
+    src: url(../Fuentes/Comfortaa-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: PuntaRedonda500;
+    src: url(../Fuentes/Comfortaa-SemiBold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --Gris: rgb(150,150,150);
+    --GrisClarito: rgb(201,201,201);
+}
+
+body {
+    padding: 60px;   
+}
+
+header {
+    background-color: white;
+    position: relative;
+
+}
+
+header p, header b {
+    display: block;
+    font-size: 12px;
+    text-align: center;
+}
+
+header img {
+    
+    width: 120px;
+    position: absolute;
+    top: 0;
+}
+
+.TituloCentrado{
+    text-align: center;
+    display: block;
+    border-bottom: 1px solid rgb(46,117,182);
+    background-color: rgb(189,215,238);
+}
+
+.EspacioDeTitulo {
+    font-size: 18px;
+    border-bottom: 2px solid rgb(46,117,182);
+    text-align: center;
+    
+    
+}
+
+.aber1 {
+    
+    height: 100px;
+    position: relative;
+}
+
+.EspacioDeCliente {
+    border: 2px solid rgb(46,117,182);
+    width: 60%;
+    position: relative;
+    height: 90px;
+}
+
+
+.xd {
+    background-color: blue;
+    width: 150px;
+}
+
+.TituloDelDato {
+    position: absolute;
+    width: 85px;
+}
+
+
+.PuntosSeparadores {
+    position: absolute;
+    left: 85px;
+    width: 10px;
+}
+
+.RespuestaDelDato {
+    
+    position: absolute;
+    left: 100px;
+    
+}
+
+.TituloDelDato b, .PuntosSeparadores b, .RespuestaDelDato span {
+    display: block;
+    height: 20px;
+    overflow: hidden;
+}
+
+.EspacioDeFecha {
+    border: 2px solid rgb(46,117,182);
+    width: 25%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 75px;
+}
+
+.TituloDelDatoParaFecha {
+    width: 80px;
+    position: absolute;
+    
+}
+
+.TituloDelDatoParaFecha b,.PuntosSeparadoresParaF b,.RespuestaDelDatoParaF span {
+    display: block;
+    height: 20px;
+    overflow: hidden;
+}
+
+.PuntosSeparadoresParaF {
+    position: absolute;
+    left: 80px;
+    width: 10px;
+}
+
+.RespuestaDelDatoParaF {
+    position: absolute;
+    left: 90px;
+    
+}
+
+
+
+.Tabla {
+    border: 2px solid rgb(31,78,121);
+    border-bottom: none;
+}
+.Tabla2 {
+    border: 2px solid rgb(31,78,121);
+}
+
+.TituloDeTabla {
+    background-color: rgb(31,78,121);
+    font-size: 18px;
+    height: 30px;
+    color: white;
+    text-align: center;
+    font-family: PuntaRedonda500, 'Times New Roman';
+}
+
+.NombresDeColumnas {
+    background-color: #bbb;
+    position: relative;
+    display: block;
+    height: 24px;
+    width: 100%;
+    
+}
+
+.NombreDeTituloDeTabla {
+    background-color: rgb(238, 238, 238);
+    height: 20px;
+    display: block;
+    position: absolute;
+    padding: 2px;
+    text-align: center;
+}
+
+.ColumnaID {
+    left: 0;
+    width: 60px;
+}
+
+.ColumnaNombre {
+    width: 258px;
+    left: 66px;
+    overflow: hidden;
+}
+
+.ColumnaUnidad {
+    width: 50px;
+    right: 308px;
+}
+
+.ColumnaDias {
+    width: 40px;
+    right: 126px;
+}
+
+.ColumnaPrecio {
+    width: 100px;
+    right: 202px;
+}
+
+.ColumnaPrecio2 {
+    width: 100px;
+    right: 252px;
+}
+
+.ColumnaCantidad {
+    width: 70px;
+    right: 126px;
+}
+
+.ColumnaCantidad2 {
+    width: 70px;
+    right: 172px;
+}
+
+.ColumnaNombre2 {
+    width: 284px;
+    left: 66px;
+}
+
+.ColumnaPrecio2 {
+    width: 110px;
+    right: 248px;
+}
+
+.ColumnaDepreciacion {
+    width: 116px;
+    right: 126px;
+}
+
+.ColumnaTotal {
+    right: 0;
+    width: 120px;
+}
+
+.EspacioDeRows {
+    background-color: #bbb;
+}
+
+.Row {
+    background-color: #bbb;
+    margin-bottom: 1px;
+    height: 25px;
+    position: relative;
+}
+
+.CeldaDeTabla{
+    background-color: white;
+    padding: 2px;
+    height: 20px;
+    display: block;
+    position: absolute;
+}
+
+.TACenter {
+    text-align: center;
+}
+
+.TARight {
+    text-align: right;
+}
+
+.EspacioDeLosTotales {
+    border: 2px solid rgb(46,117,182);
+    position: relative;
+    height: 165px;
+}
+.EspacioDeLosTotales_Mixto {
+    border: 2px solid rgb(46,117,182);
+}
+.intentodemejoracion {
+    height: 100px;
+    position: absolute;
+    left: 100px;
+}
+
+.SubTotales {
+    position: absolute;
+    right: 110px;
+    width: 200px;
+    height: 100px;
+}
+
+.SubTotales2 {
+    position: absolute;
+    right: 110px;
+    width: 200px;
+    height: 40px;
+}
+
+.PuntosSeparadoresDelSubTotal {
+    position: absolute;
+    right: 100px;
+    width: 10px;
+    height: 100px;
+}
+
+.PreciosDeSubTotal {
+    position: absolute;
+    right: 0;
+    width: 100px;
+    height: 100px;
+}
+
+
+
+.SubTotales b, .SubTotales2 b, .PuntosSeparadoresDelSubTotal b,.PreciosDeSubTotal p, .PreciosDeSubTotal_BS p, .PreciosDeSubTotal_USD p {
+    display: block;
+    height: 20px;
+}
+
+.EspacioDeLosTotales div .Palito {
+    height: 2px;
+    display: block;
+    background-color: rgb(46,117,182);
+}
+.EspacioDeLosTotales_Mixto div .Palito {
+    background-color: rgb(46,117,182);
+}
+
+.EspacioDelTotal {
+    position: absolute;
+    right: 0;
+    bottom: 30;
+    width: 310px;
+    font-size: 26px;
+    
+}
+
+.EspacioDelTotal b {
+    display: block;
+    position: absolute;
+    
+}
+
+.EspacioDelTotal p {
+    position: absolute;
+    right: 0;
+}
+
+.Coloreado {
+    color: rgb(32,56,100);
+}
+
+
+footer {
+    height: 150px;
+    position: relative;
+}
+
+.EspacioDeFirma {
+    position: absolute;
+    width: 30%;
+    left: 35%;
+    height: 150px;
+}
+
+.EspacioDeFirma img {
+    width: 100%;
+    
+    position: absolute;
+}
+
+.SelloXDDD {
+    position: absolute;
+    left: 150px;
+    height: 80px;
+    top: 50px;
+}
+
+.EspacioDeFirma .PalitoYNombre {
+
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.PalitoYNombre b {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.Sello {
+    height: 80px;
+    position: absolute;
+    right: 50px;
+    top: 50px;
+}
+
+.RowVacia {
+    background-color: white;
+    color: gray;
+    text-align: center;
+    height: 21px;
+    padding: 2px 0;
+}
+
+.NombreDeLaHoja {
+    text-decoration: underline;
+    padding-bottom: 20px;;
+    display: block;
+}
+
+.ColumnaID2 {
+    left: 0;
+    width: 75px;
+}
+
+.ColumnaNombre3 {
+    width: 243px;
+    left: 81px;
+    overflow: hidden;
+}
+
+.EspacioDeLosTotales2 {
+    border: 2px solid rgb(46,117,182);
+    position: relative;
+    height: 80px;
+}
+
+
+.TitulosATotalizar {
+    position: absolute;
+    right: 200px;
+    width: 100px;
+    height: 50px;
+    
+}
+
+.DosPuntosxd {
+    position: absolute;
+    right: 190px;
+    width: 10px;
+    text-align: center;
+    height: 50px;
+}
+
+.PreciosATotalizar {
+    position: absolute;
+    right: 0;
+    width: 190px;
+    height: 50px;
+}
+
+.TitulosATotalizar b, .DosPuntosxd b, .PreciosATotalizar p {
+    height: 20px;
+    display: block;
+}
+
+.Palito2 {
+    height: 2px;
+    display: block;
+    background-color: rgb(46,117,182);
+}
+
+.TotalDeLaCot {
+    font-size: 28px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 35px ;
+    width: 300px;
+}
+
+.PrecioTotal {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.listaDeCompras {
+    margin: 10px 0;
+    
+}
+.listaDeCompras .quantity {
+    width: 70px;
+    border-right: 1px solid rgb(46,117,182);
+    display: inline-block;
+}
+
+.CategoriaDeProd {
+    font-size: 20px;
+    border-bottom: 2px solid rgb(46,117,182);
+}
+
+.numerillo {
+    color: rgb(31,78,121);
+}
+.giunsillo {
+    color: rgb(31,78,121);
+    padding-left: 20px;
+}
+.rowProvider {
+    padding: 5px 0;
+}
+.grisesillo {
+    color: gray;
+    
+}
+
+
+
+.EspacioDeCliente *, .EspacioDeFecha * {
+    font-size: 14px;
+}
+
+.PalitoAbajo {
+    border-bottom: 2px solid rgb(46,117,182);
+}

@@ -1,0 +1,266 @@
+aside {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+aside {
+    background-color: #ddd;
+    display: flex;
+    width: 250px;
+    flex-direction: column;
+    
+}
+.optionName > a {
+    color: #222;
+    text-decoration: none;
+}
+.childs span a {
+    color: #555;
+    text-decoration: none;
+    cursor: pointer;
+}
+.childs span a:hover {
+    color: #222;
+}
+aside .optionParent .optionName {
+    padding: 20px;
+    color: #222;
+}
+aside .optionParent .optionName:hover {
+    background-color: #ccc;
+}
+aside .optionParent.disabled .optionName {
+    background-color: #ddd !important;
+}
+.open .childs {
+    display: flex;
+}
+aside .childs {
+    background-color: #eee;
+    display: none;
+    flex-direction: column;
+}
+aside .childs span {
+    padding: 15px 20px;
+    color: #555;
+}
+aside .childs span:hover {
+    color: #111;
+}
+.optionName span {
+    display: inline-block;
+    transition: all 200ms;
+}
+.optionName span.fi-rr-arrows {
+    rotate: 270deg;
+}
+.open .optionName span {
+    display: inline-block;
+    rotate: 360deg;
+}
+.asideContainer {
+    height: calc(100vh - 35px);
+    position: sticky;
+    top: 35px;
+    background: #ddd;
+}
+
+
+section {
+    display: flex;
+}
+article {
+    display: flex;
+    width: calc(100% - 250px);
+    padding: 10px;
+    flex-direction: column;
+}
+
+
+.mostly-customized-scrollbar {   
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.mostly-customized-scrollbar::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    background-color: #aaa;
+}
+.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
+    background-color: gray;
+}
+
+.optionParent.disabled .optionName, .optionParent.disabled .optionName a {
+    color: #aaa;
+    cursor: default !important;
+}
+
+.optionSimple {
+    padding: 20px;
+    color: #222;
+    text-decoration: none;
+}
+
+
+h2 {
+    font-family: 'FuenteNormalPeroBonita';
+    text-align: center;
+    font-size: 30px;
+    color: #333;
+}
+.searchSection {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    gap: 20px;
+}
+.searchContainer {
+    display: flex;
+    margin-bottom: 100px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    
+}
+.searchContainer input {
+    background-color: var(--Rosita);
+    border: none;
+    
+    outline: none;
+    font-size: 16px;
+    
+    height: 20px;
+    
+    width: 100%;
+}
+.lupita {
+    position: absolute;
+    left: 10px;
+    top: 7px;
+    color: #555;
+}
+.lupitaContainer {
+    position: relative;
+    border: 2px solid var(--VinotintoClarito);
+    padding: 5px 10px 5px 40px;
+    border-radius: 20px;
+    background-color: var(--Rosita);
+    width: 100%;
+    max-width: 500px;
+    z-index: 20;
+}
+
+.resultsContainer {
+    width: 100%;
+    max-width: 500px;
+    background: var(--RositaOscuro);
+    opacity: 0.9;
+    border: 1px solid gray;
+    padding: 25px;
+    padding-bottom: 15px;
+    transform: translateY(-10px);
+    z-index: 10;
+    color: #222;
+    position: absolute;
+    top: 30px;
+    gap: 5px;
+
+
+    display: flex;
+    flex-direction: column;
+}
+.resultsContainer a {
+    text-decoration: none;
+    color: #333;
+}
+.resultsContainer a span {
+    font-size: 13px;
+    margin-right: 10px;
+}
+.resultsContainer a:hover {
+    color: var(--VinotintoClarito);
+}
+
+.resultsContainer.close {
+    display: none !important;
+}
+
+.pageModule > ul {
+    line-height: 1.5;
+}
+.searchSection > p {
+    padding: 0 40px;
+    text-align: justify;
+    line-height: 1.5;
+    position: relative;
+}
+.searchSection > p small:first-child {
+    bottom: 1px;
+    right: 40px;
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.pageModule {
+    padding: 10px;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.moduleTitle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.moduleTitle img {
+    height: 30px;
+    border: 2px solid var(--VinotintoClarito);
+    padding: 3px;
+    border-radius: 5px;
+}
+.moduleTitle strong {
+    font-family: PuntaRedonda, cursive;
+    font-size: 30px;
+    height: 26px;
+}
+
+.pageModule > p {
+    line-height: 1.5;
+    text-align: justify;
+}
+.pageModule > p > a, .pageModule ul li a, .hooker {
+    color: var(--Vinotinto);
+    text-decoration: none;
+    cursor: pointer;
+}
+.pageModule > p > a:hover, .pageModule ul li a:hover, .hooker:hover {
+    text-decoration: underline;
+}
+.pageModule > img {
+    border: 1px solid gray;
+}
+
+
+ul li::marker {
+    color: white;
+}
+
+h4 {
+    margin-top: 10px;
+    text-transform: uppercase;
+}

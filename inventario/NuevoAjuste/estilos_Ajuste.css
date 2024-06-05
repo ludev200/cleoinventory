@@ -1,0 +1,471 @@
+html {
+    background-color: rgba(238,238,238,1);
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    grid-template-rows: 100px 35px 50px;
+    grid-auto-rows: 1fr;
+    background: rgb(238,238,238);
+    background: linear-gradient(0deg, rgba(238,238,238,1) 0%, rgba(255,255,255,1) 60%);
+}
+
+:root {
+    --Gris: rgb(150,150,150);
+    --GrisClarito: rgb(201,201,201);
+}
+
+
+article {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.TituloDeSectionDelArticle {
+    font-size: 25px;
+    border-bottom: 3px solid var(--VinotintoClarito);
+    display: block;
+    font-family: 'PuntaRedonda' ,Arial, sans-serif;
+    font-stretch: wider;
+}
+.TituloDeSectionDelArticle::before {
+    color: var(--Vinotinto);
+}
+
+.LabelDeMostrarMas {
+    height: 30px;
+    border-radius: 15px;
+    padding: 0 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: var(--Rosita);
+    color: var(--Vinotinto);
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: 245px;
+    justify-content: space-between;
+}
+
+.CartaDeAlmacenApagao {
+    width: 90%;
+    background-color: gainsboro;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 2px 5px rgb(50 50 50 / 50%);
+    position: relative;
+}
+.LetreroAlmacenApagao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    color: gray;
+    background-color: white;
+    border-radius: 10px;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+}
+.LetreroAlmacenApagao a {
+    color: var(--VinotintoClarito);
+    text-decoration: none;
+}
+.LetreroAlmacenApagao label {
+    background-color: var(--VinotintoClarito);
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+}
+.LetreroAlmacenApagao label:hover {
+    box-shadow: 0 0 5px rgb(50 50 50 / 80%);
+}
+.CartaDeAlmacen {
+    width: 90%;
+    background-color: #99d6d1;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 2px 5px rgb(50 50 50 / 50%);
+    position: relative;
+}
+.AlertaDeInactivo {
+    color: rgb(236, 49, 49);
+}
+.NombreDeAlmacen {
+    font-size: 20px;
+    font-family: PuntaRedonda;
+    border-bottom: 1px solid gray;
+    
+}
+.Grisesito {
+    color: lightslategrey;
+    font-size: 16px;
+    font-family: PuntaRedonda;
+}
+
+.EspacioDeProductosDeAlmacen {
+    border: 1px solid gray;
+    background: var(--VinotintoClarito);
+    background: linear-gradient(90deg, white 5%, var(--Rosita) 26%, var(--VinotintoClarito) 50%, var(--Rosita) 74%, white 95%);
+    gap: 1px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+row {
+    height: 50px;
+    background-color: white;
+    display: flex;
+    border-radius: 10px;
+}
+row:hover {
+    color: var(--VinotintoClarito);
+}
+celda {
+    display: flex;
+    align-items: center;
+}
+.Celda_Imagen {
+    width: 50px;
+    justify-content: center;
+}
+.Celda_Imagen img {
+    height: 35px;
+    width: 35px;
+    border: 2px solid var(--VinotintoClarito);
+    border-radius: 5px;
+    background-color: white;
+}
+.Celda_ID {
+    width: 90px;
+}
+.Celda_Nombre {
+    width: calc(100% - 340px);
+    align-items: baseline;
+}
+.Celda_Cantidad {
+    width: 100px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.Celda_Cantidad input {
+    width: 70px;
+    border: none;
+    height: 30px;
+    font-size: 16px;
+    border-bottom: 2px solid var(--VinotintoClarito);
+    text-align: right;
+    background-color: var(--Rosita);
+    padding: 0 5px;
+    outline: none;
+}
+.Celda_Botones {
+    width: 100px;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.Celda_Botones button {
+    height: 30px;
+    width: 30px;
+    border: 1px solid #444;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: white;
+}
+.BotonAgregarCambio:hover, .BotonRehacer:hover {
+    box-shadow: 0 0 3px rgb(50 50 50 / 60%);
+}
+.BotonRehacer {
+    background-color: lightskyblue;
+}
+.BotonAgregarCambio {
+    background-color: var(--VinotintoClarito);
+}
+.BotonDesactivado {
+    background-color: lightgrey;
+}
+
+.BotonInactivo {
+    background-color: darkgray !important;
+    box-shadow: none !important;
+}
+
+
+/*----------------Hojita derecha----------------*/
+.EspacioDeLosCambiosARealizar {
+    background-color: var(--Rosita);
+    height: calc(100vh - 155px);
+    border-left: 1px solid var(--VinotintoClarito);
+    position: sticky;
+    top: 35px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+}
+.DatosDelAjuste {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px
+}
+.DatosDelAjuste .Titulo {
+    border-bottom: 3px solid var(--VinotintoClarito);
+    font-family: PuntaRedonda;
+    text-align: center;
+    font-size: 20px;
+    width: 100%;
+    padding: 5px 0;
+    margin-bottom: 5px;
+}
+.xd {
+    width: 100%;
+}
+.xd i {
+    color: var(--Vinotinto);
+}
+.DatosDelAjuste textarea{
+    text-align: justify;
+    resize: none;
+    outline: none;
+    border: none;
+    width: calc(100% - 10px);
+    background-color: var(--RositaOscuro);
+    padding: 5px;
+    font-size: 14px;
+}
+
+.BotonesDelAjuste {
+    height: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.BotonesDelAjuste a, .BotonesDelAjuste button {
+    border: 2px solid var(--VinotintoClarito);
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.BotonesDelAjuste a:hover, .BotonesDelAjuste button:hover {
+    box-shadow: 0 0 5px rgb(50 50 50 / 80%);
+}
+.BotonesDelAjuste a {
+    color: var(--Vinotinto);
+    height: 27px;
+}
+.BotonesDelAjuste button {
+    color: white;
+    background-color: var(--Vinotinto);
+}
+
+.DivDeLosCambios {
+    height: calc(100% - 200px);
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.TablaDeCambios {
+    height: calc(100% - 30px);
+    
+}
+
+.EspacioDeRowDeCambio {
+    flex-direction: column;
+    gap: 1px;
+}
+.RowDeCambio {
+    background-color: var(--RositaOscuro);
+    height: 50px;
+    display: flex;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    width: 95%;
+}
+
+celda {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.CeldaRowDeCambio_Flechita {
+    align-items: center;
+    font-size: 25px;
+    width: 30px;
+}
+.fi-rr-caret-up {
+    color: rgb(64, 173, 64);
+}
+.fi-rr-caret-down {
+    color: red;
+}
+.CeldaRowDeCambio_Imagen {
+    width: 50px;
+    align-items: center;
+}
+.CeldaRowDeCambio_Imagen img {
+    height: 35px;
+    width: 35px;
+    border: 2px solid var(--VinotintoClarito);
+    border-radius: 5px;
+    background-color: white;
+    object-fit: cover;
+}
+.SpanDeNombre {
+    font-size: 14px;
+}
+.SpanDeAlmacen {
+    font-size: 13px;
+    color: gray;
+}
+.CeldaRowDeCambio_Almacen {
+    width: calc(100% - 180px);
+    padding: 0 5px;
+    align-items: baseline;
+}
+.CeldaRowDeCambio_Cantidad {
+    width: 70px;
+    padding: 0 5px;
+    align-items: end;
+}
+.CeldaRowDeCambio_Quitar {
+    width: 20px;
+    border-radius: 10px;
+    color: gray;
+}
+.CeldaRowDeCambio_Quitar:hover {
+    background-color: var(--VinotintoClarito);
+    color: white;
+}
+
+.mostly-customized-scrollbar {
+    display: block;
+    
+    overflow: auto;
+    height: 100%;
+}
+.mostly-customized-scrollbar::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    background-color: #aaa;
+}
+.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--VinotintoClarito);
+}
+
+
+.AlmacenApagao {
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(121,121,121,1) 100%);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(236, 49, 49);
+    gap: 5px;
+}
+.AlmacenApagao span {
+    font-family: PuntaRedonda;
+    height: 20px;
+    display: flex;
+    align-items: end;
+}
+
+.DivNoAlmacen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 3px solid #bbb;
+    color: #bbb;
+    font-family: PuntaRedonda;
+    height: calc(100vh - 331px);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+
+
+
+
+/*--------------MODAL DE ERROR---------------*/
+.ModalDeError {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(134, 134, 134, 0.3);
+}
+.TarjetaDeWarning {
+    background-color: white;
+    width: 50%;
+    height: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #666;
+    box-shadow: 4px 8px rgb(50 50 50 / 50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.TarjetaDeWarning img {
+    width: 100px;
+    margin: 10px 0;
+}
+.TarjetaDeWarning p {
+    margin: 10px 0;
+}
+.TextoIzquierda {
+    align-self: baseline;
+}
+.CajaDeErrores {
+    background-color: #ddd;
+    width: 98%;
+    padding: 5px 5px 0 5px;
+    border: 1px solid rgb(182, 135, 114);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 200px;
+    overflow-y: auto;
+}
+
+
+#botonSubmit {
+    display: none;
+}
