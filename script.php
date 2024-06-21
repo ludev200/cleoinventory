@@ -4,8 +4,8 @@ $BaseDeDatos = new conexion();
 
 
 
-$maxProd = 0;
-$maxProv = 10;
+$maxProd = 30;
+$maxProv = 0;
 $maxCust = 0;
 $lorem = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore voluptatem ratione exercitationem rerum consequuntur amet architecto non, asperiores nisi perspiciatis nulla adipisci est consectetur aut in debitis quibusdam, temporibus soluta.";
 

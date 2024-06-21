@@ -3,6 +3,7 @@ include_once('../Otros/clases.php');
 $BaseDeDatos = new conexion();
 
 $Inventario = new inventario();
+$publicFunctions = new publicFunctions();
 
 $DatosAMostrar = array(
     'descripcion' => '',
@@ -12,18 +13,12 @@ $DatosAMostrar = array(
 if($_GET){
     $DatosAMostrar = array(
         'descripcion' => ((isset($_GET['descripcion']))?$_GET['descripcion']:''),
-        'estado' => ((isset($_GET['estado']))?$_GET['estado']:'0')
+        'estado' => ((isset($_GET['estado']))?$_GET['estado']:'0'),
     );
-    
-    $ProductosEnInventario = $Inventario->ConsultarProductos($_GET);
-}else{
-    $ProductosEnInventario = $Inventario->ConsultarProductos($DatosAMostrar);
 }
 
+$inventary = $publicFunctions->getInventary($DatosAMostrar);
 $DatosDelInventario = $Inventario->ObtenerDatos();
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -73,10 +68,11 @@ $DatosDelInventario = $Inventario->ObtenerDatos();
     </modal>
     <article>
         <span id="TopeDelListado" class="fi-rr-line-width TituloDeSectionDelArticle"> PRODUCTOS EN INVENTARIO:</span>
+        <input hidden type="text" placeholder="Step" id="step" form="FormularioBuscador" value="1">
         <form autocomplete="off" id="FormularioBuscador" href="#SeccionDeLista" method="get">
-            <input value="<?php echo $DatosAMostrar['descripcion'];?>" type="text" name="descripcion" id="" placeholder="Filtra por ID o nombre...">
+            <input value="<?php echo $DatosAMostrar['descripcion'];?>" currentValue="<?php echo $DatosAMostrar['descripcion'];?>" type="text" name="descripcion" id="searchInput" placeholder="Filtra por ID o nombre...">
             <button id="BotonRealizarBusqueda" type="submit"><i class="fi-rr-search"></i></button>
-            <select name="estado" id="SelectEstado">
+            <select name="estado" id="SelectEstado" currentValue="<?php echo $DatosAMostrar['estado'];?>">
                 <option <?php echo (($DatosAMostrar['estado'] == 0)?'selected':'');?> value="0">Todos</option>
                 <option <?php echo (($DatosAMostrar['estado'] == 1)?'selected':'');?> value="1">Disponible</option>
                 <option <?php echo (($DatosAMostrar['estado'] == 2)?'selected':'');?> value="2">En alerta</option>
@@ -93,23 +89,22 @@ $DatosDelInventario = $Inventario->ObtenerDatos();
             </div>
             <div class="CuerpoDeLaTabla">
                 <?php
-                
-                if(empty($ProductosEnInventario)){
+                if(empty($inventary['result'])){
                     echo '
                     <row class="RowVacio">
                         <span>No hay productos en el invenario a mostrar.</span>
                     </row>
                 ';
                 }else{
-                    foreach($ProductosEnInventario as $Producto){
+                    foreach($inventary['result'] as $Producto){
                         echo '
                         <row>
                             <celda class="ColumnaImagen">
-                                <img src="../Imagenes/Productos/'.((empty($Producto['ULRImagen']))?'ImagenPredefinida_Productos.png':$Producto['ULRImagen']).'" alt="">
+                                <img src="../Imagenes/Productos/'.((empty($Producto['img']))?'ImagenPredefinida_Productos.png':$Producto['img']).'" alt="">
                             </celda>
                             <celda class="ColumnaID">'.$Producto['id'].'</celda>
-                            <celda class="ColumnaNombre">'.$Producto['nombre'].'</celda>
-                            <celda class="ColumnaExistencia">'.(($Producto['idEstado'] == 3)?'<span title="Este producto se encuentra agotado." style="color: rgb(236, 49, 49);" class="fi-sr-comment-exclamation"></span>':(($Producto['idEstado'] == 2)?'<span title="Este producto se encuentra bajo el nivel de alerta establecido ('.$Producto['nivelDeAlerta'].' '.$Producto['unidadDeMedida'].')" style="color: #FEA82F;" class="fi-sr-comment-exclamation"></span>':'')).'x '.$Producto['existencia'].'</celda>
+                            <celda class="ColumnaNombre">'.$Producto['name'].'</celda>
+                            <celda class="ColumnaExistencia">'.(($Producto['idState'] == 3)?'<span title="Este producto se encuentra agotado." style="color: rgb(236, 49, 49);" class="fi-sr-comment-exclamation"></span>':(($Producto['idState'] == 2)?'<span title="Este producto se encuentra bajo el nivel de alerta establecido ('.$Producto['alertLevel'].' '.$Producto['unit'].')" style="color: #FEA82F;" class="fi-sr-comment-exclamation"></span>':'')).'x '.$Producto['existence'].'</celda>
                             <celda class="ColumnaDetalles">
                                 <a class="hovershadow" href="../Productos/Producto/?id='.$Producto['id'].'">Ver más</a>
                             </celda>
@@ -119,6 +114,9 @@ $DatosDelInventario = $Inventario->ObtenerDatos();
                 }
                 ?>
             </div>
+        </div>
+        <div id="loadingResults">
+            Buscando más resultados
         </div>
     </article>
     <aside>
@@ -144,7 +142,7 @@ $DatosDelInventario = $Inventario->ObtenerDatos();
                     </div>
                 </div>
                 <div class="PalBoton">
-                    <a href="../Compras/NuevaOrden/?modo=1"> <i class="fi-rr-shopping-cart"></i> Ir a generar Orden de compra</a>
+                    <a href="../Compras/NuevaOrden/?modo=1"> <i class="fi-rr-shopping-cart"></i> Generar Orden de compra</a>
                 </div>
             </div>
             ';

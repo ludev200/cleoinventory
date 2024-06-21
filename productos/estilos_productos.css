@@ -100,7 +100,7 @@ body {
 
 .TapaDeTextoSobrante {
     background: var(--Rosita);
-    background: linear-gradient(0deg, var(--Rosita) 10%, rgba(247,229,233,0) 100%);
+    background: linear-gradient(0deg, var(--Rosita) 30%, rgba(247,229,233,0) 100%);
     position: absolute;
     bottom: 0;
     width: 100%;

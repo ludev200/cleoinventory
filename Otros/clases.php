@@ -5719,7 +5719,67 @@ class customer {
 
 
 class publicFunctions extends conexion {
+    public function getInventary($givenData){
+        $resultMax = 20;
+        $result = array();
+        $step = 1;
+        $isNextStepPossible = false;
+        $filters = ['(`productos`.`idCategoria` = 1 OR `productos`.`idCategoria` = 2)'];
 
+        if(!empty($givenData['step'])){
+            $step = $givenData['step'];
+        }
+
+        $limit = "LIMIT ".(($step - 1) * $resultMax).",".($resultMax + 1);
+        
+        
+        if(!empty($givenData['search'])){
+            $filters[] = "(`productos`.`nombre` LIKE '%".$givenData['search']."%' OR `productos`.`id` LIKE '%".$givenData['search']."%' OR `productos`.`descripcion` LIKE '%".$givenData['search']."%')";
+        }
+
+        if(!empty($givenData['status'])){
+            $filters[] = "(`productos`.`idEstado` = ".$givenData['status'].")";
+        }
+
+        $sql = "SELECT `productos`.*, `unidadesdemedida`.`nombre` AS 'unit' FROM `productos` INNER JOIN `unidadesdemedida` ON `productos`.`idUnidadDeMedida` = `unidadesdemedida`.`id` WHERE ".implode(' AND ', $filters)."ORDER BY id $limit";
+
+        $search = $this->consultar($sql);
+        if(!empty($search)){
+            if(count($search) > $resultMax){
+                array_pop($search);
+                $isNextStepPossible = true;
+            }
+
+
+            foreach($search as $row){
+                $existence = 0;
+
+                $search2 = $this->consultar("SELECT * FROM `inventario` WHERE `idProducto` = ".$row['id']);
+                if(!empty($search2)){
+                    foreach($search2 as $row2){
+                        $existence = $existence + $row2['existencia'];
+                    }
+                }
+
+                $result[] = array(
+                    'id' => $row['id'],
+                    'img' => $row['ULRImagen'],
+                    'name' => $row['nombre'],
+                    'alertLevel' => $row['nivelDeAlerta'],
+                    'idState' => $row['idEstado'],
+                    'existence' => $existence,
+                    'unit' => $row['unit'],
+                );
+            }
+        }
+
+
+        return array(
+            'step' => $step,
+            'result' => $result,
+            'isNextStepPossible' => $isNextStepPossible
+        );
+    }
 
     public function checkProvidersImagesExistence(){
         $search = $this->consultar("SELECT * FROM `proveedores`");
