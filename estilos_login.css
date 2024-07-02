@@ -19,6 +19,7 @@
     padding: 0;
     margin: 0;
     font-family: FuenteNormalPeroBonita, sans-serif;
+    user-select: none;
 }
 
 body {

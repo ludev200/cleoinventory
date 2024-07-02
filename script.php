@@ -2,7 +2,7 @@
 include('Otros/clases.php');
 $BaseDeDatos = new conexion();
 
-
+exit('Script no disponible');
 
 $maxProd = 30;
 $maxProv = 0;

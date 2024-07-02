@@ -2,6 +2,10 @@ html {
     background-color: rgba(238,238,238,1);
 }
 
+* {
+    user-select: none;
+}
+
 body {
     display: grid;
     grid-template-columns: 75fr minmax(200px ,20fr);
@@ -83,4 +87,15 @@ body {
 
 .VentanitaDeInfo p {
     color: gray;
+}
+
+
+
+.unselectable {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-drag: none;
 }

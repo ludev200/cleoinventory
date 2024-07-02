@@ -5719,6 +5719,67 @@ class customer {
 
 
 class publicFunctions extends conexion {
+    public function getProductsList($givenData){
+        $resultMax = 20;
+        $result = array();
+        $step = 1;
+        $order = '';
+        $isNextStepPossible = false;
+        if(!empty($givenData['step'])){$step = $givenData['step'];}
+        $limit = "LIMIT ".(($step - 1) * $resultMax).",".($resultMax + 1);
+        $filters = array();
+
+        if(isset($givenData['status']) && $givenData['status'] > 0 && $givenData['status'] < 4){
+            $filters[] = "(`idEstado` = ".$givenData['status'].")";
+        }else{
+            $filters[] = "(`idEstado` < 4)";
+        }
+
+        if(!empty($givenData['category'])){
+            $filters[] = "(`idCategoria` = ".$givenData['category'].")";
+        }
+
+        if(!empty($givenData['search'])){
+            $filters[] = "(`id` LIKE '%".$givenData['search']."%' OR `nombre` LIKE '%".$givenData['search']."%' OR `descripcion`LIKE '%".$givenData['search']."%')";
+        }
+
+        if(!empty($givenData['order'])){
+            switch($givenData['order']){
+                case 'estado':
+                    $order = "ORDER BY `idEstado`";
+                break;
+                default:
+                    $order = "ORDER BY `".$givenData['order']."`";
+            }
+        }
+
+        $sql = "SELECT * FROM `productos` WHERE ".implode(' AND ', $filters)." $order $limit";
+        $search = $this->consultar($sql);
+        if(!empty($search)){
+            if(count($search) > $resultMax){
+                array_pop($search);
+                $isNextStepPossible = true;
+            }
+
+            foreach($search as $row){
+                $result[] = array(
+                    'id' => $row['id'],
+                    'img' => $row['ULRImagen'],
+                    'name' => $row['nombre'],
+                    'price' => $row['precio'],
+                    'idCategory' => $row['idCategoria'],
+                    'desc' => $row['descripcion'],
+                );
+            }
+        }
+
+        return array(
+            'step' => $step,
+            'result' => $result,
+            'isNextStepPossible' => $isNextStepPossible
+        );
+    }
+
     public function getInventary($givenData){
         $resultMax = 20;
         $result = array();

@@ -176,16 +176,26 @@ if(isset($_GET['id'])){
                                 <span>1<span style="color: green;">$</span></span>
                                 <i class="fi-rr-exchange"></i>
                                 <div class="DatosDelCambio">
-                                    <input id="InputTasa" onkeypress="return SoloNumerosFloat(event)" onpaste="return false" maxlength="9" type="text">
+                                    <input id="InputTasa" onkeypress="return SoloNumerosFloat(event)" onfocus="this.select()" maxlength="9" type="text">
                                     <div><?php echo $DatosAMostrar['simboloModenaNacional'];?></div>
+                                </div>
+                                <div class="apiInfo">
+                                    <i class="fi fi-rr-info"></i>
+                                    <div class="info">Consultando Tasa de cambio establecida por el BCV..</div>
                                 </div>
                             </div>
                             <br>
-                            <div>
-                                <div style="text-align: center; margin-bottom: 5px;">Opción de moneda:</div>
+                            <br>
+                            <br>
+                            <div style="position: relative;">
+                                <!-- <div  style="text-align: center; margin-bottom: 5px;">Opción de moneda:</div>
                                 <div class="twinButtons">
                                     <button id="BotonGenerarReporteConTasaEspecifica" class="BotonDeAqui">Única</button>
                                     <button id="newOptionButton" class="BotonDeAqui">Múltiple</button>
+                                </div> -->
+                                <div class="twinButtons2">
+                                    <button id="uniqueDivisaButton" class=""><i class="fi fi-rr-coin"></i><span>Moneda</span><span>única</span></button>
+                                    <button id="multyDivisaButton" class=""><i class="fi fi-rr-coins"></i><span>Moneda</span><span>múltiple</span></button>
                                 </div>
                             </div>
                         </div>

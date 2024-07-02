@@ -561,6 +561,7 @@ span.numerillo {
 
 .OtroDivPorqueSoyIdiota {
     overflow-x: hidden;
+    height: 240px;
 }
 
 .CajaDeSeleccionDeTasa {
@@ -577,7 +578,7 @@ span.numerillo {
     left: -50px;
     position: absolute;
     height: 200px;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .TituloDeCambioDeTasa {
@@ -599,6 +600,18 @@ span.numerillo {
     height: 30px;
     align-items: center;
     font-size: 20px;
+
+    position: relative;
+}
+
+.toolKit {
+    position: absolute;
+    font-size: 13px;
+    bottom: -30px;
+    padding: 3px 10px;
+    border-radius: 5px;
+    background: #6ec0cb;
+    color: #1d5678;
 }
 
 .DatosDelCambio {
@@ -740,4 +753,62 @@ span.numerillo {
 .twinButtons {
     display: flex;
     gap: 20px;
+}
+
+
+.apiInfo {
+    font-size: 13px;
+    color: gray;
+    text-align: center;
+    position: relative;
+}
+
+.info {
+    display: none;
+    position: absolute;
+    top: 40px;
+    width: 230px;
+    left: -200px;
+    flex-direction: column;
+    background-color: white;
+}
+
+.apiInfo:hover .info {
+    display: flex;
+}
+
+
+
+.twinButtons2 {
+    position: absolute;
+    background-color: lightgray;
+    display: flex;
+    gap: 2px;
+    left: -110px;
+    width: 220px;
+    top: -30px;
+}
+
+.twinButtons2 button {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50px;
+    border: none;
+    background: white;
+    font-size: 14px;
+    transition: all 0.5s;
+    color: gray;
+}
+
+.twinButtons2 button.able {
+    color: black;
+    cursor: pointer;
+}
+
+.twinButtons2 button.able:hover {
+    color: var(--VinotintoClarito);
+    font-size: 15px;
 }
