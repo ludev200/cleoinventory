@@ -247,7 +247,7 @@ if($_POST){
                 <b>Almacenes</b>
             </div>
             <button id="BotonDelAsideAgregarProducto" style="width: 210px;"> <i class="fi-sr-apps-add"></i> Agregar producto</button>
-            <a href="../../Ayuda/#22" target="_blank"><i class="fi-rr-interrogation"></i> Obtener información</a>
+            <a href="../../Ayuda/#22" target="_blank"><i class="fi-rr-interrogation"></i> Obtener ayuda</a>
             <a href="../" id=""> <i class="fi-rr-arrow-left"></i> Salir sin guardar</a>
             
             <a HIDDEN href="../NuevoAlmacen/"> <i class="fi-sr-broom"></i> Limpiar formulario</a>

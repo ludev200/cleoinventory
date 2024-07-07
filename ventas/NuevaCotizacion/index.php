@@ -441,7 +441,7 @@ if($_POST){
                 <b>Ventas</b>
             </div>
             <label id="BotonAbrirModalAgregarProducto"> <i class="fi-sr-apps-add"></i> Agregar producto</label>
-            <a href="../../Ayuda/#63" target="_blank"><i class="fi-rr-interrogation"></i> Obtener información</a>
+            <a href="../../Ayuda/#63" target="_blank"><i class="fi-rr-interrogation"></i> Obtener ayuda</a>
             <a href="../" id=""> <i class="fi-rr-arrow-left"></i> Salir sin guardar</a>
             <a HIDDEN href="../../Otros/funcion_EliminarCotizacionEnBorrador.php" id="VaciarFormulario" class="BotonesLaterales" > <i class="fi-sr-broom"></i> Vaciar formulario</a>
             <label HIDDEN for="BotonBorrador" class="BotonesLaterales" > <i class="fi-sr-folder-minus"></i> Guardar en borrador</label>

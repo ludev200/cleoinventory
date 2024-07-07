@@ -289,7 +289,7 @@ if($_POST){
             </div>
             <button style="width: 210px;" id="BotonAbrirModalAgregarProducto"> <i class="fi-sr-apps-add"></i> Agregar producto</button>
             <a href="../../Otros/funcion_EliminarCompraEnBorrador.php" id="VaciarFormulario" class="BotonesLaterales" > <i class="fi-sr-broom"></i> Vaciar formulario</a>
-            <button style="width: 210px;" form="FormularioNuevaOrden" name="borrador" value="borrador" class="BotonesLaterales" > <i class="fi-sr-folder-minus"></i> Guardar en borrador</button>
+            <button hidden style="width: 210px;" form="FormularioNuevaOrden" name="borrador" value="borrador" class="BotonesLaterales" > <i class="fi-sr-folder-minus"></i> Guardar en borrador</button>
         </div>
         <div class="LetreroDeExistencia">
             <div class="ImagenesDelLetrero">

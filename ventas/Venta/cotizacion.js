@@ -114,6 +114,7 @@ BotonMonedaNacional.addEventListener('click', () => {
 const apiInfo = document.querySelector('.apiInfo div');
 
 function consultarTasa(){
+    apiInfo.innerText = 'Consultando Tasa de cambio establecida por el BCV..';
     fetch('https://pydolarvenezuela-api.vercel.app/api/v1/dollar?page=bcv')
     .then(res => res.json())
     .then(petition => {
@@ -148,7 +149,6 @@ function consultarTasa2(){
             hour: '2-digit', 
             minute: '2-digit', 
             second: '2-digit', 
-            
         });
         venezuelaDateString = dateFormatter.format(dateInVenezuela);
         pieces = venezuelaDateString.split(',')

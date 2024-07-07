@@ -138,7 +138,7 @@ if($_POST){
                 <img src="../../Imagenes/iconoDelMenu_Proveedores.png">
                 <b>Proveedores</b>
             </div>
-            <a href="../../Ayuda/#54" target="_blank"><i class="fi-rr-interrogation"></i> Obtener información</a>
+            <a href="../../Ayuda/#54" target="_blank"><i class="fi-rr-interrogation"></i> Obtener ayuda</a>
             <a href="../" id="" href="Cambios"> <i class="fi-rr-arrow-left"></i> Salir sin guardar</a>
         </div>
     </aside>

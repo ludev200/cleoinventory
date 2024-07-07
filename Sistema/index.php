@@ -54,7 +54,7 @@ if(isset($_POST['color'])){
     
     fwrite($file, $content);
     fclose($file);
-    header('Location: ../Sistema/');
+    header('Location: ../Sistema/#TopeColores');
 }
 
 if(isset($_POST['photo'])){

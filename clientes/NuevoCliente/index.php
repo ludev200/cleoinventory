@@ -236,6 +236,7 @@ if($_POST){
                 <img src="../../Imagenes/iconoDelMenu_Clientes.png" alt="">
                 <b>Clientes</b>
             </div>
+            <a href="../../Ayuda/#74" target="_blank"><i class="fi-rr-interrogation"></i> Obtener ayuda</a>
             <a href="../" id=""> <i class="fi-rr-arrow-left"></i> Salir sin guardar</a>
             <a HIDDEN href="../../Otros/funcion_EliminarClientesEnBorrador.php" id="VaciarFormulario" class="BotonesLaterales" > <i class="fi-sr-broom"></i> Vaciar formulario</a>
             <label HIDDEN for="BotonBorrador" class="BotonesLaterales" > <i class="fi-sr-folder-minus"></i> Guardar en borrador</label>

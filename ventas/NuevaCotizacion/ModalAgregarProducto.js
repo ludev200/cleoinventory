@@ -373,6 +373,24 @@ function CambiarPrevisualizacion(){
             <button id="BotonParaAgregarElProductoSeleccionado" title="Agregar este producto a la cotización" class="BotonParaAgregarElProductoSeleccionado">Agregar</button>
         `;
 
+        document.getElementById('InputDeMultiplicar')?.addEventListener('keyup', (e)=>{
+            if(e.keyCode == 13){
+                document.getElementById('BotonParaAgregarElProductoSeleccionado')?.click();
+            }
+        })
+        document.getElementById('InputDePersonas')?.addEventListener('keyup', (e)=>{
+            if(e.keyCode == 13){
+                document.getElementById('InputDeDias')?.select();
+            }
+        })
+        document.getElementById('InputDeDias')?.addEventListener('keyup', (e)=>{
+            if(e.keyCode == 13){
+                document.getElementById('BotonParaAgregarElProductoSeleccionado')?.click();
+            }
+        })
+
+        
+
         if(ProductoSeleccionado.idcategoria < 3){
             if(ProductoSeleccionado.idcategoria == 1){
                 //Cuando el producto a mostrar es Material o Equipo

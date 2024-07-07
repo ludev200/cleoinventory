@@ -181,7 +181,7 @@ if(isset($_GET['id'])){
                                 </div>
                                 <div class="apiInfo">
                                     <i class="fi fi-rr-info"></i>
-                                    <div class="info">Consultando Tasa de cambio establecida por el BCV..</div>
+                                    <div class="info">Consultando Tasa de cambio establecida por el BCV.</div>
                                 </div>
                             </div>
                             <br>

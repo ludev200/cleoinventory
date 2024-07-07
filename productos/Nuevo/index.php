@@ -79,7 +79,7 @@ $units = $BaseDeDatos->consultar("SELECT * FROM `unidadesdemedida` WHERE `id` > 
         <span class="SubtituloCentral" style="margin-top: 20px;"><i class="fi-sr-list Arreglito"></i> DETALLES:</span>
         <div class="inputsContainer">
             <div style="margin-bottom: 10px;">
-                <b>Categoría:</b> <a href="../../Ayuda/#indice1" target="_blank" class="AyudaEnNavegacion"><i class="fi-sr-interrogation"></i> <span>Ir a información de las categorías</span></a>
+                <b>Categoría:</b> <a href="../../Ayuda/#indice1" target="_blank" class="AyudaEnNavegacion"><i class="fi-sr-interrogation"></i> <span>Obtener información sobre las categorías</span></a>
             </div>
             <select name="idCategory" id="categoryInput" style="width: 200px">
                 <option value="1" selected="">Material</option>
@@ -158,7 +158,7 @@ $units = $BaseDeDatos->consultar("SELECT * FROM `unidadesdemedida` WHERE `id` > 
                 <img src="../../Imagenes/iconoDelMenu_Productos.png">
                 <b>Productos</b>
             </div>
-            <a href="../../Ayuda/#5" target="_blank"><i class="fi-rr-interrogation"></i> Obtener información</a>
+            <a href="../../Ayuda/#5" target="_blank"><i class="fi-rr-interrogation"></i> Obtener ayuda</a>
             <a href="../" id="AgregarNuevo" href="Cambios"> <i class="fi-rr-arrow-left"></i> Salir sin guardar</a>
         </div>
     </aside>
