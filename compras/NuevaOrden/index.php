@@ -237,6 +237,7 @@ if($_POST){
                                     $DatosDelProducto = $ProductoAMostrarEnLista->ObtenerDatos();
 
                                     $Cantidad = (($DatosDelProducto['idCategoria'] == 1)?$pedazos[1]:number_format($pedazos[1], 4, '.', ""));
+                                    $Cantidad = $pedazos[1];
                                     
                                     echo '
                                         <row id="RowDeProducto-'.$DatosDelProducto['id'].'">
