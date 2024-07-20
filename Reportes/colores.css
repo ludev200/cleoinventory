@@ -54,13 +54,13 @@ header img {
 .TituloCentrado{
     text-align: center;
     display: block;
-    border-bottom: 1px solid rgb(215,54,99);
-    background-color: rgb(247,229,233);
+    border-bottom: 1px solid rgb(133,189,95);
+    background-color: rgb(197,224,180);
 }
 
 .EspacioDeTitulo {
     font-size: 18px;
-    border-bottom: 2px solid rgb(215,54,99);
+    border-bottom: 2px solid rgb(133,189,95);
     text-align: center;
     
     
@@ -73,7 +73,7 @@ header img {
 }
 
 .EspacioDeCliente {
-    border: 2px solid rgb(215,54,99);
+    border: 2px solid rgb(133,189,95);
     width: 60%;
     position: relative;
     height: 90px;
@@ -111,7 +111,7 @@ header img {
 }
 
 .EspacioDeFecha {
-    border: 2px solid rgb(215,54,99);
+    border: 2px solid rgb(133,189,95);
     width: 25%;
     position: absolute;
     right: 0;
@@ -146,15 +146,15 @@ header img {
 
 
 .Tabla {
-    border: 2px solid rgb(188,28,72);
+    border: 2px solid rgb(84,130,53);
     border-bottom: none;
 }
 .Tabla2 {
-    border: 2px solid rgb(188,28,72);
+    border: 2px solid rgb(84,130,53);
 }
 
 .TituloDeTabla {
-    background-color: rgb(188,28,72);
+    background-color: rgb(84,130,53);
     font-size: 18px;
     height: 30px;
     color: white;
@@ -269,12 +269,12 @@ header img {
 }
 
 .EspacioDeLosTotales {
-    border: 2px solid rgb(215,54,99);
+    border: 2px solid rgb(133,189,95);
     position: relative;
     height: 165px;
 }
 .EspacioDeLosTotales_Mixto {
-    border: 2px solid rgb(215,54,99);
+    border: 2px solid rgb(133,189,95);
 }
 .intentodemejoracion {
     height: 100px;
@@ -320,10 +320,10 @@ header img {
 .EspacioDeLosTotales div .Palito {
     height: 2px;
     display: block;
-    background-color: rgb(215,54,99);
+    background-color: rgb(133,189,95);
 }
 .EspacioDeLosTotales_Mixto div .Palito {
-    background-color: rgb(215,54,99);
+    background-color: rgb(133,189,95);
 }
 
 .EspacioDelTotal {
@@ -347,7 +347,7 @@ header img {
 }
 
 .Coloreado {
-    color: rgb(162,19,37);
+    color: rgb(54,110,66);
 }
 
 
@@ -422,7 +422,7 @@ footer {
 }
 
 .EspacioDeLosTotales2 {
-    border: 2px solid rgb(215,54,99);
+    border: 2px solid rgb(133,189,95);
     position: relative;
     height: 80px;
 }
@@ -459,7 +459,7 @@ footer {
 .Palito2 {
     height: 2px;
     display: block;
-    background-color: rgb(215,54,99);
+    background-color: rgb(133,189,95);
 }
 
 .TotalDeLaCot {
@@ -494,20 +494,20 @@ footer {
 }
 .listaDeCompras .quantity {
     width: 70px;
-    border-right: 1px solid rgb(215,54,99);
+    border-right: 1px solid rgb(133,189,95);
     display: inline-block;
 }
 
 .CategoriaDeProd {
     font-size: 20px;
-    border-bottom: 2px solid rgb(215,54,99);
+    border-bottom: 2px solid rgb(133,189,95);
 }
 
 .numerillo {
-    color: rgb(188,28,72);
+    color: rgb(84,130,53);
 }
 .giunsillo {
-    color: rgb(188,28,72);
+    color: rgb(84,130,53);
     padding-left: 20px;
 }
 .rowProvider {
@@ -525,5 +525,5 @@ footer {
 }
 
 .PalitoAbajo {
-    border-bottom: 2px solid rgb(215,54,99);
+    border-bottom: 2px solid rgb(133,189,95);
 }

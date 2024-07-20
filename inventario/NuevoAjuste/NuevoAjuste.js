@@ -101,9 +101,9 @@ window.addEventListener('load', () => {
 
                 Diferencia = InputConCantidad.value - CantidadOriginalEnInput[AlmaXProd];
 
-                if(InputConCantidad.getAttribute('categoria') == 2){
-                    Diferencia = Diferencia.toFixed(4);
-                }
+                // if(InputConCantidad.getAttribute('categoria') == 2){
+                //     Diferencia = Diferencia.toFixed(4);
+                // }
 
                 
                 AgregarCambioALaLista(AlmaXProd, Diferencia);

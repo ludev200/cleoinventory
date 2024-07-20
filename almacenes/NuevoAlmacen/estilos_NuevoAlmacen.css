@@ -209,7 +209,7 @@ row:hover {
     position: absolute;
     right: 0;
     background: rgb(247,229,233);
-    background: linear-gradient(89deg, rgba(247,229,233,0) 0%, rgba(247,229,233,1) 86%);
+    background: linear-gradient(89deg, rgba(247,229,233,0) 0%, var(--Rosita) 86%);
     width: 50px;
     transition: all 500ms;
     height: 100%;

@@ -149,7 +149,7 @@ if(isset($_GET['id'])){
                 <span id="idEntity"><?php echo $_GET['id'];?></span>
             </div>
         </div>
-        <div class="TablaDeProductos">
+        <div class="TablaDeProductos" style="border: 1px solid lightgray;">
             <span class="TituloDeTabla">Lista de productos</span>
             <header>
                 <celda class="ColumnaImagen">Imagen</celda>

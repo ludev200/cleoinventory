@@ -46,20 +46,20 @@ $DatosDelInventario = $Inventario->ObtenerDatos();
                 <b class="TituloDeModal">ELEGIR TIPO DE MODIFICACIÓN</b>                
                 <div class="CuerpoDeLaVentanaModal">
                     <div class="OpcionesPrincipales">
-                        <a href="NuevoAjuste" class="TarjetaDeMetodo">
-                            <img src="../Imagenes/Otros/AjusteDeInventario.png" alt="">
-                            <b>Ajuste de inventario</b>
-                            <p>Modifica la existencia de los productos en los distintos almacénes sin especificar su origen o destino.</p>
+                        <a href="../Compras/RegistrarCompra/" class="TarjetaDeMetodo">
+                            <img src="../Imagenes/iconoDelMenu_Compras.png" alt="">
+                            <b>Registro de compra</b>
+                            <p>Registra una compra y así realiza una entrada de productos e incrementa su existencia en los almacenes indicados.</p>
                         </a>
                         <a href="../Ventas/Confirmar/" class="TarjetaDeMetodo">
                             <img src="../Imagenes/iconoDelMenu_Ventas.png" alt="">
                             <b>Registro de venta</b>
                             <p>Registra una venta en el sistema para asi realizar una salida de productos de los almacenes indicados.</p>
                         </a>
-                        <a href="../Compras/RegistrarCompra/" class="TarjetaDeMetodo">
-                            <img src="../Imagenes/iconoDelMenu_Compras.png" alt="">
-                            <b>Registro de compra</b>
-                            <p>Registra una compra y así realiza una entrada de productos e incrementa su existencia en los almacenes indicados.</p>
+                        <a href="NuevoAjuste" class="TarjetaDeMetodo">
+                            <img src="../Imagenes/Otros/AjusteDeInventario.png" alt="">
+                            <b>Ajuste de inventario</b>
+                            <p>Modifica la existencia de los productos en los distintos almacénes sin especificar su origen o destino.</p>
                         </a>
                     </div>
                 </div>
@@ -106,7 +106,7 @@ $DatosDelInventario = $Inventario->ObtenerDatos();
                             <celda class="ColumnaNombre">'.$Producto['name'].'</celda>
                             <celda class="ColumnaExistencia">'.(($Producto['idState'] == 3)?'<span title="Este producto se encuentra agotado." style="color: rgb(236, 49, 49);" class="fi-sr-comment-exclamation"></span>':(($Producto['idState'] == 2)?'<span title="Este producto se encuentra bajo el nivel de alerta establecido ('.$Producto['alertLevel'].' '.$Producto['unit'].')" style="color: #FEA82F;" class="fi-sr-comment-exclamation"></span>':'')).'x '.$Producto['existence'].'</celda>
                             <celda class="ColumnaDetalles">
-                                <a class="hovershadow" href="../Productos/Producto/?id='.$Producto['id'].'">Ver más</a>
+                                <a target="_blank" class="hovershadow" href="../Productos/Producto/?id='.$Producto['id'].'">Ver más</a>
                             </celda>
                         </row>
                         ';

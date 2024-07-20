@@ -2140,7 +2140,7 @@ class usuario {
 
     function ConsultarUsuarios(){
         $BaseDeDatos = new conexion();
-        $search = $BaseDeDatos->consultar("SELECT `usuarios`.*, `nivelesdeusuario`.`nombre` AS 'perfil'  FROM `usuarios` INNER JOIN `nivelesdeusuario` ON `usuarios`.`idNivelDeUsuario` = `nivelesdeusuario`.`id`");
+        $search = $BaseDeDatos->consultar("SELECT `usuarios`.*, `nivelesdeusuario`.`nombre` AS 'perfil'  FROM `usuarios` INNER JOIN `nivelesdeusuario` ON `usuarios`.`idNivelDeUsuario` = `nivelesdeusuario`.`id` ORDER BY `idNivelDeUsuario`");
         return $search;
     }
 
@@ -2615,12 +2615,16 @@ class cliente{
             }
 
             //creo el contacto
-            $IdDelContacto = $ContactoFantasma->CrearNuevo($DatosAGuardar);
+            $address = (empty($DatosAGuardar['phone'])? "'".$DatosAGuardar['phone']."'": 'NULL');
+            $email = (empty($DatosAGuardar['correo'])? "'".$DatosAGuardar['correo']."'": 'NULL');
+            $phone = (empty($DatosAGuardar['phone'])? "'".$DatosAGuardar['phone']."'": 'NULL');
+            $phone2 = (empty($DatosAGuardar['phone2'])? "'".$DatosAGuardar['phone2']."'": 'NULL');
+            
+            $IdDelContacto = $BaseDeDatos->ejecutar("INSERT INTO `contactos`(`direccion`, `telefono1`, `telefono2`, `correo`) VALUES 
+            ($address, $phone, $phone2, $email);");
 
-            if($Estado != 12){
-                $Auditoria = new historial();
-                $Auditoria->CrearNuevoRegistro(1, 3, $DatosAGuardar['rif'], 'Se ha registrado el cliente #'.$DatosAGuardar['rif']);
-            }
+            $Auditoria = new historial();
+            $Auditoria->CrearNuevoRegistro(1, 3, $DatosAGuardar['rif'], 'Se ha registrado el cliente #'.$DatosAGuardar['rif']);
             
 
             return $BaseDeDatos->ejecutar("INSERT INTO `clientes`(`rif`, `tipoDeDocumento`, `nombre`, `idContacto`, `idEstado`, `ULRImagen`) VALUES (
@@ -5889,7 +5893,7 @@ class publicFunctions extends conexion {
 
                 if(!empty($row['ULRImagen'])){
                     if(!file_exists("../Imagenes/Productos/".$row['ULRImagen'])){
-                        $this->ejecutar("UPDATE `productos` SET `ULRImagen` = NULL WHERE `id` = ".$row['id']);
+                        // $this->ejecutar("UPDATE `productos` SET `ULRImagen` = NULL WHERE `id` = ".$row['id']);
                     }
                 }
             }

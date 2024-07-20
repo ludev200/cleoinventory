@@ -1,5 +1,6 @@
 <?php
 include('../../Otros/clases.php');
+print_r($_POST);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,13 +16,12 @@ $DatosAMostrar = array(
     "nombre" => "",
     "simbolo1" => "",
     "simbolo2" => "",
-    "codigoDeArea1" => "",
-    "codigoDeArea2" => "",
-    "numeroDerecho1" => "",
-    "numeroDerecho2" => "",
+    
     "correo" => "",
     "direccion" => "",
-    "ULRImagen" => ""
+    "ULRImagen" => "",
+    'phone' => '',
+    'phone2' => ''
 );
 
 //Reviso si hay proveedor en borrador; si lo hay, cargo el objeto
@@ -41,13 +41,12 @@ if($_POST){
         "nombre" => $_POST['nombre'],
         "simbolo1" => ((isset($_POST['ModoInter1']))?"+":"-"),
         "simbolo2" => ((isset($_POST['ModoInter2']))?"+":"-"),
-        "codigoDeArea1" => $_POST['CodigoArea1'],
-        "codigoDeArea2" => $_POST['CodigoArea2'],
-        "numeroDerecho1" => $_POST['telefono1'],
-        "numeroDerecho2" => $_POST['telefono2'],
+        
         "correo" => $_POST['correo'],
         "direccion" => $_POST['direccion'],
-        "ULRImagen" => ""
+        "ULRImagen" => "",
+        'phone' => $_POST['phone'],
+        'phone2' => $_POST['phone2']
     );
     
 
@@ -101,28 +100,6 @@ if($_POST){
                 header("Location: ../");
             }
         }
-    }
-}else{
-//Si no recpciono post y hay datos en el borrador, los cargo para mostrarlos    
-    if($ExisteBorrador){
-        $DatosDelClienteEnBorrador = $ClienteEnBorrador->ObtenerDatos();
-        $ContactoEnBorrador = new contacto($DatosDelClienteEnBorrador['idContacto']);
-        $DatosDelContactoEnBorrador = $ContactoEnBorrador->ObtenerDatos();
-
-        $DatosAMostrar = array(
-            "tipoDeDocumento" => $DatosDelClienteEnBorrador['tipoDeDocumento'],
-            "rif" => $DatosDelClienteEnBorrador['rif'],
-            "nombre" => $DatosDelClienteEnBorrador['nombre'],
-            "simbolo1" => $DatosDelContactoEnBorrador['simbolo1'],
-            "simbolo2" => $DatosDelContactoEnBorrador['simbolo2'],
-            "codigoDeArea1" => $DatosDelContactoEnBorrador['codigoDeArea1'],
-            "codigoDeArea2" => $DatosDelContactoEnBorrador['codigoDeArea2'],
-            "numeroDerecho1" => $DatosDelContactoEnBorrador['numeroDerecho1'],
-            "numeroDerecho2" => $DatosDelContactoEnBorrador['numeroDerecho2'],
-            "correo" => $DatosDelContactoEnBorrador['correo'],
-            "direccion" => $DatosDelContactoEnBorrador['direccion'],
-            "ULRImagen" => $DatosDelClienteEnBorrador['ULRImagen']
-        );
     }
 }
 ?>
@@ -191,37 +168,32 @@ if($_POST){
                 </div>
             </div>
             <div class="SubtituloCentral"> <i class=" fi-sr-circle-phone Arreglito"></i> INFORMACIÓN DE CONTACTO</div>
-            <div class="lolo">
-            <div style="margin-bottom: 10px;">
+            <div class="inputsContainer">
+                <div style="margin-bottom: 10px;">
                     <b>Telefono 1:</b> <small style="color: gray;">(Opcional)</small>
                 </div>
-            <span class="ContenedorDeBoton">
-                <input value="<?php echo $DatosAMostrar['codigoDeArea1']?>" name="CodigoArea1" onkeypress="return SoloNumeros(event)" onpaste="return false" id="CodigoDeArea1" class="CampoDeEntrada Input80px" type="text" maxlength="4">
-                <b id="Separador1"> - </b> 
-                <input value="<?php echo $DatosAMostrar['numeroDerecho1']?>" name="telefono1" onkeypress="return SoloNumeros(event)" onpaste="return false" id="Numero1" class="Input200px CampoDeEntrada" type="text" maxlength="7">
-                <label title="Cambiar a formato internacional"><input hidden <?php echo (($DatosAMostrar['simbolo1']=="+")?"checked":"")?> name="ModoInter1" type="checkbox" id="CheckBox1"> <i id="Icono1" class="fi-sr-map-marker-home"></i></label>
-            </span>
+                <input name="phone" id="phoneInput" onkeypress="return valida_phoneFormat(this, event)" type="text" style="width: 200px;" value="<?php echo $DatosAMostrar['phone'] ?>">
+
+
                 <div style="margin-bottom: 10px;">
                     <b>Telefono 2:</b> <small style="color: gray;">(Opcional)</small>
                 </div>
-            <span class="ContenedorDeBoton">
-                <input value="<?php echo $DatosAMostrar['codigoDeArea2']?>" name="CodigoArea2" id="CodigoDeArea2" onkeypress="return SoloNumeros(event)" onpaste="return false" class="CampoDeEntrada Input80px" type="text" maxlength="4">
-                <b id="Separador2"> - </b> 
-                <input value="<?php echo $DatosAMostrar['numeroDerecho2']?>" name="telefono2" onkeypress="return SoloNumeros(event)" onpaste="return false" id="Numero2" class="Input200px CampoDeEntrada" type="text" maxlength="7">
-                <label><input hidden <?php echo (($DatosAMostrar['simbolo2']=="+")?"checked":"")?> name="ModoInter2" type="checkbox" id="CheckBox2"> <i id="Icono2" class="fi-sr-map-marker-home" title="Cambiar a formato internacional"></i></label>
-            </span>
-            <div class="Width400px">
-                <div style="margin-bottom: 10px;">
-                    <b>Correo:</b> <small style="color: gray;">(Opcional)</small>
-                </div>
-                <input id="InputCorreo" value="<?php echo $DatosAMostrar['correo'] ?>" name="correo" class="CampoDeEntrada" type="email">
-                <div style="margin-bottom: 10px;">
-                    <b>Dirección:</b> <small style="color: gray;">(Opcional)</small>
-                </div>
-                <input id="InputDireccion" value="<?php echo $DatosAMostrar['direccion'] ?>" name="direccion" class="CampoDeEntrada" type="text">
+                <input name="phone2" id="phone2Input" onkeypress="return valida_phoneFormat(this, event)" type="text" style="width: 200px;" value="<?php echo $DatosAMostrar['phone2'] ?>">
             </div>
+
+            <div class="lolo">
+                
+                <div class="Width400px">
+                    <div style="margin-bottom: 10px;">
+                        <b>Correo:</b> <small style="color: gray;">(Opcional)</small>
+                    </div>
+                    <input id="InputCorreo" value="<?php echo $DatosAMostrar['correo'] ?>" name="correo" class="CampoDeEntrada" type="email">
+                    <div style="margin-bottom: 10px;">
+                        <b>Dirección:</b> <small style="color: gray;">(Opcional)</small>
+                    </div>
+                    <input id="InputDireccion" value="<?php echo $DatosAMostrar['direccion'] ?>" name="direccion" class="CampoDeEntrada" type="text">
+                </div>
             </div>
-            
         </div>
         
         <div class="coolFinalButtons">

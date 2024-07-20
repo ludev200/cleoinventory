@@ -247,7 +247,7 @@ row {
 }
 .RowsDeMovimientos {
     background: rgb(215,54,99);
-    background: linear-gradient(90deg, rgba(255,255,255,1) 5%, rgba(228,127,155,1) 26%, rgba(215,54,99,1) 50%, rgba(228,127,155,1) 74%, rgba(255,255,255,1) 95%);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 5%, var(--Rosita) 26%, var(--VinotintoClarito) 50%, var(--Rosita) 74%, rgba(255,255,255,1) 95%);
     display: flex;
     flex-direction: column;
     gap: 1px;

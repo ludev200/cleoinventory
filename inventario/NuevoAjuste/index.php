@@ -66,7 +66,7 @@ $AlmacenesConProductos = $Inventario->ObtenerAlmacenesConProductos($DatosInicial
         <div class="DatosDelAjuste">
             <span class="Titulo">AJUSTE DE INVENTARIO #8</span>
             <div class="xd"> <i class="fi-rr-text"></i> Descripción:</div>
-            <textarea autocomplete="off" form="FormularioDeInventario" placeholder="Añade una descripción con el motivo de los cambios realizados. " name="descripcion" id="textarealol" cols="30" rows="3"><?php echo $DatosIniciales['descripcion'];?></textarea>
+            <textarea autocomplete="off" form="FormularioDeInventario" placeholder="Indica el motivo de los cambios realizados." name="descripcion" id="textarealol" cols="30" rows="3"><?php echo $DatosIniciales['descripcion'];?></textarea>
         </div>
         <div class="DivDeLosCambios">
             <span class="xd"> <i class="fi-rr-exchange"></i> Cambios a realizar: </span>

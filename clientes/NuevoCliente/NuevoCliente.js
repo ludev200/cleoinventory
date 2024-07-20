@@ -184,3 +184,33 @@ CheckBoxModal.addEventListener("click", () => {
 
 
 
+
+
+
+function valida_phoneFormat(element, event){
+    if(element.value.charAt(4)!='-'){
+        element.setAttribute('maxlength', '13');
+    }else{
+        element.setAttribute('maxlength', '12');
+    }
+
+    if(isNaN(event.key)){
+        if(event.keyCode != 43){
+            return false;
+        }else{
+            if(element.value != ''){
+                return false;
+            }
+        }
+    }else{
+        value = element.value+event.key;
+        
+        if(value.toString().length == 4 && element.value.charAt(0)!='+'){
+            element.value = value+'-';
+            
+            return false;
+        }else{
+            
+        }
+    }
+}

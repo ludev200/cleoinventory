@@ -700,3 +700,15 @@ aside a:hover, aside button:hover {
 .hovershadow:hover {
     box-shadow: 0 0 3px 3px rgba(150, 150, 150, 0.5);
 }
+
+
+
+.inputsContainer input {
+    font-size: 17px;
+    height: 30px;
+    background-color: var(--Rosita);
+    border: none;
+    border-bottom: 4px solid var(--Vinotinto);
+    margin-bottom: 10px;
+    padding: 0 5px;
+}
