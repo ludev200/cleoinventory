@@ -281,6 +281,7 @@ if($_POST){
             <div class="expiracion">
                 <div>
                     <b>Descripción del servicio</b>
+                    <b>Número de petición</b>
                     <b>Límite de tiempo</b>
                     <b>Tiempo de vigencia</b>
                     <b>Fecha de vencimiento</b>
@@ -296,9 +297,11 @@ if($_POST){
                     <b>:</b>
                     <b>:</b>
                     <b>:</b>
+                    <b>:</b>
                 </div>
                 <div class="CajaDeInputsDeDetalles">
-                    <input name="name" maxlength="50" value="<?php echo $budget->getName();?>" type="text"  id="InputNombreDeLaCot" class="Targeteable RayitaVino">
+                    <input name="name" maxlength="200" value="<?php echo $budget->getName();?>" type="text"  id="InputNombreDeLaCot" class="Targeteable RayitaVino">
+                    <input name="request_number" maxlength="30" value="<?php echo $budget->getRequestNumber();?>" type="text" id="InputRequestNumber" class="Targeteable RayitaVino">
                     <select id="SelectTiempoLimitado">
                         <option <?php echo (empty($budget->getExpireDate())? 'selected':'');?> value="0">No</option>
                         <option <?php echo (!empty($budget->getExpireDate())? 'selected':'');?> value="1">Si</option>

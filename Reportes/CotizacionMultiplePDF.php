@@ -154,6 +154,7 @@ $contenido = file_get_contents('../Otros/colores.css');
     </div>
     <br>
     <div class="EspacioDeTitulo"><?php echo $budget->getName();?></div>
+    <div style="text-align: center; color: gray;"><?php echo (empty($budget->getRequestNumber())? '':'N° de petición: '.$budget->getRequestNumber());?></div>
     <br>
     <div class="TasaAvisito">Tasa de cambio comprendida: <?php echo $tasa.$localCurrencySymbol;?></div>
     <div class="Tabla">
@@ -419,6 +420,8 @@ $contenido = file_get_contents('../Otros/colores.css');
         </div>
     </div>
     <br>
+    <?php echo (empty($budget->getRequestNumber())? '':'<div class="EspacioDeTitulo">N° de petición: '.$budget->getRequestNumber().'</div>');?>
+    
     <div style="font-size: 14px;">Después de un cordial saludo, nos es grato dirigirnos a ustedes con la finalidad de someter a consideración la cotización referente su petición.</div>
     <br>
     <div class="TasaAvisito">Tasa de cambio comprendida: <?php echo $tasa.$localCurrencySymbol;?></div>

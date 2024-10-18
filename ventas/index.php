@@ -202,7 +202,6 @@ $publicFunctions->checkBudgetsAndPurchase();
                     ?>
                 </select>
                 <select name="" id="SelectMesDeGrafico">
-                    <option value="0">Mes</option>
                     <option <?php echo ((date('m') == 1)?'selected':'');?> value="1">Enero</option>
                     <option <?php echo ((date('m') == 2)?'selected':'');?> value="2">Febrero</option>
                     <option <?php echo ((date('m') == 3)?'selected':'');?> value="3">Marzo</option>

@@ -63,6 +63,7 @@ if(isset($_GET['id'])){
         $DatosAMostrar = array(
             'id' => $DatosDeLaCoti['id'],
             'nombre' => $DatosDeLaCoti['nombre'],
+            'NumeroDePeticion' => $DatosDeLaCoti['NumeroDePeticion'],
             'respuesta' => $DatosDeLaCoti['estado'],
             'tipoDeDocumento' => ((empty($DatosDeLaCoti['cedulaCliente']))?'':$DatosDelCliente['tipoDeDocumento']),
             'rif' => $DatosDeLaCoti['cedulaCliente'],
@@ -236,6 +237,21 @@ if(isset($_GET['id'])){
                         }
                     ?>
                 </a>
+           </div>
+            <div class="FilaDato">
+                <b>N° petición</b>
+                <span>:</span>
+                <span class="RespuestaDeFila">
+                    <?php 
+                        if(empty($DatosAMostrar['NumeroDePeticion'])){
+                            echo '<i style="color: gray;">No especificado.</i>';
+                        }else{
+                            echo '
+                            <p style="border-bottom: none !important;">'.$DatosAMostrar['NumeroDePeticion'].'</p>
+                            ';
+                        }
+                    ?>
+                </span>
            </div>
             <?php
                 if(!empty($DatosAMostrar['rif'])){

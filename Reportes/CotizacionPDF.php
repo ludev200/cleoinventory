@@ -142,6 +142,8 @@
             'modificado' => $FechaModificado,
             'fechaExpiracion' => $FechaVence,
             'nombre' => $DatosDeLaCotizacion['nombre'],
+            'NumeroDePeticion' => $DatosDeLaCotizacion['NumeroDePeticion'],
+            
             'pUtilidades' => $DatosDeLaCotizacion['pUtilidades'],
             'pIVA' => $DatosDeLaCotizacion['pIVA'],
             'pCASalario' => $DatosDeLaCotizacion['pCASalario'],
@@ -241,6 +243,7 @@
                 <span style="height: 30px;"><?php echo $DatosAMostrar['direccion'];?></span>
             </div>
         </div>
+        
         <div class="EspacioDeFecha">
             <b class="TituloCentrado">Fecha</b>
             <div class="TituloDelDatoParaFecha">
@@ -262,6 +265,8 @@
     </div>
     <br>
     <div class="EspacioDeTitulo"><?php echo $DatosAMostrar['nombre'];?></div>
+    <div style="text-align: center; color: gray;"><?php echo (empty($DatosAMostrar['NumeroDePeticion'])? '':'N° de petición: '.$DatosAMostrar['NumeroDePeticion']);?></div>
+    
     <br>
     <div class="Tabla">
         <div class="TituloDeTabla">Materiales</div>

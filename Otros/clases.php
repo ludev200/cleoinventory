@@ -1595,9 +1595,10 @@ class cotizacion{
         if($idACargar!=0){
             $DatosDeLaConsulta = $BaseDeDatos->consultar("SELECT * FROM `cotizaciones` WHERE `id` = ".$idACargar);
             $DatosACargar = $DatosDeLaConsulta[0];
-
+            
             $this->id = $DatosACargar['id'];
             $this->nombre = $DatosACargar['nombre'];
+            $this->NumeroDePeticion = $DatosACargar['nro_peticion'];
             $this->cedulaCliente = $DatosACargar['cedulaCliente'];
             $this->fechaExpiracion = $DatosACargar['fechaExpiracion'];
             $this->idEstado = $DatosACargar['idEstado'];
@@ -1656,6 +1657,7 @@ class cotizacion{
         return array(
             'id' => $this->id,
             'nombre' => $this->nombre,
+            'NumeroDePeticion' => $this->NumeroDePeticion,
             'cedulaCliente' => $this->cedulaCliente,
             'fechaExpiracion' => $this->fechaExpiracion,
             'DiasDeVigencia' => "0",
@@ -1757,6 +1759,7 @@ class cotizacion{
             //Preparo los datos para el insert
             $DatosParaElInsert = array(
                 'nombre' => "'".$DatosAGuardar['Nombre']."'",
+                'NumeroDePeticion' => "'".trim($DatosAGuardar['NumeroDePeticion'])."'",
                 'cedulaCliente' => ((empty($DatosAGuardar['RifCliente']))?'NULL':$DatosAGuardar['RifCliente']),
                 'fechaExpiracion' => ((empty($DatosAGuardar['FechaExpiracion']))?"NULL":"'".$DatosAGuardar['FechaExpiracion']."'"),
                 'idEstado' => $Estado,
@@ -1787,8 +1790,9 @@ class cotizacion{
             
             
             //Registro la cotizacion
-            $IDCotizacionInsertada = $BaseDeDatos->ejecutar("INSERT INTO `cotizaciones`(`nombre`, `cedulaCliente`, `fechaExpiracion`, `idEstado`, `pUtilidades`, `pIVA`, `pCASalario`) VALUES (
+            $IDCotizacionInsertada = $BaseDeDatos->ejecutar("INSERT INTO `cotizaciones`(`nombre`, `nro_peticion`, `cedulaCliente`, `fechaExpiracion`, `idEstado`, `pUtilidades`, `pIVA`, `pCASalario`) VALUES (
                 ".$DatosParaElInsert['nombre'].", 
+                ".$DatosParaElInsert['NumeroDePeticion'].", 
                 ".$DatosParaElInsert['cedulaCliente'].", 
                 ".$DatosParaElInsert['fechaExpiracion'].", 
                 ".$DatosParaElInsert['idEstado'].", 
@@ -3898,6 +3902,7 @@ class budget {
 
             $this->id = $data['id'];
             $this->name = $data['nombre'];
+            $this->request_number = $data['nro_peticion'];
             $this->clientCedula = $data['cedulaCliente'];
             $this->expireDate = $data['fechaExpiracion'];
             $this->idStatus = $data['idEstado'];
@@ -3908,6 +3913,9 @@ class budget {
         }
     }
 
+    public function getRequestNumber(){
+        return $this->request_number;
+    }
 
     public function setExpired(){
         $this->db->ejecutar("UPDATE `cotizaciones` SET `idEstado` = 34 WHERE `id` = $this->id");
@@ -3916,6 +3924,7 @@ class budget {
     public function updateData($givenData){
         $this->validateData($givenData);
         $clean_name = "'".str_replace("'", '', trim($givenData['name']))."'";
+        $clean_requestName = "'".str_replace("'", '', trim($givenData['request_number']))."'";
         $clean_idClient = (empty($givenData['idClient'])? 'NULL':"'".$givenData['idClient']."'");
         $clean_expireDate = (empty($givenData['expireDate'])? 'NULL':"'".str_replace("'", '', trim($givenData['expireDate']))."'");
         $clean_percentCAS = $givenData['percentCAS'];
@@ -3925,6 +3934,7 @@ class budget {
 
         $this->db->ejecutar("UPDATE `cotizaciones` SET 
         `nombre`= $clean_name,
+        `nro_peticion`= $clean_requestName,
         `cedulaCliente`= $clean_idClient,
         `fechaExpiracion`= $clean_expireDate,
         `pUtilidades`= $clean_percentUti,
@@ -3995,7 +4005,7 @@ class budget {
             }
         }
 
-        if(strlen($givenData['name']) < 5 || strlen($givenData['name']) > 50){
+        if(strlen($givenData['name']) < 5 || strlen($givenData['name']) > 200){
             throw new Exception('El nombre debe comprender una longitud de entre 5 y 50 caractéres');
         }
 

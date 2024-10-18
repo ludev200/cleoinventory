@@ -17,6 +17,7 @@ if($ExisteBorrador){
 $DatosAMostrar = array(
     'RifCliente' => '',
     'Nombre' => '',
+    'NumeroDePeticion' => '',
     'FechaExpiracion' => '',
     'DiasDeVigencia' => '',
     'Utilidades' => '30',
@@ -33,6 +34,7 @@ if($_POST){
     $DatosAMostrar = array(
         'RifCliente' => $_POST['RifCliente'],
         'Nombre' => $_POST['Nombre'],
+        'NumeroDePeticion' => $_POST['NumeroDePeticion'],
         'FechaExpiracion' => ((empty($_POST['FechaExpiracion']))?'':$_POST['FechaExpiracion']),
         'DiasDeVigencia' => ((empty($_POST['DiasDeVigencia']))?'0':$_POST['DiasDeVigencia']),
         'Utilidades' => $_POST['Utilidades'],
@@ -86,6 +88,7 @@ if($_POST){
         $DatosAMostrar = array(
             'RifCliente' => $DatosDeCotizacionEnBorrador['cedulaCliente'],
             'Nombre' => $DatosDeCotizacionEnBorrador['nombre'],
+            'NumeroDePeticion' => $DatosDeCotizacionEnBorrador['NumeroDePeticion'],
             'FechaExpiracion' => $DatosDeCotizacionEnBorrador['fechaExpiracion'],
             'DiasDeVigencia' => $DatosDeCotizacionEnBorrador['DiasDeVigencia'],
             'Utilidades' => $DatosDeCotizacionEnBorrador['pUtilidades'],
@@ -265,6 +268,7 @@ if($_POST){
             <div class="expiracion">
                 <div>
                     <b>Descripción del servicio</b>
+                    <b>Número de petición</b>
                     <b>Límite de tiempo</b>
                     <b>Tiempo de vigencia</b>
                     <b>Fecha de vencimiento</b>
@@ -280,9 +284,11 @@ if($_POST){
                     <b>:</b>
                     <b>:</b>
                     <b>:</b>
+                    <b>:</b>
                 </div>
                 <div class="CajaDeInputsDeDetalles">
-                    <input value="<?php echo $DatosAMostrar['Nombre']?>" type="text" name="Nombre" id="InputNombreDeLaCot" class="Targeteable RayitaVino" maxlength="50">
+                    <input value="<?php echo $DatosAMostrar['Nombre']?>" type="text" name="Nombre" id="InputNombreDeLaCot" class="Targeteable RayitaVino" maxlength="200">
+                    <input value="<?php echo $DatosAMostrar['NumeroDePeticion']?>" type="text" name="NumeroDePeticion" id="InputNumeroDePeticion" class="Targeteable RayitaVino" maxlength="30">
                     <select name="" id="SelectTiempoLimitado">
                         <option value="No">No</option>
                         <option <?php echo ((empty($DatosAMostrar['FechaExpiracion']))?'':'selected ');?>value="Si">Si</option>
